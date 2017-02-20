@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>전자신문레이아웃</title>
+  <style>
+   .one{  border:3px red solid;
+     width:900px; height:540px;
+   }
+  /* border대신 outline 선을 그어놓고 육안으로 확인할때 좀 더 편안한 element
+     넓이가 증가하지않기때문에 */
+  .two{
+    border:1px black solid;
+    width:840px; height:111px;
+    margin: 0 auto;
+  }
+  .three{
+    border:1px black solid;
+    width:513px; height:386px;
+    float:left;
+    margin-right:20px;
+    margin-left:30px;
+  }
+  .four{
+    border:1px black solid;
+    width:513px; height:132px;
+    }
+  .five{
+    border:1px black solid;
+    width:513px; height:200px;
+    margin-top:14px;
+  }
+  .six{
+    border:1px black solid;
+    width:307px; height:375px;
+    float:left;
+    margin-right:15px;
+
+  }
+  .seven{
+    border:1px black solid;
+    width:307px; height:82px;
+    margin-top:10px;
+  }
+
+  .eight{
+    border:1px black solid;
+    width:307px; height:260px;
+    margin-top:10px;
+  }
+
+  </style>
+</head>
+<body>
+
+ <div class="one">1번
+   <div class="two">2번</div>
+
+        <div class="three">3번
+          <div class="four">4번</div>
+          <div class="five">5번</div>
+        </div>
+        <div class="six">6번
+          <div class="seven">7번</div>
+          <div class="eight">8번</div>
+        </div>
+
+ </div>
+
+</body>
+</html>

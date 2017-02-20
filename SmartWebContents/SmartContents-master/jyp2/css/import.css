@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+body {
+  margin: 0;
+  background-image: url("http://wondergirls.jype.com/images/bg-pc.jpg");
+  background-repeat: no-repeat;
+  background-position: center 0;
+  -webkit-appearance: cover;
+  background-size: cover;
+}
+header {
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 0 20px;
+  box-shadow: 0 2px 10px #666;
+}
+header h1 {
+  float: left;
+}
+header h1 a {
+  background-image: url("http://wondergirls.jype.com/images/logo-s.png");
+  background-repeat: no-repeat;
+  width: 104px;
+  height: 52px;
+  background-position: center;
+  text-indent: -9999px;
+  font-size: 0;
+  display: block;
+  margin: 25px;
+  transition: 1s;
+}
+header h1 a:hover {
+  transform: rotateY(180deg);
+}
+header nav {
+  float: right;
+}
+header nav li {
+  float: left;
+  height: 100px;
+  line-height: 100px;
+  transition: .15s linear;
+}
+header nav li:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+header nav li a {
+  display: block;
+  padding: 0 18px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #F28195;
+}
+header nav li a:hover {
+  border-top: 3px #F28195 solid;
+  color: #f4c22d;
+}
+section .biglogo {
+  width: 350px;
+  height: 350px;
+  background-image: url("http://wondergirls.jype.com/images/mainlogo.png");
+  position: absolute;
+  left: 60%;
+  top: 50%;
+  transition: 0.8s;
+}
+section .biglogo:hover {
+  transform: scale(1.3);
+  opacity: 0;
+}
+footer {
+  width: 100%;
+  height: 57px;
+  position: fixed;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+footer .jyplogo {
+  width: 115px;
+  height: 45px;
+  background-image: url("http://wondergirls.jype.com/images/jyplogo-b.png");
+  background-repeat: no-repeat;
+  display: block;
+  float: left;
+  margin-left: 110px;
+  margin-top: 5px;
+}
+footer .snslogo {
+  float: right;
+}

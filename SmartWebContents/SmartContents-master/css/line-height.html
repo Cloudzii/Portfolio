@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>line-height</title>
+<style>
+  .div{border:1px #F00 solid; vertical-align: middle;} /*text-align:center; text 가운데정렬*/
+  .div span{ vertical-align: bottom; display: block;}
+  /*block 속성에서는 vertical 기능을 써도 적용이 안됨
+    vertical 기능은 line-height 기준에 따라 적용!
+    inline 속성에서 위냐 아래냐 에 따라서 적용이 달라짐
+    display에 따라서 vertical의 기능이 달라진다
+    vertical 기능은 contents가 여러줄이여도 가운데정렬도 가능함 (line-height는 한줄만 가운데정렬이 가능함)
+
+    inline : line-height를 기준으로 여기냐 저기냐
+    inline-block : 가장 큰 박스를 기준으로 위냐 중간이냐 아래냐
+    table : 테이블을 기준으로 위 중간 아래
+
+
+
+
+    */
+  span{line-height:100px;}
+  .a{vertical-align: bottom;}
+  input{vertical-align: middle;}
+ </style>
+</head>
+<body>
+  <div class="div">text <span>dsfasdfasdf</span></div>
+  <span>text text text</span><span class="a">text text text</span>
+  <input type="checkbox"><span>아이디기억하기</span>
+
+
+
+</body>
+</html>

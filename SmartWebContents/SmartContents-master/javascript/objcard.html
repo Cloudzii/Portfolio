@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>objcard</title>
+    <script type="text/javascript">
+        //객체로 카드게임만들기
+        //카드부터 셋팅
+        var card = {
+            
+            card_number:13,
+            card_case : [],
+            shape : ['♠','♣','♥','◆'],
+            arrange : function(){
+                card_case : [];
+                for(var i=0 in this.shape){
+                    for(var j=1; j <= this.card_number; j++){
+                        if( j == 1) card_case.push(shape[i]+"A")
+                        else if( j == 11) card_case.push(shape[i]+"J")
+                        else if( j == 12) card_case.push(shape[i]+"Q")
+                        else if( j == 13) card_case.push(shape[i]+"K")
+                        else card_case.push(shape[i]+j);
+                    }
+                }
+                
+                
+            },
+            check : function (){
+                console.log(card_case);
+                
+            },
+            
+            
+            
+            
+
+            }
+            
+            
+            
+           
+            
+            
+        
+        
+        
+        
+        
+
+    </script>
+</head>
+<body>
+    
+    <button type="button" onclick="">카드정리</button>
+    
+</body>
+</html>

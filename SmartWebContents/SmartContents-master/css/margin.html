@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>margin</title>
+ <style>
+   #box{
+     border:1px #F00 solid;
+     /* border에서 solid와 #F00은 순서 바꿔도 상관X */
+     width:100px;
+     height:100px;
+     margin:0 auto ;
+     /* marginm을 0 auto 해줬을 때 가운데 맞춤 해준 것처럼 보일 수 있음 (실무에서 많이 쓰임) */
+     /*margin:100px 100px 100px 100px*/
+     /*이렇게 하면 top right bottom left (시계방향) 다 margin100px의 값이 들어감*/
+     /*margin:0 auto*/
+     /*top부분과 right 부분에만 값을 써도 bottom 과 left 의 값이 짝꿍의값으로 같이 들어가짐*/
+       }
+
+ </style>
+
+
+
+</head>
+<body>
+   <div id="box"></div>
+
+</body>
+</html>
+
+<!--형제간의 margin겹침현상 -> margin겹침현상은 더 큰 값을 따라간다.
+/ 부모자식간의 margin겹침현상
+상하로 일어나고 좌우에는 일어나지 않는다.
+수직상태에서 마진겹침현상이 일어나면 마진의 값이 더 큰 값이 이긴다, 그 큰 값만큼 커짐
+p태그상에서 p style=margin-top:"300px" 이런식으로 바로 디자인적용을 해도되고
+p id=" " 이렇게하고 #" " 한 다음에 margin-top 값을 써도 됨 ->

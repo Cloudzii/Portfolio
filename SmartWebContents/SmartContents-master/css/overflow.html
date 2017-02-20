@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>overflow</title>
+<style>
+/*overflow : hidden  (배경색이 넘어갔을시 정해진 규격의 만큼만 보여지는 것)
+           visible  (기본상태) -> 접근성코딩에 중요한 기능
+           scroll  (정해진 규격이 넘어가면 스크롤이 생겨나는 것)
+
+           -overflow기능을 안써두 기본적으로 visible상태
+             ex)width값의 태그를 안써도 auto의 상태가 되듯이
+                overflow기능을 안써도 기본적으로 visible상태가 되어있음
+           -overflow기능을 쓰면 기본적으로 hidden상태   */
+  .box{
+    border:1px #F00 solid;
+    width:300px; height:300px;
+    overflow:scroll;
+  }
+  .subbox{
+    width:500px;  height:500px;
+    background-color:rgba(255,0,0,.3)
+  }
+
+</style>
+   <div class="box">
+     <div class="subbox"></div>
+  </div>
+</head>
+<body>
+
+</body>
+</html>

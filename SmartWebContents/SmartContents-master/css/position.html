@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>position</title>
+    <style type="text/css">
+
+ /*
+    position
+
+    static:;
+    relative
+    absolute
+    fixed
+
+*/
+
+
+      .realbox{
+          width:200px;
+          height:200px;
+          border:1px black solid;
+          top:200px;
+          position:relative;
+      }
+      .rbox{
+          width:200px;
+          height:200px;
+          border:1px #F00 solid;
+          position:absolute;
+          right:10px;
+          left:10px;
+          top:10px;
+          bottom:10px;
+          /**/
+     }
+     .box1{
+        border:1px #F00 solid;
+        position:absolute;
+        left:0;
+        top:0;
+        right:50%;
+        bottom:50%;
+
+
+    }
+
+    .box2{
+        border:1px #F00 solid;
+        position:absolute;
+        left:50%;
+        top:0;
+        right:0;
+        bottom:50%;
+
+    }
+
+    .box3{
+        border:1px #F00 solid;
+        position:absolute;
+        left:0;
+        top:50%;
+        right:50%;
+        bottom:0;
+        background-color:blue;
+        z-index:10;
+    }
+
+
+    .box4{
+        border:1px #F00 solid;
+        position:absolute;
+        left:50%;
+        top:50%;
+        right:0;
+        bottom:0;
+        background-color:yellow;
+        z-index:12;
+    }
+    .box5{
+      border:1px #F00 solid;
+      width:200px;
+      height:700px;
+      position:relative;
+      left:100px;
+    }
+    .box6{
+      border:1px blue solid;
+      width:300px;
+      height:300px;
+      position:fixed;
+      right:1px;
+    }
+    .box7{
+      border:1px yellow solid;
+      width:500px;
+      height:500px;
+      position:relative;
+      bottom:900px;
+      background-color: red;
+      z-index:11;
+    }
+    </style>
+</head>
+<body>
+
+    <div class="box6"></div>
+    <div class="realbox"></div>
+    <div class="rbox"></div>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box7"></div>
+
+
+
+</body>
+</html>

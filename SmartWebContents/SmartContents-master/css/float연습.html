@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>float연습</title>
+  <style>
+   .div{
+
+   }
+   .최순실{
+     border:1px #F00 solid;
+     width:1000px;
+     margin:0 auto;
+     min-width:400px;
+
+   }
+
+    .트럼프{
+      border:1px #F00 solid;
+      width:200px; height:430px;
+      float:left;
+    }
+
+    .회원가입양식{
+      border:1px #00F solid;
+      margin-left:205px;
+      min-height:430px;
+    }
+
+    .오바마{
+      border:1px #F00 solid;
+      margin-top:1px;
+    }
+
+    .부시{
+      border:1px #F0f solid;
+      height:100px;
+      margin-top:1px;
+    }
+
+    .김재규{
+      border:1px #00F solid;
+      margin:1px;
+      height:100px;
+      padding-bottom:100px;
+    }
+
+  </style>
+</head>
+<body>
+  <div></div>
+  <div class="최순실">
+    <div class="부시">부시</div>
+  <div class="트럼프">트럼프</div>
+  <div class="회원가입양식">회원가입양식
+    <form class="" action="회원가입양식테이블" method="post">
+    <fieldset>
+     <legend>회원가입 / JOIN</legend>
+      <table border="1" width="100%" >
+        <caption>회원정보 입력 (* 표시는 필수입력사항입니다.)</caption>
+        <tr>
+          <th>
+            <label for="userid">회원아이디*</label>
+          </th>
+          <td>
+            <input type="text" placeholder="아이디를 입력하세요" id="userid">
+            <input type="button" value=">아이디중복확인">
+            <input type="button" value="!">
+            <span>4~12자의 영문, 소문자, 숫자로 구성합니다.</span>
+          </td>
+        </tr>
+
+        <tr>
+          <th>
+            <label for="pw">비밀번호*</label>
+          </th>
+          <td>
+            <input type="text" placeholder="비밀번호를 입력하세요" id="pw">
+            <input type="button" value="!">
+            <span>4~12자의 영문, 숫자로 설정하고 빈칸은 사용하지 마세요.</span>
+          </td>
+        </tr>
+
+        <tr>
+          <th>
+            <label for="repw">비밀번호 확인*</label>
+          </th>
+          <td>
+            <input type="text" placeholder="비밀번호를 다시 입력하세요" id="repw">
+            <input type="button" value="!">
+            <span>상단에 입력하신 비밀번호와 동일하게 입력하세요</span>
+          </td>
+        </tr>
+
+        <tr>
+          <th>
+            <label for="name">이름*</label>
+          </th>
+          <td>
+            <input type="text" id="name">
+            <input type="button" value=!>
+            <span>실명으로 적어주세요.</span>
+          </td>
+        </tr>
+
+        <tr>
+          <th>
+            <label for="register">주민등록번호*</label>
+          </th>
+          <td>
+            <input type="text" id="register">
+            <span>-</span>
+            <label for="register2"><input type="text" id="register2"></label>
+          </td>
+        </tr>
+
+        <tr>
+       <th>
+         <label for="email">이메일주소*</label>
+       </th>
+       <td>
+         <input type="text" id="email" />
+         <span>@</span>
+         <label for="email2"></label>
+         <select name="" id="email2">
+           <option value="http://hanmail.com">한메일</option>
+           <option value="http://naver.com">네이버</option>
+           <option value="http://gmail.com">지메일</option>
+           <option value="">직접입력</option>
+         </select>
+         <span>-</span>
+         <input type="text" />
+         <br /><input type="checkbox" />
+         <span>이 주소로 정기적으로 발행되는 다양한 소식의 올림푸스 웹진을 받겠습니다.</span>
+       </td>
+     </tr>
+
+     <tr>
+       <th>
+         <label for="question">본인확인 질문*</label>
+       </th>
+       <td>
+         <select class="" name="" id="question">
+           <option value="">장소</option>
+           <option value="">기억</option>
+           <option value="">별명</option>
+         </select>
+       </td>
+     </tr>
+
+     <tr>
+       <th>
+         <label for="answer">질문의 답*</label>
+       </th>
+       <td>
+         <input type="text" id="answer">
+       </td>
+     </tr>
+
+     <tr>
+       <th>
+         <label for="interesting">관심물품 체크</label>
+       </th>
+       <td>
+         <input type="radio" id="interesting" />
+         <span>DSLR</span>
+         <label for="interesting2">
+         <input type="radio" id="interesting2">광학20배줌</label>
+         <label for="interesting3">
+         <input type="radio" id="interesting3">방수제품</label>
+         <label for="interesting4">
+         <input type="radio" id="interesting4">컴팩트</label>
+
+       </td>
+     </tr>
+
+
+
+   </table>
+     </fieldset>
+  </form>
+
+
+
+
+
+
+      </table>
+
+
+
+    </fieldset>
+
+
+  </div>
+  <div class="오바마">오바마</div>
+
+  <div class="김재규">김재규</div>
+  </div>
+</body>
+</html>

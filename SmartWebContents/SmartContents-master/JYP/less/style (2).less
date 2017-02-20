@@ -1,0 +1,122 @@
+*{margin:0; padding:0;}
+html,body{height:100%;}
+a{text-decoration: none;}
+ul{list-style:none;}
+
+body{
+    margin:0;
+    background-image: url(@pcbg);
+    background-repeat:no-repeat;
+    .bgsize(cover);
+    background-position:center 0;
+}
+
+header{
+    z-index: 1;
+    position:relative;
+    height:100px;
+    background-color:rgba(255,255,255,0.7);
+    padding:0 20px;
+    box-shadow: 0 2px 10px #666;
+    h1{
+        float:left;
+      a{
+          border:1px #F00 solid;
+          display:block;
+          background-image: url(@logo);
+          width:104px;
+          height:52px;
+          text-indent: -9999px;
+          font-size: 0;
+          margin:25px;
+          transition:1s;
+          background-repeat: no-repeat;
+          background-position: center;
+          &:hover{
+             transform: rotateY(180deg);
+        }
+      }
+    }
+    nav{
+        float:right;
+        .menu{
+          display:none;
+          height:55px;
+          width:200px;
+          background-color:@text-color;
+          text-align: center;
+          position:relative;
+          margin-right: -20px;
+          line-height:55px;
+          color:#FFF;
+          font-weight: bold;
+        }
+        li{
+            float:left;
+            height:100px;
+            line-height:100px;
+            &:hover{
+                // cursor: pointer;
+                // -> height와 line-height로 크기를 늘렸기때문에 전체에 커서가 먹혀서 안써도됨
+                background-color:rgba(255,255,255,.7);
+            }
+            a{
+                display:block;
+                padding:0 18px;
+                text-decoration: none;
+                font-size:16px;
+                color:@text-color;
+                transition: .1s;
+                font-weight: bold;
+                &:hover{
+                  border-top:2px @text-color solid;
+                  color:@base-color;
+                }
+              }
+
+
+
+            }
+
+
+    }
+
+}
+
+section{
+  // positon:relative;
+  // height:calc(100% - 100px);
+  // calc쓸때에는 꼭 마이너스 위치에서 띄어쓰기를 해줘야함
+  // calc 쓸 경우 스크롤바가 생겨 이게 문제가 될 수 있음
+  // 그래서 아예 지워버리는게 더 나음
+
+
+  // 로고에만 포지션이랑 위치를 줄경우 줄였을 때
+  // 로고만 짤릴 수가 있음 그래서 section에 포지션과 높이 를 줌
+  // section에게 position을 줘서 부모로 만들어서
+  // biglogo에 값을 더 많이줘서 떨어뜨릴 수 있게되었음
+  // section에게 position:relative를 안 주었을 경우
+  // biglogo의 부모가 header이기 때문에 값을 한정적으로(ex: top:10px) 으로
+  // 밖에 줄 수가 없어서 이렇게 함
+  // 물론 section에 position을 줘서 부모로 안만들어도 되지만
+  // 값을 자유자재로 주기위해서 한거임
+  // 삭제해도 무방함
+
+
+   .biglogo{
+      width:350px;
+      height:350px;
+      background-image: url(@biglogo);
+      position:absolute;
+      left:60%;
+      top:50%;
+      transition:1s;
+      // 이거의 변하는 과정을 봐야하기때문에 trasition을 넣음
+      &:hover{
+        transform:scale(1.3);
+        opacity:0;
+
+      }
+   }
+
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>01_어트리뷰트의_값을_수정하여_이미지_바꾸기</title>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<style>
+			html * { margin:0; padding:0; }
+			body { padding:10px;  margin-top:100px;}
+			body span { color:red; font-size: 30px; }
+			p { margin-bottom: 20px;}
+			#wrapper { width:522px; margin:0 auto; text-align:center;}
+			li { float: left; list-style: none; margin-left: 10px;overflow:hidden; width:123px; height:40px;}
+			li.first { margin-left:0px; }
+			li a {display:block;  width:123px;}
+			li a img {display:block;}
+			#nav {width:522px; height:40px; margin: 0px auto 10px auto; }
+			#image { width:522px; height:400px; margin: 10px auto 0px auto; }
+			#image img { width: 522px; height: 400px; }
+		</style>
+		<script>
+			$(document).ready(function(){
+				
+				// var imgurl = ["spring.jpg","summer.jpg","fall.jpg","winter.jpg"];
+				
+				
+				// $('#nav > ul > li').click(function(){
+				// 	var idx = $(this).index();
+				// 	//click function내에서니깐 this는 현재 내가 클릭한 아이
+				// 	$('#image img').attr('src',"images/"+imgurl[idx]);
+				// })
+				
+				 
+				var imgurl = ["spring.jpg","summer.jpg","fall.jpg","winter.jpg"];
+				// [] <- 배열이라서 씀 
+				
+				var path = "images/";
+				
+				
+				$('#nav > ul > li').click(function(){
+					
+					var idx = $(this).index();
+					//배열로 변수를 만들었기때문에 0 1 2 3 을 숫자로 된 아이들임
+					//현재 클릭한 아이의 번호를 알아내려고 index를 써서 알아내려고 index를 씀
+					//배열은 숫자로 선택되는데 번호를 모르면 알지못함
+					//this가 나 여기있다(나 지금 이거 클릭했다) 라고하면 
+					//index가 너 몇번이야라고 물어봐서 알아내니까 index를 이용함
+					$('#image img').attr('src',path+imgurl[idx]);
+					//배열의 index를 알아내려한거니까 [] 이거안에 idx가 들어가야함
+					
+				})
+				
+				
+				
+				
+				
+				
+				
+				
+				$('#nav > ul > #springBtn').click(function(){
+					$('#image > img').attr({'src':'images/spring.jpg','alt':'봄'});
+				});
+				
+				$('#nav > ul > #summerBtn').click(function(){
+					$('#image > img').attr({'src':'images/summer.jpg','alt':'여름'});
+				});
+				
+				//객체는 he 나 she 의 의미(고유한그런!!!!), 그래서 src 시작할때 {} 를 써야함
+				
+				$('#nav > ul > #fallBtn').click(function(){
+					$('#image > img').attr({'src':'images/fall.jpg','alt':'가을'});
+				});
+				
+				$('#nav > ul > #winterBtn').click(function(){
+					$('#image > img').attr({'src':'images/winter.jpg','alt':'겨울'});
+				});
+				
+			---------------------------------------------------------------------------
+				
+				// $('#nav > ul > #springBtn').click(function(){
+					
+				// 	$('#image > img').attr('src','images/spring.jpg')
+					
+				// })
+				
+				// $('#nav > ul > #summerBtn').click(function(){
+					
+				// 	$('#image > img').attr('src','images/summer.jpg')
+					
+				// })
+				
+				// $('#nav > ul > #fallBtn').click(function(){
+					
+				// 	$('#image > img').attr('src','images/fall.jpg')
+					
+				// })
+				
+		
+			});
+		</script>
+	</head>
+	
+	<body>
+	<div id="wrapper">
+		<div id="nav">
+			<ul>
+				<li id="springBtn" class="first on">
+					<a href="#">
+						<img src="images/btn1_2.jpg" />
+					</a>
+				</li>
+				<li id="summerBtn">
+					<a href="#">
+						<img src="images/btn2_2.jpg" />
+					</a>
+				</li>
+				<li id="fallBtn">
+					<a href="#">
+						<img src="images/btn3_2.jpg" />
+					</a>
+				</li>
+				<li id="winterBtn">
+					<a href="#">
+						<img src="images/btn4_2.jpg" />
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div id="image">
+			<img src="images/spring.jpg" alt="봄" />
+		</div>
+	</div>
+	</body>
+</html>

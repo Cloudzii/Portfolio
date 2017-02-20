@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>popup</title>
+    <style type="text/css">
+        :root{
+            background-color:#EEE;
+        }
+    
+        *{margin:0; padding:0;}
+        .box{
+            position:absolute; 
+            width:500px; 
+            height:500px; 
+            border:1px #CCC solid;
+            border-radius:10px;
+            background-color:#FFF;
+            left:50%; 
+            margin-left:-250px;
+            top:-60%;
+        }
+        
+        a{text-decoration: none;}
+        
+        .btn{
+            border:1px #CCC solid; 
+            height:50px; 
+            line-height:50px; 
+            color:#FFF;
+            padding:0 30px; 
+            font-size:16px; 
+            background-color:#333;
+        }
+        
+        .box:target{
+          animation:openMtion 1s;
+        }
+        @Keyframes openMtion{
+            from {top:-60%; margin:0%; left:50%; margin-left:-250px;}
+            to {top:50%; margin-top:-250p;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <a href="#popup" class="btn">Open</a>
+    
+    <div class="box" id="popup"></div>
+    
+    
+    
+    
+</body>
+</html>

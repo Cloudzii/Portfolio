@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>회원가입실습</title>
+</head>
+<body>
+  <h3><ul>개인회원가입</ul></h3>
+
+  <form action="회원가입양식실습" method="post">
+
+  <fieldset>
+    <legend>
+      
+    </legend>
+  </fieldset>
+
+
+
+
+
+  <ul>
+
+    <label for="id">
+    <li>회원 아이디 <input type="text" placeholder="아이디를 입력하시오" id="id">
+    <input type="button" value=아이디중복조회>
+    <span>(영문자 또는 숫자, 4~15자리)</span>
+    </li>
+    </label>
+
+
+
+
+
+    <label for="password">
+    <li>비밀번호 <input type="text" placeholder="비밀번호를 입력하시오" id="password">
+      <span>
+        변경 시에만 입력하시오. (영문자 또는 숫자, 4~12자리)
+      </span>
+    </li>
+    </label>
+
+
+    <label for="repw">
+    <li>비밀번호 확인 <input type="text" placeholder="비밀번호를 다시입력하시오" id="repw">
+    </li>
+    </label>
+
+
+
+    <label for="name">
+    <li>회원성명 <input type="text" placeholder="이름을 입력하시오" id="name">
+      <span>한글 8자이내, 영문 16자이내 입력</span>
+    </li>
+    </label>
+
+
+    <label for="register">
+    <li>주민등록번호 <input type="text" id="register">-<input type="text" id="register"> </li>
+    </label>
+
+
+
+
+    <label for="phone">
+    <li>전화번호
+      <select name="" id="phone">
+        <option value="">02</option>
+        <option value="">031</option>
+        <option value="">041</option>
+        <option value="">051</option>
+        <option value="">070</option>
+      </select> -
+      <input type="text"> -
+      <input type="text">
+    </li>
+    </label>
+
+
+    <li>
+    <label for="cellphone">
+       휴대폰번호
+       <select name="" id="cellphone">
+         <option value="">010</option>
+         <option value="">011</option>
+         <option value="">016</option>
+       </select> -
+
+      <input type="text"> -
+      <input type="text">
+
+    </label>
+    </li>
+
+
+
+    <label for="address">
+    <li>주소
+      <input type="text" id="address"> - <input type="text"> <input type="button" value="우편번호검색">
+     <p>
+      <input type="text">
+     </p>
+     <p>
+       <input type="text">
+     </p>
+
+
+   <li>
+     <label for="email">E-mail</label>
+      <input type="text" id="email" /> @
+      <select name="" id="">
+        <option value="">gmail.com</option>
+        <option value="">naver.com</option>
+        <option value="">nate.com</option>
+        <option value="">hanmail.com</option>
+        <option value="">직접입력</option>
+      </select>
+    </li>
+
+
+
+    <li>
+    <label for="re">참조 E-mail</label>
+    <input type="text" id="re"> @
+    <select name="" id="">
+      <option value="">gmail.com</option>
+      <option value="">naver.com</option>
+      <option value="">nate.com</option>
+      <option value="">hanmail.com</option>
+      <option value="">직접입력</option>
+
+    </select>
+      <ul>
+        <span>
+          <strong>참조 E-mail이란?</strong>
+          <p>E-mail 고지를 받는 고객께서 고지를 정상적으로 받으실 수 없을 경우 업무의 공백을 막기위한</p>
+          <p>서비스로 참조 E-mail을 등록해 놓으시면 매번 E-mail 고지서에 등록하신 두개의 E-Mail로 고지해</p>
+          <p>드립니다. <strong>단, 한국전력과 서울도시가스에만 해당됩니다.</strong></p>
+       </span>
+      </ul>
+    </li>
+
+
+    <li>
+    <label for="infor"></label>
+    한빌 부가서비스 안내수신
+       <input type="radio" name="one" id="infor">예
+    <label for="mation"></label>
+       <input type="radio" name="one" id=mation>아니오
+    </li>
+
+
+
+    <label for="recommendid">
+    <li>추천인아이디
+      <input type="text" id="recommendid">
+    </li>
+    </label>
+
+
+   <input type="submit" value="확인">
+   <input type="reset" value="재입력">
+
+
+
+  </ul>
+
+
+
+
+
+</body>
+</html>
+</form>

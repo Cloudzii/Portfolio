@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>submenu</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style type="text/css">
+        *{margin:0; padding:0;}
+        ul{list-style: none;}
+        .menu{
+            width:300px; border:1px #CCC solid;
+            margin:0 auto;
+        }
+        .menu>ul{
+            border:1px #F00 solid;
+            padding:20px;
+        }
+        .menu a{
+            text-decoration:none;
+            color:#000;
+        }
+        .menu ul ul{
+            border:1px #F00 solide;
+            display:none;
+        }
+        
+    </style>
+    <script>
+        // $(document).ready() 1.4이전버전
+        // $(fucntion)  1.4이후버전부터는 이거 권장
+        
+        $(function(){
+            
+            var over = function(){
+                $(this).children('ul').stop().slideDown(1000,function(){
+                    $(this).css('background','red');
+                })
+            }
+            
+            var out = function(){
+                $(this).children('ul').stop().slideUp()
+            }
+            
+            // $('.menu > ul >li').hover(over,out)   
+            
+            // $('.menu > ul > li').click(function(){
+            //     $(this).children('ul').toggle(function(){
+            //         $(this).css('background','red');
+            //     })
+            //     return false;
+            // })
+            
+            $('.menu > ul >li').click(function(){
+                $(this).children('ul').slideToggle(1000)
+                return false;
+            
+        })
+        
+        
+        // $(function(){
+            
+        //     $('.menu > ul > li').hover(function(){
+        //         $(this).children('ul').stop().slideDown(function(){
+        //             $(this).children('ul').stop().slideUp()
+        //         })    
+        //     //children은 내가 지금 this하고있는아이의(li에 hover하고있는거) 자식이라서 쓴거
+        //     //a태그에 있는 menu에 hover를 하는건데 왜 li를 선택했냐면 
+        //     //a 의 영역은 그리크지않아서 hover했을 때 밑으로 hover할때 오류가 난거처럼 매끄럽지않음
+        //     //그런데 a 태그를 감싸고 있는 li의 영역은 그보다 커서 hover를 하였을 때 오류가 적음(보다 매끄러움)
+        //     },function(){
+        //         $(this).children('ul').stop().slideUp(1000)
+        //     })
+            
+        //     //$('.menu > ul >li').hover(over,out)   
+            
+        // })
+        
+    </script>
+    <!--show-->
+    <!--hide-->
+    <!--toggle   
+    움직임 자체는 show/hide와 같음 
+    다시누르면 다시 들어간다는게 차이점
+    a태그에 적용할 시 return false 를 걸어야함
+    실무에서는 return false를 쓰지말아야함-->  
+    <!--fadeIn-->
+    <!--fadeOut-->
+    <!--fadeToggle-->
+    <!--slideDown-->
+    <!--slideUp-->
+    <!--slideToggle
+    toggle과 기능은 같지만
+    slide처럼 내려오고 들어감-->
+    <!--toggleClass-->
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li>
+                <a href="">menu</a>
+                <ul>
+                    <li><a href="">submenu</a></li>
+                    <li><a href="">submenu</a></li>
+                    <li><a href="">submenu</a></li>
+                    <li><a href="">submenu</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">menu</a>
+                <ul>
+                    <li><a href="">submenu</a></li>
+                    <li><a href="">submenu</a></li>
+                    <li><a href="">submenu</a></li>
+                    <li><a href="">submenu</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">menu</a>
+                <ul>
+                    <li><a href="">submenu</a></li>
+                    <li><a href="">submenu</a></li>
+                    <li><a href="">submenu</a></li>
+                    <li><a href="">submenu</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">menu</a>
+                <ul>
+                    <li><a href="">submenu</a></li>
+                    <li><a href="">submenu</a></li>
+                    <li><a href="">submenu</a></li>
+                    <li><a href="">submenu</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">menu</a>
+                <ul>
+                    <li><a href="">submenu</a></li>
+                    <li><a href="">submenu</a></li>
+                    <li><a href="">submenu</a></li>
+                    <li><a href="">submenu</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

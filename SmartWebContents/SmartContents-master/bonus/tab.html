@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tab</title>
+    <style type="text/css">
+    *{margin:0; padding:0;}
+    ul{list-style:none;}
+    
+        .tab{height:400px; width:500px; position:relative;}
+        .tab div{height:400px; width:100%; border:1px #CCC solid; 
+                 position:absolute; left:0; top:40px; z-index:0; }
+        .tab li {border:1px #CCC solid; border-left:0; border-bottom:0; float:left;}
+        .tab li>a {height:40px; display:block; padding:0 10px; line-height:40px;}
+        .tab li:first-child{border-left:1px #CCC solid;}
+        .tab li.on>a{color:#000; padding-bottom:1px; background-color:#FFF; position:relative; z-index:1;}
+        
+        
+        
+    </style>
+</head>
+<body>
+    <!--<a href="">company information</a>-->
+    
+    <div class="tab">
+        <ul>
+            <li class="on">
+                <a href="">menu1</a>
+                <div>contents</div>
+            </li>
+            <li>
+                <a href="">menu2</a>
+                <div>contents</div>
+            </li>
+            <li>
+                <a href="">menu3</a>
+                <div>contents</div>
+            </li>
+        </ul>
+    </div>
+    
+       <div class="tab style-default">
+        <ul>
+            <li class="on">
+                <a href="">menu1</a>
+                <div>contents</div>
+            </li>
+            <li>
+                <a href="">menu2</a>
+                <div>contents</div>
+            </li>
+            <li>
+                <a href="">menu3</a>
+                <div>contents</div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

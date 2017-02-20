@@ -1,0 +1,42 @@
+
+<!--//     var user = prompt("만들 사람을 입력해주세요") -->
+    
+<!--//     alert("어디한번 "+user+"를 만들어볼까!");-->
+<!--//     alert("확인을 누르면 만들어집니다.");-->
+    
+<!--//     var text1 = ["일단은","음....","어디보자","우어어어어","호오오오"];-->
+<!--//     var text2 = ["어여쁨","높은지능","낮은지능","먹성","귀여움","썩은인성","바른인성","D라인","O라인","S라인","빚","돈"];-->
+<!--//     var text3 = ["한숟깔","한방울","한가득","우오오오어ㅓㅇㄴ이ㅏ러ㅣㅏㅓㅎ","헉....","깜빡했다..","덜넣음"];-->
+    
+<!--//     var ran1 = Math.floor(Math.random() * text1.length);-->
+<!--//     var ran2 = Math.floor(Math.random() * text2.length);-->
+<!--//     var ran3 = Math.floor(Math.random() * text3.length);-->
+    
+<!--//     document.write(user+"님"+" "+text1[ran1]+" "+text2[ran2]+" "+text3[ran3])-->
+    
+<!--// </script>-->
+
+
+<script>
+    
+    var user = prompt("당신의 이름을 입력하시오");
+    
+    var birth = prompt("당신의 생년월일을 입력하시오");
+    
+    birth=Number(birth);
+    
+    var text1 = ["당신은","너님은","you are"];
+    var text2 = ["본래","아직은","벌써","타고난","엄청난","부족한"];
+    var text3 = ["성품을","지혜를","미모를","처세술을","화술을","현명함을","총명함을","운을"];
+    var text4 = ["포기하셔야합니다","연마하셔야합니다","가지고있습니다","타고나셨습니다"];
+
+    var ran1 = Math.floor(Math.random()*text1.length);
+    var ran2 = Math.floor(Math.random()*text2.length);
+    var ran3 = Math.floor(Math.random()*text3.length);
+    var ran4 = Math.floor(Math.random()*text4.length);
+    
+    
+    document.write(user+"님"+" "+text1[ran1]+" "+text2[ran2]+" "+text3[ran3]+" "+text4[ran4]);
+    
+    console.log(typeof(birth));
+</script>

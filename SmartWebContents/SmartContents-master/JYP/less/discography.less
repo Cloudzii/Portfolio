@@ -1,0 +1,183 @@
+body.nonebg{
+    background:none;
+}
+
+section{
+    
+    >.bigtitle{
+        margin-bottom:50px;
+        height:60px;
+        padding: 30px 0;
+        background-color: #f4f4f4;
+        text-align:center;
+        text-transform:capitalize;
+        text-indent: -99999px;
+        font-size:0;
+        h2{
+            width:306px;
+            height:51px;
+            margin:0 auto;
+        }
+    }
+    
+    section.disco{
+        h2{
+           background-image:url(http://wondergirls.jype.com/images/title-discography.png);    
+        }
+    }
+    
+    .global-lang{
+        width:1000px;
+        margin:0 auto;
+        height:21px;
+        a{
+            color:#FFF;
+            font-size:11px;
+            text-align:center;
+            text-transform: uppercase;
+            display:inline-block;
+            width:21px;
+            height:21px;
+            line-height: 20px;
+            border-radius: 50%;
+            background-color:#000;
+            vertical-align:top;
+        }
+    }
+    .wrap{
+        margin:0 auto 100px;
+        border:1px #F00 solid;
+        max-width:1000px;
+        .album-thumb,.album-contents{
+            border:1px #F00 solid;
+            display:table-cell;
+        }
+        .album-thumb{
+            width:35.2%;
+            >img{
+                width:100%;
+            }
+            ol{
+                list-style-position: inside;
+            }
+        }
+    }
+    .album-contents{
+        vertical-align: top;
+        padding-left:28px;
+        strong{
+            float:left;
+        }
+        span{
+            float:right;
+            font-size: 12px;
+        }
+    }
+    
+    
+    .title{
+        border:1px #F00 solid;
+        height:58px;
+        background-image:url(http://wondergirls.jype.com/images/discography/a-titlebg.png);
+        margin-bottom:50px;
+        text-transform:capitalize;
+        color:#FFF;
+        font-size:1.5em;
+        line-height:50px;
+        padding:0 20px;
+    }
+    .album-list{
+        margin-top:30px;
+        text-align:center;
+        
+        .list-btn a{
+            width:10px;
+            height:10px;
+            border-radius:50%;
+            background-color: #CCC;
+            display: inline-block;
+        }
+        li{
+            vertical-align:top;
+            display:inline-block;
+            .description{
+                display:block;
+                span{display: block;}
+            }
+        }
+    }
+
+}
+
+section.gallery{
+    h2{
+        background-image:url(http://wondergirls.jype.com/images/title-gallery.png);
+    }
+    .grid-list{
+        max-width:769px; 
+        margin:0 auto;
+        overflow: hidden;
+        outline:1px #F00 solid;
+
+    }
+    ul{
+        overflow:hidden;
+        outline:1px #F00 solid;
+
+    }
+    li{
+        float:left;
+        width:20%;
+        max-width:153px;
+
+        img{
+            max-width: 150px;
+            width:100%;
+            vertical-align: top;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+section.notice{
+    h2{
+        background-image: url(http://wondergirls.jype.com/images/title-noti.png);
+    }
+    .list{
+        width:1000px;
+        margin:0 auto;
+        table{
+            width:100%;
+            border-collapse: collapse;
+            thead{
+                visibility: hidden;
+            }
+            td,th{
+                border:1px #F00 solid;
+                padding:4px 0;
+                font-size:13px;
+            }
+            tr>td:first-child{
+                text-align: center;
+            }
+             tr>td:nth-child(2){
+                padding-left: 10px;
+            }
+            tr>td:nth-child(3){
+                text-align: center;
+            }
+            td[colspan="3"] div{padding:40px; font-size:13px; text-align: left;}
+            .elip{
+                width:400px;
+                border:1px #F00 solid;
+                display: block;
+                overflow:hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                color:skyblue;
+            }
+            
+        }
+    }
+}
+

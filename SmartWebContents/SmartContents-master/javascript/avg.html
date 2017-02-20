@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>avg</title>
+    
+    <script>
+ 
+    var nameArr = [];
+    var scoreArr = [];
+
+    var max_user = prompt('학생의 수를 입력해주세요');
+      console.log(max_user);
+    var check = confirm(max_user+"인원이 맞습니까?");   
+    
+    //confirm이라는 것은 확인을 하려는 기능
+    //   console.log(check);
+    if(check){
+        
+      for(var i=0; i<max_user; i++){
+        var name = prompt('이름을 입력하세요');
+        var score = prompt('점수를 입력하세요');
+        nameArr.unshift(name);
+        scoreArr.unshift(score);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+     }
+        // console.log(nameArr);
+        // console.log('gogogo');
+        
+        document.write(nameArr + "<br />" +scoreArr)
+        
+        var nexts = confirm ('입력정보가 맞습니까?');
+    
+        if(nexts){
+            console.log('반 전체 평균을 산출합니다');
+            
+          var score = 0;   //모든숫자를더하려구 var score=0 이라설정
+          for(i=0; i<scoreArr.length; i++){
+            score += Number(scoreArr[i]);
+          }
+          
+          console.log("total:"+score);
+          
+          var avg = score/max_user;
+            console.log(avg);
+            if( avg >=0 && avg < 20 ){
+                 console.log("가");
+            }else if(avg >=20 && avg<40){
+                 console.log("양");
+            }else if(avg >=40 && avg<60){
+                 console.log("미");
+            }else if(avg >=60 && avg<80){
+                 console.log("우");
+            }else if(avg >=80 && avg<=100){
+                 console.log("수");
+            }
+          
+          
+          
+          
+          document.write('반 전체 평균은 '+avg+' 등급입니다');
+          
+
+          document.write('반 전체 평균은 '+score/max_user+' 점입니다');
+          
+          
+          
+      
+    
+            
+        }else if(!nexts){
+            alert('프로그램을 종료합니다');
+        }
+    
+        
+        console.log(nameArr,scoreArr);
+        
+        
+    }else if(!check){
+      console.log('re');
+    }
+    
+   
+
+
+
+
+
+    </script>
+
+    
+    
+    
+</head>
+<body>
+    
+</body>
+</html>

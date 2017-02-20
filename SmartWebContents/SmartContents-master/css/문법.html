@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS문법</title>
+  <!-- external 형식 -->
+  <!--보통 이 형식을 많이 씀 -->
+  <!-- link:css 하고 탭 -->
+  <!-- <link rel="stylesheet" href="불러올파일명"> -->
+  <link rel="stylesheet" href="style.css">
+  <!-- head부분에 이렇게 디자인을 해야한다구 인식시키는 방법 -->
+  <style>
+  /*스타일 작성위치*/
+  /*internal 형식*/
+  /*여기서 h1에 명령을 할거기에 h1을 쓰는거임*/
+  /*이렇게하면 모든 h1에게 명령을 하는거여서 모든 h1에 적용이됨*/
+   h1 {border:1px red solid; width:100px; height:100px;}
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <!-- inline 형식 -->
+  <!-- : 태그한테 직접적으로 스타일을 주는 방법 -->
+  <!-- <div></div> ->블록속성의 태그 (아무런의미가없음) -->
+  <!-- <span></span> ->블록속성의 태그 (아무런의미가없음) -->
+  <div style="border:1px red solid; width:100px; height:100px;">box</div>
+
+   <h1>hello word</h1>
+   <h1>hello</h1>
+   <h2>안녕월드</h2>
+
+</body>
+</html>

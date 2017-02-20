@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>slidebanner함수연습</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style type="text/css">
+        
+        *{margin:0; padding:0;}
+        ul{list-style:none;}
+        
+        .slide{border:1px #F00 solid; width:600px; height:300px; margin:0 auto; position:relative;}
+        .slide button{position:absolute; top:50%;width:30px; height:40px;}
+        .slide button.next{right:-50px;}
+        .slide button.prev{left:-50px;}
+        .slide .view{text-align:center; position:relative; height:300px; overflow:hidden;}
+        .slide li {display:inline-block;}
+        .slide li.on a{background-color: #F00;}
+        .slide li a{position:relative; top:250px; z-index:1; display:block; width:20px; height:20px; line-height:20px; border:1px #FFF solid; color:#FFF; text-decoration:none;}
+        .slide li:first-child div{display:block; }
+        .slide li div{position:absolute; width:100%;left:0; top:0; display:none;}
+        .slide li div img{width:100%;}
+     </style>
+     
+     <script>
+         
+        $(function(){
+            
+            var idx = 0;
+            
+            function movement(start,end,i){
+                
+                $('.view li').eq(i).addClass('on').find('div').css({
+                    left:start,
+                    'display':'block'  //display:none이 다 되어있으니까 display:block으로 해서 다른이미지들도 다 보이게끔 만듦
+                }).stop().animate({
+                    left:end
+                }).parent().siblings().removeClass();
+                
+                if(idx == $('.view li').length){         
+                //만약에 idx가 view클래스안에 li들의 length만큼이 되면!(= 그니까 그 li의 갯수들,횟수들이 끝나면)
+                    idx = 0
+                    movement('100%',0,idx)
+                }else if(idx < 0){      
+                //이거는 그 좌우로 왔다갔다 한쪽으로만 넘겨지는것이 아닌 이전으로도 움직일수있고 다음으로도 움직일수있도록하기위해 하는거
+                    idx = $('.view li').length -1;
+                    movement('-100%',0,idx)
+                }
+                
+            }
+            
+            
+            
+            $('.next').click(function(){
+                movement(0,'-100%',idx);  // movement 또 다른 함수를 불러낸거 
+                idx++
+                movement('100%',0,idx);
+            })
+            
+            $('.prev').click(function(){
+                movement(0,'100%',idx);  
+                idx--
+                movement('-100%',0,idx)
+            })
+            
+            $('.view li a').click(function(){     //a링크 123 그거 기능작용하게하는function 옆으로 넘겨지는거는 이미지넘어가는거랑 똑같은거니까 쌤은 그대로 활용함
+                
+                var hisnum = $('.view li .on').index(); 
+                idx = $(this).parent().index();
+                
+                if(hisnum < idx){
+                    movement(0,'-100%',hisnum);
+                    movement('100%',0,idx);
+                }else if(hisnum > idx){
+                    // console.log('aa');
+                    movement(0,'100%',hisnum);
+                    movement('-100%',0,idx);
+                }
+                
+                return false; 
+                //a링크 실행안되게하려구 return false함 javascriptvoid:0 이랑 같은거
+            })
+            
+            
+        })
+         
+         
+     </script>
+     
+     
+     
+     
+    
+    
+</head>
+<body>
+    
+    <div class="slide">
+        <div class="btngroup">
+                <button class="next">다음</button>
+                <button class="prev">이전</button>
+        </div>
+        
+        <div class="view">
+            <ul>
+                <li class="on">
+                    <a href="">1</a>
+                    <div><img src="../../../../../img/aa.jpg"></div>
+                </li>
+                <li>
+                    <a href="">2</a>
+                    <div><img src="../../../../../img/bb.jpg"></div>
+                </li>
+                <li>
+                    <a href="">3</a>
+                    <div><img src="../../../../../img/cc.jpg"></div>
+                </li>
+                <li>
+                    <a href="">4</a>
+                    <div><img src="../../../../../img/dd.jpg"></div>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+    
+    
+</body>
+</html>

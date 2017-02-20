@@ -1,0 +1,8 @@
+*{margin:0; padding:0;}
+ul{list-style:none;}
+
+/*tab*/
+.tab{border:1px #F00 solid; height:400px; width:500px; position:relative;}
+.tab div{height:400px; width:100%;}
+.tab li {border:1px #CCC solid; border-left:0; border--bottom:0;}
+.tab li>a {height:40px; display:block; padding:0 10px;}

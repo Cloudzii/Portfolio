@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script>
+        
+        // $(document).ready(function(){
+            
+        //     $('#wrap li').each(function(i){
+        //       console.log($(this).text())
+        //     })
+            
+        // })
+
+
+
+        
+        // $('#wrap li').each(function(i){
+        //             console.log(i)
+        //         })
+        // })
+        
+        
+        
+        $(document).ready(function(){
+            
+            for(i=0; i<$('wrap li').size(); i++) {
+                
+              $('#wrap li:eq('+i+')').text()
+               
+              console.log('#wrap li:eq('+i+')'.text())
+               
+            }
+        
+        })
+        
+        
+    </script>
+</head>
+<body>
+     
+     <div id="wrap">
+         <ul>
+             <li>hi</li>
+             <li>hi</li>
+             <li>hi</li>
+             <li>hi</li>
+         </ul>
+         
+         
+     </div>
+    
+    
+</body>
+</html>

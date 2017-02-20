@@ -1,0 +1,59 @@
+<!-- width나 height에 100% 값을 주는 것은 부모가 그 값을 가지고 있기에 가능한 기능 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+.wrap{
+  width: 900px;
+  height: 540px;
+  border:1px #F00 dotted;
+}
+.left{width: 60%; height:100%; outline: 2px #00f solid;float:left}
+.right{width: 40%; height:100%; outline: 2px #F00 solid; margin-left:60%;}
+.sub-box1{ width: 50%;  height:100%; outline: 2px #F00 solid; float:left; }
+.sub-box2{width: 50%;  height:100%; outline: 2px #F00 solid; margin-left:50%;}
+[class^="top"]{border:1px #F00 solid; height:100px;}
+.top-left{width:200px; float:left;}
+.top-center{margin:0 210px}
+.top-right{width:200px; float:right;}
+  </style>
+</head>
+<body>
+<h1>3단겹침 float 레이아웃</h1>
+
+<div class="top-left">1</div>
+<div class="top-right">3</div>
+
+<div class="top-center">2</div>
+
+
+
+
+
+<hr />
+<h1>2단겹침 float 레이아웃</h1>
+
+  <div class="wrap">
+    <div class="left">
+      <div class="sub-box1">1</div>
+      <div class="sub-box2">2</div>
+
+    </div>
+    <div class="right">rigt</div>
+  </div>
+
+
+
+
+
+
+<!-- overflow:hidden이 되어서 딱 맞는 영역이 되어보여도
+실제영역은 원래있었던 그 영역만큼이다.
+따라서 overflow:hidden되어있는 영역을 그 옆 영역하고 띄어놓으려면
+그 옆영역에 margin값을 줘야함 -->
+
+
+
+</body>

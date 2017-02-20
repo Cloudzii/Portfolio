@@ -1,0 +1,55 @@
+
+*{margin:0; padding:0;}
+ul,ol{list-style: none;}
+
+ .wrap{
+	 width: 900px;
+	 height: 540px;
+	 margin:0 auto;
+	 .border();
+	 .top{
+		 height: 100px;
+		 margin:0 30px 10px;
+		 .border();
+		 .logo{
+			float:left;
+			.border();
+		 }
+		 .banner{
+			float:right;
+			
+			.border();
+		 }
+		 .btn-list{
+			clear:left;
+			.border();
+			button{
+				height:@top-btn-height;
+				background-image: url(@imgsplit-bg);
+			}
+			.btn-follow{
+				width:66px;
+				
+				.border();
+				
+			}
+			.btn-user{
+				width:106px;
+				
+				.border();
+			}
+			.btn-sns{
+				width:28px;
+				
+				.border();
+			}
+		 }
+	 }
+	 .bottom{
+		 height: 380px;
+		 margin:0 30px;
+		 .border();
+	 }
+ }
+ 
+ 

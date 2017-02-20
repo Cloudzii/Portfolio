@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>maxmin.html</title>
+</head>
+  <style>
+    #box{border:1px #F00 solid;
+      height:600px;
+    margin-left:auto;
+    margin-right:auto;
+    min-width: 400px;
+    /*부모가 크면클수록 작아지면 더 작아진다
+    최소넓이가 이하로 작아지면 박스가 끊김
+    넓이에 최소값 지정, 지정된 값 이하는 줄어들지 않는다*/
+    max-width: 800px
+    /*넓이에 최대값 지정, 지정된 값이상은 커지지 않는다*/
+    /*절대값과 상대값 auto를 잘 알고 있어야 함
+      ★절대값 : px
+       상대값 : %
+       auto 는 width 부모기준
+               height 컨텐츠 기준
+     이것과 부모자식관계를 잘 이해해야함★ */
+    ;}
+
+  #hei{
+    border:1px #F00 solid;
+    min-height:200px;
+    /*지정된값 이하로 줄어들지 말아라(컨텐츠기준)*/
+    max-height:300px;
+    /*최소 300이하로는 커지지말아라(컨텐츠기준)
+    만약 컨텐츠가 300을 오바하면 그 박스에서 벗어남*/
+    }
+ </style>
+
+
+<body>
+  <div id="box"></div>
+  <div id="hei"></div>
+    a<br />
+    a<br />
+    a<br />
+    a<br />
+    a<br />
+    a<br />
+
+</body>
+</html>

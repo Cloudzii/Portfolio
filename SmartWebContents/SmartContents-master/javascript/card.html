@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>card</title>
+    <script type="text/javascript">
+        
+        // var user = prompt('게임 참여자수를 입력하세요'); <-어차피 한번밖에 안쓸거기에 function으로 기능 실행할거임
+        var user;
+        var cardeck = [];
+        var cardModel = ['♠','♣','♥','◆'];
+        var users = [];
+        
+        
+        //카드나눠주기 function
+        function cardSelector(){
+            
+            var rcard = Math.floor(Math.random() * cardeck.length);
+            console.log(rcard);
+            users.unshift(cardeck[rcard]);
+            cardeck.splice(rcard,1);
+            //랜덤으로 뽑은 애를(rcard에서 랜덤으로뽑은거 중에 첫번째배열,그 자신임) 제거하니깐 중복되는 카드 발생X 
+            //(나눠준 카드를 삭제하는거,삭제한다음 또 랜덤으로 나눠줌)
+            
+        }
+        
+        
+        
+        function addUser(){
+            user =  prompt ('사용자수를 입력하세요')
+        }
+        
+        // 카드를 만들어내고 섞는 function
+        function cardMake(){
+            
+            cardeck=[];
+            for(i=0; i<4; i++){
+                for(j=1; j<=13; j++){
+                    
+                //총 세가지 방법 
+                
+                // switch(j){
+                //     case 1 :
+                //         cardeck.push(cardModel[i]+"A");
+                //         break;
+                //     case 11 :
+                //         cardeck.push(cardModel[i]+"J");
+                //         break;
+                //     case 12 :
+                //         cardeck.push(cardModel[i]+"Q");
+                //         break;
+                //     case 13 :
+                //         cardeck.push(cardModel[i]+"K");
+                //         break;
+                //     default : 
+                //         cardeck.push(cardModel[i]+j);
+                //         break;
+                // }        
+                       
+                 
+                if(j == 1) cardeck.push(cardModel[i]+"A");    
+                else if(j==11) cardeck.push(cardModel[i]+"J");    
+                else if(j==12) cardeck.push(cardModel[i]+"Q");    
+                else if(j==13) cardeck.push(cardModel[i]+"K");    
+                else cardeck.push(cardModel[i]+j);
+                
+   
+                /*
+                if(j == 1){
+                    cardeck.push(cardModel[i]+"A")    
+                }else if(j==11){
+                    cardeck.push(cardModel[i]+"J")    
+                }else if(j==12){
+                    cardeck.push(cardModel[i]+"Q")    
+                }else if(j==13){
+                    cardeck.push(cardModel[i]+"K")    
+                }else{
+                    cardeck.push(cardModel[i]+j)  
+                }
+                */
+                
+                
+                // cardeck.push(cardModel[i]+j)
+                }
+            }
+        }
+        
+        
+        
+        
+        // 현재있는 값들을 단지 확인하려고 만든 것 (return값 X)
+        function checkvalue(){        
+            
+           console.log("현재등록된 사용자수:"+user)
+           console.log(cardeck);
+           console.log(users);
+           
+            
+        }
+        
+        
+        
+        
+    </script>
+</head>
+<body>
+    
+    <button type="button" onclick="addUser()">시작</button>
+    <button type="button" onclick="cardMake()">카드생산</button>
+    <button type="button" onclick="checkvalue()">데이터확인</button>
+    <button type="button" onclick="cardSelector()">카드나눠주기</button>
+
+</body>
+</html>

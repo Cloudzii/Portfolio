@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>clear</title>
+<style>
+/*  신문접기중 header부분에 써먹을 수 있음  */
+/*  float를 기능을 하였을 때 float 기능을 안받앗으면 하는 아이한테
+    clear left / right 기능을 선언하면
+    float한 녀석중 height값이 가장 긴 애 밑으로 붙는다
+    clear both는 엘리먼트 중에 height값이 제일 긴 애한테간다
+    clear기능이 선언됐으면 margin값은 기능작용을 안한다  */
+   .box1{width:300px; height:100px; border:1px #F00 solid;
+   float:left;}
+   .box2{width:400px; height:200px; border:1px #F00 solid;
+   }
+   .clearbox{
+     clear:left;
+     border:1px #F00 solid;
+     width:100px; height:100px;
+   }
+  </style>
+</head>
+<body>
+  <div class="box1"></div>
+  <div class="box2"></div>
+  <div class="clearbox"></div>
+
+</body>
+</html>

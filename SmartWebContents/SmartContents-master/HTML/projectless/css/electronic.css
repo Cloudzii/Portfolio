@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.wrap {
+  width: 900px;
+  height: 540px;
+  margin: 0 auto;
+  border: 1px #F00 solid;
+}
+.wrap .top {
+  height: 100px;
+  margin: 0 30px 10px;
+  border: 1px #F00 solid;
+}
+.wrap .top .logo {
+  float: left;
+  border: 1px #F00 solid;
+}
+.wrap .top .banner {
+  float: right;
+  border: 1px #F00 solid;
+}
+.wrap .top .btn-list {
+  clear: left;
+  border: 1px #F00 solid;
+}
+.wrap .top .btn-list .btn-follow {
+  width: 66px;
+  border: 1px #F00 solid;
+}
+.wrap .top .btn-list .btn-follow button {
+  height: 22px;
+}
+.wrap .top .btn-list .btn-user {
+  width: 106px;
+  border: 1px #F00 solid;
+}
+.wrap .top .btn-list .btn-sns {
+  width: 28px;
+  border: 1px #F00 solid;
+}
+.wrap .top .bottom {
+  height: 380px;
+  margin: 0 30px;
+  border: 1px #F00 solid;
+}

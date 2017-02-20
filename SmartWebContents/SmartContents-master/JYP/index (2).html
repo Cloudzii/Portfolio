@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jyp</title>
+    <link rel="stylesheet" href="css/import.css" type="text/css" />
+    <link rel="stylesheet" href="font/flaticon.css" type="text/css" />
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+       <script>
+         $(document).ready(function(){
+           $('.menu').click(function(){
+             $(this).next('ul').slideToggle(1000);
+           })
+         })
+       </script>
+       <style>
+          .footer{
+            width:100%;
+            /*width값을 주기전에 조그맣게 옆에 나오는것은
+            content길이만큼만 나온 것 그래서 width값을 줘야 전체로 나옴*/
+            height:57px;
+            background-color: black;
+            background-color: rgba(000,000,000,0.5);
+            box-shadow: 0 2px 10px #666;
+            position:fixed;
+            bottom:0;
+          }
+          .footer>img{
+            width:115px;
+            height:45px;
+            margin-left: 80px;
+            margin-top:5px;
+            float:left;
+            margin-left: 110px;
+            margin-top: 5px;
+          }
+          .snslogo{
+            float:right;
+            margin-right: 90px;
+            margin-top: 15px;
+          }
+          .flaticon-facebook-logo:before{
+            font-size: 25px;
+            color:white;
+
+          }
+          .flaticon-twitter-logo-silhouette:before{
+            font-size: 25px;
+            color:white;
+
+
+          }
+          .flaticon-youtube-logo:before{
+            font-size: 25px;
+            color:white;
+
+
+          }
+
+       </style>
+</head>
+
+<body>
+
+    <header>
+      <h1><a href="index.html">원더걸스</a></h1>
+          <nav>
+            <a href="javascript:void(0);" class="menu">Main Menu</a>
+                  <ul>
+                      <li><a href="#">PROFILE</a></li>
+                      <li><a href="#">DISCOGRAPHY</a></li>
+                      <li><a href="#">GALLERY</a></li>
+                      <li><a href="#">VIDEO</a></li>
+                      <li><a href="#">NOTICE</a></li>
+                      <li><a href="#">SCHEDULE</a></li>
+                  </ul>
+          </nav>
+    </header>
+    
+    <section>
+      <div class="biglogo"></div>
+      <div class="smlogo"></div>
+
+
+
+      <div class="footer">
+          <img src="http://wondergirls.jype.com/images/jyplogo-b.png" alt="">
+          <div class="snslogo">
+          <i class="flaticon-facebook-logo"></i>
+          <i class="flaticon-twitter-logo-silhouette"></i>
+          <i class="flaticon-youtube-logo"></i>
+          </div>
+      </div>
+      
+    </section>
+
+
+</body>
+</html>
+

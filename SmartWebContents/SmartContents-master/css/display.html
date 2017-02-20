@@ -1,0 +1,80 @@
+<!--
+
+<display>
+
+      1.block  ex) div p h1 -> 레이아웃 잡는(꾸미는) 태그들
+
+      2.inline ex) span strong em -> 보통 글씨는 꾸미는 태그들
+      -width / height 적용안됨
+      -inline에서 margin속성의 기능은  좌우만 적용됨
+      -inline에서 padding속성의 기능은 상하좌우 다 적용됨
+       현재위치를 유지하면서 현재위치로부터 커짐
+      -inline에서 border의 기능도 다 적용됨
+
+      3.inline-block ex) button input
+      -inline-block에서 width / height / border 의 값은 적용됨
+       inline처럼 옆으로 배치되면서 기능들은 다 적용됨
+
+        ex)사진찍은거에서 보면
+          ul에서 font:0으로 하면 박스사이의 간격이 0 이 됨
+          (왜냐면? input은 줄바꿈을 하면 간격이 생겨서)
+          때문에 li에다 font-size를 다시 준거임
+         -inline-block기능을 사용할때
+           ->  display:inline-block;
+              *display:inline;
+              *zoom:1;
+              (zoom:1이면 100% 2이면 200% => 확대의 의미)
+           이거를 사용하면 좋음 (ex7에서도 인라인블록을 먹게하려고)
+         ( '*'이 괄호 밖에 있을경우 전체를 가리키는 선택자임 )
+
+      4.table ex) table
+      5.tavle-cell ex) table 안의 칸
+      6.list-item  ex) ul li ol
+                                                        -->
+<!-- !인라인요소태그와 블록요소태그 어떠한것들이 있는지 조사!-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+   ul{
+    margin:0; padding:0; list-style:0;
+    font-size:0;
+    text-align:center;}
+
+   li{
+
+    border:1px #F00 solid;
+
+  /*  dot이 다시 나오려고하면 (list-style)
+      display:list-item 으로 설정이 되어져야함
+      (보통 엄청 display속성을 잘 바꾸게됨) */
+
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+
+    width:50px;
+    font-size:12px;
+
+   }
+   span{width:500px; height:500px;
+    border:5px #F00 solid;
+    margin:30px; padding:30px;
+       }
+  </style>
+</head>
+<body>
+  <span>dsfasdf</span><span>dsfasdf</span><span>dsfasdf</span><span>dsfasdf</span><span>dsfasdf</span><span>dsfasdf</span>
+  <ul>
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+  </ul>
+
+
+</body>
+</html>

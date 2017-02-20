@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Document</title>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script>
+       
+       $(document).ready(function(){
+           
+           var $wrap = $('.wrap');
+
+           
+           $(window).resize(function(){
+               
+             $('.fly').css('left',$wrap.offset().left+$wrap.width()+10)
+              //left로 위치시킬거니까 그 위치값을 알아내기위하여 위치값을 알아내려면 
+              //position or offset으로 알아냄 
+              //그런다음 이걸 위치시킬 아이는 .fly이고 위치시키는건 css left로 해야하니까 css안에 담음 
+           });
+           
+           $(window).scroll(function(){
+               $('.fly').stop().animate({         
+                   top:$(this).scrollTop()
+               },500)
+            
+            //그냥 animate만 주었을경우엔 뻑뻑하게 느릿하게 스크롤움직이고나서 따라옴
+            //stop을 줘야 빠릿해짐
+            //밑부분에 ms로 값을줘서 조정하면 그에따라 빠르기가 달라짐
+               
+           })
+           
+          $(window).trigger('resize');
+          //trigger는 그 윈도우가 위치해 있는 바로 그걸 보여주는거니까 trigger를 표기해죠야함
+          //resize만 있으면 창을 실행해야 줄이거나 늘이거나 해야 작동을 함
+          //trigger를 안써줄거면 그 값이resize 밖에도 있어야 실행을 하지않아도 
+          //윈도우가 위치해잇는데에 뙇 표기됨
+          //그 기능이 그냥 function 안에 있지않고 밖에 위치해잇으면 그냥 trigger와같은기능
+     
+       })
+      
+      
+      
+        
+        
+        
+        
+        
+    </script>
+    <style>
+      *{margin:0; padding:0;}
+      .wrap{width:800px; height:2000px; border:1px #F00 solid; margin:0 auto;}
+      .fly{width:200px; height:800px; border:1px #F00 solid; position:absolute; left:0; top:0;}
+ 
+        
+        
+    </style>
+</head>
+<body>
+    <div class="wrap"></div>
+    <div class="fly"></div>
+</body>
+</html>

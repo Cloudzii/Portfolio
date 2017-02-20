@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cardgame</title>
+    <script type="text/javascript">
+        
+        var cardcase = [];
+        var cardModel = ['♠','♣','♥','◆'];
+        var users = []; 
+        
+        
+        function cardarrange(){
+            
+            cardcase = [];
+            for(i=0; i<4; i++){
+                for(j=1; j<13; j++){
+                    
+                    if(j == 1) cardcase.push(cardModel[i]+"A");
+                    else if(j == 11) cardcase.push(cardModel[i]+"J");
+                    else if(j == 12) cardcase.push(cardModel[i]+"Q");
+                    else if(j == 13) cardcase.push(cardModel[i]+"K");
+                    else cardcase.push(cardModel[i]+j);
+                }
+            }
+            console.log(cardcase);
+        }
+        
+
+        function GameStart(){
+             
+             
+            // users = [];
+             
+            for(i=1; i<2; i++){
+                for(j=0; j<3; j++){
+                    
+                    var rancard = Math.floor(Math.random() * cardcase.length);
+                    users.unshift(cardcase[rancard]);
+                    cardcase.splice(rancard,1);
+                    
+                }
+            }
+            //   for(k=0; k<3; k++){
+            //       users.unshift(cardcase[rancard]);
+            //       var rancard = Math.floor(Math.random() * cardcase.length);
+            //       cardcase.splice(rancard,1); 
+            //   }
+            
+           console.log(users);
+        }
+        
+        
+        function call(){
+           
+           var rancard = Math.floor(Math.random() * cardcase.length);
+           users.unshift(cardcase[rancard]);
+           
+           console.log(users);
+
+        }
+
+        function die(){
+            
+            users=[];
+            cardarrange();
+            
+            console.log(users);
+            
+        }
+        
+        
+        
+    </script>
+</head>
+<body>
+    
+    <button type="button" onclick="cardarrange()">카드정리</button>
+    <button type="button" onclick="GameStart()">게임시작</button>
+    <button type="button" onclick="call()">콜</button>
+    <button type="button" onclick="die()">다이</button>
+    
+    
+    
+</body>
+</html>

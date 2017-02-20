@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style type="text/css">
+        
+        *{margin:0; padding:0;}
+        ul{list-style:none;}
+        
+        .slide{border:1px #F00 solid; width:600px; height:300px; margin:0 auto; position:relative;}
+        .slide button{position:absolute; top:50%;width:30px; height:40px;}
+        .slide button.next{left:-50px;}
+        .slide button.prev{right:-50px;}
+        .slide .view{text-align:center; position:relative;  height:300px; overflow:hidden;}
+        .slide li {display:inline-block;}
+        .slide li.on a{background-color: #F00;}
+        .slide li a{position:relative; top:250px; z-index:1; display:block; width:20px; height:20px; line-height:20px; border:1px #FFF solid; color:#FFF; text-decoration:none;} 
+        /*//여기서 relative를 주고 top:250%를 줘서 밑으로 떨어진것은 육안상으로만 밑으로 간것으로보이는것이지, 실제로는 relative를 주기전처럼 그 위에 붙어있음*/
+        .slide li:first-child div{display:block; }
+        .slide li div{position:absolute; width:100%;left:0; top:0; display:none;}
+        .slide li div img{width:100%;}
+     </style>
+     
+     <script>
+         
+         
+         $(function(){
+             
+             var idx;
+             
+             $('.next').click(function(){
+                //다음버튼을 클릭했을 때 실행하여라
+                idx = $('.slide .view li.on').index();
+                // idx는 초기값이 0이다 그리고 엘아이의 첫번째 클레스는 on이기때문에 초기값으로 부여
+                $('.view li').eq(idx).find('div').animate({
+                    left:'-100%'
+                // 뷰클레스안에 엘아이한테 선택했을때 idx는 위에 변수 on에 해당하는 디아이브이를 찾아서 에니메이션 줘라
+                }).parent().removeClass('on').next().addClass('on').find('div') 
+                // parent전에는 디아이브이 위치였어 다시 부모한테 올라가서 li(0)에서 on을 지우고 다음 li(1)한테 on을 다시 주고 그놈의 디아이브이를 찾아서 
+                .css({'display':'block', 'left':'100%'})  //css로 보이게하고 left 100%만큼 이동
+                .stop().animate({left:0})  //도달하면 left:0만큼에 멈춰서 애니메이트해라
+                                
+                if($('.view li.on').html() == undefined){
+                    //만약 현재 내가 건드리고있는 view클래스 안에 li안에 on 클래스의 html요소들이 undefined일 경우에 
+                     $('.slide .view li:first').addClass('on')
+                     //첫번째에 해당하는 li한테 on을 다시 주고  //반복되어서 이미지를 나오게하려구
+                     idx = $('.slide .view li.on').index();
+                     // 위에 있는애한테 너 몇번째냐고 물어봄
+                     $('.view li').eq(idx).find('div').css({
+                         "left":"100%"
+                     }).stop().animate({
+                         left:0
+                     })
+                    
+                }
+                 
+                 
+                 
+                 
+             })
+             
+             
+         })
+         
+         
+     </script>
+     
+     
+     
+     
+    
+    
+</head>
+<body>
+    
+    <div class="slide">
+        <div class="btngroup">
+                <button class="next">다음</button>
+                <button class="prev">이전</button>
+        </div>
+        
+        <div class="view">
+            <ul>
+                <li class="on">
+                    <a href="">1</a>
+                    <div><img src="../../../../../img/aa.jpg"></div>
+                </li>
+                <li>
+                    <a href="">2</a>
+                    <div><img src="../../../../../img/bb.jpg"></div>
+                </li>
+                <li>
+                    <a href="">3</a>
+                    <div><img src="../../../../../img/cc.jpg"></div>
+                </li>
+                <li>
+                    <a href="">4</a>
+                    <div><img src="../../../../../img/dd.jpg"></div>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+    
+    
+</body>
+</html>

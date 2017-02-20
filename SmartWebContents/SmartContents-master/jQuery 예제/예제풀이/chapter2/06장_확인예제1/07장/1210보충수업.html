@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        li.on{background-color: #F00; color:#FFF;}
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <script>
+        
+            
+            
+        $(function(){
+         
+         $('.menu li').click(function(){
+             $('.menu li').removeClass();
+             $(this).addClass('on')
+         })
+         
+         /*
+         $('.menu li').click(function(){
+             $(this).addClass('on').siblings().removeClass()
+         })
+         */
+         
+         /* each 알때
+         $('.menu li').click(function(){
+             
+            var idx=$(this).index() 
+             
+             $('.menu li').each(function(i,e){
+                $(e).removeClass('on');
+                
+                if(idx == i){
+                    $(e).addClass('on');
+                }
+                 
+             })
+         */ 
+             
+             
+            /*
+             each   모를때  //each문법을 모를때 안쓸경우에는 요렇게 노가다로 다 쳐야함
+            var len = $('.menu li').length
+             var idx = $(this).index();
+             
+             for(i=0; i < len; i++){
+                 
+                 if(idx == i){
+                     
+                     $('.menu li').eq(i).addClass('on');
+                     
+                 }else{
+                     $('.menu li').eq(i).removeClass('on');
+                 }
+                 
+             }
+          })
+         */
+             
+            
+            
+        })
+            
+            
+        
+        
+        
+    </script>
+    
+</head>
+<body>
+    
+    <ul class="menu">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+        <li>menu5</li>
+    </ul>
+    
+    
+</body>
+</html>

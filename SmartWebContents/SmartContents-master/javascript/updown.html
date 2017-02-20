@@ -1,0 +1,28 @@
+<script>
+    
+  var randomScope = 50;
+  var randomNum = Math.random() * randomScope;
+  var ranNum = Math.floor(randomNum);
+  console.log(ranNum)
+
+  var count = prompt ('count!!!')
+ 
+  for (i=0; i<count; i++){
+      
+      var entry = prompt('input in number');
+           
+          if( ranNum > entry){
+              alert('Up!!!');
+          }else if (ranNum < entry){
+              alert('Down!!!');
+          }else if (ranNum == entry){
+              alert('oh!!!');
+              break;
+          }
+      
+
+  }
+
+
+    
+</script> 

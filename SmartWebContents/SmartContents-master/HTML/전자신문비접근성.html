@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>전자신문비접근성</title>
+  <style>
+    *{margin:0; padding:0;}
+    .guide_line{ outline:1px #F00 solid;}
+    .wrapper{
+      width:900px; height:540px;
+      margin: 0 auto;
+      }
+    .wrapper .header{
+      width:840px; height:111px;
+      margin:0 30px;
+      }
+    .contents{
+      width:840px; height:386px;
+      margin-left: 30px;
+      }
+    .contents .left{
+       width:513px; height:386px;
+       margin-bottom: 20px;
+       float: left;
+      }
+      /*?float:left로 훅 붕뜨고 contents.right에서 margin-left의 값을 줬을 때 옆으로 오는 건지?*/
+    .contents .right{
+      margin-left:530px;
+      height:100%;
+      margin-top:20px;
+      /*background: blue;*/
+      }
+    .contents .left_top{
+      width:513px; height:130px;
+
+    }
+
+    .contents .left_top>ul li span{
+      width:160px; height:94px;
+      overflow: hidden;
+      float:left;
+      margin-top: 10px;
+      margin-right:10px;
+      display:block;
+    }
+    .contents .left_top>ul li span img{width:100%}
+    .contents .left_top>ul li {font-size: 12px; margin-bottom:10px; list-style: none;}
+    .contents .left_top>ul li:first-child{margin-top: 10px;}
+    .contents .left_top>ul li li {margin-bottom:10px;}
+    .contents .left_top>ul li strong{font-size: 20px;display: block; color:#d91b5c; }
+    .contents .left_top>ul li p{
+      font-size:11px;
+      word-break: keep-all; word-spacing: 5px;}
+
+
+
+    .contents .left_bottom {
+      width:162px; height:240px;
+    }
+
+    .contents .left_bottom .left1 .left1_1 span{
+      width:126px; height:78px;
+      overflow: hidden;
+      display: block;
+      margin-left:20px;
+    }
+
+    .contents .left_bottom .left1 .left1_1 span img {width:100%}
+
+    .contents .left_bottom .left1 .left1_2 span{
+      width:126px; height:78px;
+      overflow: hidden;
+      display: block;
+      margin-left:20px;
+    }
+    .contents .left_bottom .left1 .left1_2 span img {width:100%}
+
+    .contents .left_bottom .left .left1_1 li p {margin-left: 20px; font-size: 11px;}
+    .contents .left_bottom .left .left1_2 li p {margin-left: 20px; font-size: 11px;}
+
+
+    .contents .left_bottom .left1 {float:left;}
+    /*.contents .left_bottom .left2 {margin-left: 170px; margin-bottom: 170px;}*/
+
+
+    .contents .left_bottom .left2 {width:351px; height:244px;}
+    .contents .left_bottom .left2 li {list-style: none; font-size: 15px;}
+
+
+
+
+    .contents .right{
+      width:307px; height:375px;
+    }
+
+    .contents .right .right_top>.right_top1{
+      height:30px;
+      background-color: #242625;
+      display: block;
+    }
+   .contents .right .right_top1>p {font-size: 15px; color:white; margin-left: 10px; margin-top:10px; }
+   .contents .right .right_top1> ul li {font-size:11px; margin-left: 40px;}
+   .contents .right .right_top1> ul{margin-top: 25px;}
+   .contents .right .right_bottom{
+    height:255px;
+    margin-top:80px;
+   }
+   .contents .right .right_bottom span{
+     width:146px; height:95px;
+     overflow: hidden;
+     display: block;
+     margin-left:10px;
+   }
+   .contents .right .right_bottom span img {width:100%}
+   .contents .right .right_bottom p {font-size:11px; display: block; margin-left: 10px;}
+   .contents .right .bottom_left {float:left;}
+
+
+  </style>
+</head>
+<body>
+  <div>
+    <div class="wrapper guide_line">
+      <div class="header guide_line"></div>
+    <div class="contents guide_line">
+       <div class="left guide_line">
+         <div class="left_top guide_line">
+           <ul>
+             <li>
+               <strong>SKT·BMW, 세계 최초 5G 커넥티드카 시연</strong>
+               <span><img src="http://static.naver.net/newsstand/2016/1116/etnews/111725/001.jpg" alt=""></span>
+               <p>5세대(5G) 이동통신망으로 각종 사고와 교통 정체 등 도로 상황을 0.1초 만에 인식하고 UHD급 영상으로 실시간 전송하는 커넥티드카가 세계 최초로 시동을 걸었다. SK텔레...</p>
+             </li>
+             <li>[이슈분석]커넥티드카 `가속 중`</li>
+             <li>[이슈분석]미래 자동차엔 왜 5G가 필요한가</li>
+           </ul>
+         </div>
+
+         <div class="left_bottom guide_line">
+           <div class="left1">
+              <ul>
+                <li class="left1_1">
+                 <span><img src="http://static.naver.net/newsstand/2016/1116/etnews/111725/002.jpg" alt=""></span>
+                 <p>애플, 최신 제품은25만</p><p>원짜리 포토북</p>
+               </li>
+             </ul>
+             <ul>
+               <li class="left1_2">
+                 <span><img src="http://static.naver.net/newsstand/2016/1116/etnews/111725/003.jpg" alt=""></span>
+                 <p>정부, 오늘부터 '대포폰'</p><p> 직권해지</p>
+               </li>
+             </ul>
+           <div class="left2 guide_line">
+            <ul>
+             <li>간섭 카드도 물건너가나···KT, 800㎒ 고민 깊어진다</li>
+             <li>"포켓몬고, 곧 한국 서비스 한다"</li>
+             <li>[카드뉴스]미션:아스가르디아 '우주 국가'를 세워라</li>
+             <li>11번가, '110분 이내 무료배송' 프로모션 선보여</li>
+             <li>창조경제 45조 기술금융 대출, 부실심사 의혹</li>
+             <li>전기차 최대 7대 동시 충전…'개방형 충전소' 오픈</li>
+             <li>한국형전투기에 국산 SW통합관리솔루션 첫 적용</li>
+             <li>삼성 인수한 하만 주가 25% 이상 급등</li>
+             <li>“가벼운 맥주 한잔이 뇌졸중 예방에 탁월”</li>
+           </ul>
+      </ul>
+    </div>
+
+       </div>
+
+       <div class="right ">
+         <div class="right_top ">
+           <div class="right_top1">
+               <p>이슈분석</p>
+             <ul>
+               <li>2017년 신차 경쟁...전 차급 경쟁 심화·PHEV 진격</li>
+               <li>사상 최대 실적 앞둔 정유업계, 내년 준비는?</li>
+               <li>삼성전자 미래 스마트가 주도권 잡기 나섰다</li>
+             </ul>
+          </div>
+          </div>
+         <div class="right_bottom ">
+           <div class="bottom_left">
+              <div class="bottom1">
+               <ul>
+                 <li>
+                <span><img src="http://static.naver.net/newsstand/2016/1116/etnews/111725/004.jpg" alt=""></span>
+                <p>中 "세계 최초 더블M형 스마</p><p>트 무인함정 개발"</p>
+                 </li>
+               </ul>
+              </div>
+              <div class="bottom2">
+                <span><img src="http://static.naver.net/newsstand/2016/1116/etnews/111725/005.jpg" alt=""></span>
+                <p>830만년전엔…냥이 몸무게가</p><p>404㎏</p>
+              </div>
+            </div>
+
+          <div class="bottom_right">
+            <div class="bottom3">
+              <span><img src="http://static.naver.net/newsstand/2016/1116/etnews/111725/006.jpg" alt=""></span>
+              <p>3800년 전 이집트 벽화에 숨</p><p>은 비밀</p>
+            </div>
+            <div class="bottom4">
+              <span><img src="http://static.naver.net/newsstand/2016/1116/etnews/111725/007.jpg" alt=""></span>
+              <p>탱크로봇 전쟁터로···이라크,</p><p> 모술에 배치</p>
+            </div>
+          </div>
+
+
+
+
+
+         </div>
+
+
+
+</div>
+</div>
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>mediaquery</title>
+    <style>
+            body {
+            background-color: black;
+        }
+
+        .box {
+            width: 500px;
+            height: 500px;
+            border: 2px #00F solid;
+            color: white;
+            font-size: 10vw;
+            margin: 0 auto;
+            text-align: center;
+            transition: 1s;
+        }
+
+        @media screen and (max-width:1024px) {
+            body {
+                background-color: pink;
+            }
+            .box {
+                width: 300px;
+                height: 300px;
+            }
+        }
+
+        @media screen and (max-width:480px) {
+            body {
+                background-color: yellow;
+            }
+            .box {
+                width: 200px;
+                height: 200px;
+              }
+            }
+    </style>
+</head>
+
+<body>
+    <div class="box">Hello</div>
+</body>
+
+</html>

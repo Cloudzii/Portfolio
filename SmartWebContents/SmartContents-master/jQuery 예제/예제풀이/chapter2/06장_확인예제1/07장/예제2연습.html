@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <title>Document</title>
+    <style>
+        *{margin:0 auto;}
+        .wrap div {width:800px; height:800px; border:1px #F00 solid;}
+        .menu {height:50px; background:pink; position:fixed; top:0; left:0; width:100%;}
+        .menu a {color:#FFF; font-size:20px;}
+        
+    </style>
+    
+    <script>
+        
+        $(document).ready(function(){
+           
+            //case1 
+            // $('.menu a').click(function(){
+            //     var idx = $(this).index();
+            //     var move = $('.wrap div:eq('+idx+')').offset().top;
+            //     console.log(move);
+            //     $('body,html').animate({
+            //         scrollTop:move
+            //     })
+                
+            // })
+            
+            //     var a = [];
+            //     $('.wrap div').each(function(){
+            //         a.push($(this).offset().top)
+            //     })
+                
+            //     $('.menu a').click(function(){
+            //         var idx = $(this).index();
+            //         console.log(idx);
+            //         $('body,html').animate({
+            //             scrollTop:a[idx]
+            //         })
+            //     })
+            // })
+
+        
+            // $('.menu a').click(function(){
+            //     var idx = $(this).index();
+            //     var move = $('.wrap div:eq('+idx+')').offset().top;
+            //     $('body,html').animate({
+            //         scrollTop:move
+            //     })
+            // })
+            
+        
+        var divtop = [];
+        $('.wrap div').each(function(){
+            divtop.push($(this).offset().top)
+            
+        })
+        
+        $('.menu a').click(function(){
+            var idx = $(this).index();
+            $('body,html').animate({
+                scrollTop:divtop[idx]
+            })
+        })
+    })   
+        
+        
+        
+    </script>
+     
+    
+</head>
+<body>
+    
+    <div class="menu">
+        <a href="javascript:void(0)">menu1</a>
+        <a href="javascript:void(0)">menu2</a>
+        <a href="javascript:void(0)">menu3</a>
+        <a href="javascript:void(0)">menu4</a>
+        <a href="javascript:void(0)">menu5</a>
+    </div>
+    
+    <div class="wrap">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    
+    
+</body>
+</html>

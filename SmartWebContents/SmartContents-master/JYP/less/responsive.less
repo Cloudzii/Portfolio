@@ -1,0 +1,79 @@
+/*tablet*/
+
+@media screen and (max-width:769px) {
+  body{
+    background-image: url(@mobileBg);
+    background-position: center;
+  }
+header{
+  height:55px;
+  nav{
+   .menu{
+      display:block;
+      &:hover /*+ ul*/ { // 메뉴에 마우스를 올리면 ul이 나오게하려고 +ul을 한거임
+      }
+    }
+    ul{
+      width:200px;
+      position:absolute;
+      display:none;
+    }
+    li{
+      float:none;
+      display:block;
+      height:55px;
+      line-height:55px;
+      a{
+        transition:1s;
+        border-left: 0px @base-color solid;
+        &:hover{
+          border-top:0;
+          border-left:4px @base-color solid;
+          }
+        }
+
+
+    }
+
+    }
+
+  }
+
+
+
+section{
+    .biglogo{
+      // 320의 크기를 left 50 주고 -160줘서 정가운데로 이동위치시킴
+       top:10%;
+       left:50%;
+       margin-left:-160px;
+       transform:scale(0.8);
+    }
+}
+}
+
+// mobile
+@media screen and (max-width: 479px) {
+  body{
+    background-image: url(@mobileBg);
+    background-position: center;
+  }
+
+
+  section{
+
+    .biglogo{
+      background-image: url(@biglogo);
+      border:1px #F00 solid;
+      display:block;
+      left:60%;
+      width:250px;
+      height:250px;
+      background-size: 70%;
+      background-position: center;
+      background-repeat: no-repeat;
+      transitino: 1s;
+       }
+
+    }
+  }
