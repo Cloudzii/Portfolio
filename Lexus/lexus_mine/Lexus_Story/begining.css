@@ -1,13 +1,12 @@
-*{margin:0; padding:0; list-style:none;}
-html,body{ width:100%; height:100%; }
-
 /* The Begining */
-#begining_container { margin-left:180px; position:relative; height:100%; }
-.begining { position:relative; width:100%;  }
-.begining_content { position:absolute; top:0; }
-.begining .begining_content img { position:absolute; width:1723px; background-size:cover; background-attachment:fixed; }
+.begining { position:relative; height:100%; }
+.story_begining { position:relative; background-image: url("../images/LEXUSSTORY/THEBEGINING/bg_s0.jpg"); background-size:cover; background-repeat:no-repeat;}
+.story_begining .begin_content>h2>img { position:absolute; left:50%; top:40%; margin-left:-300px;  width:720px; height:311px; }
+.story_begining .begin_content>img { text-align:right; }
 
-.begining_txt { position:absolute; left:30%; top:420px; width:720px; height:311px; }
+
+
+/*.begining_txt { position:absolute; left:30%; top:420px; width:720px; height:311px; }
 .begining_txt h2 img { vertical-align:top;}
 .begining_txt p { position: absolute; right: 21px; bottom: 0; text-align:right; }
 
@@ -27,10 +26,10 @@ html,body{ width:100%; height:100%; }
 .Birth_content_2 p { position:absolute; top:615px; }
 .Birth_content_2>img { position:absolute; top:550px; right:-20px; }
 .Birth_content_3 { height:611px; }
-/*.Birth_content_3 p img { position:absolute; right:10px;}*/
+.Birth_content_3 p img { position:absolute; right:10px;}
 
 .Launching_lexus { height:2600px; }
 .Launching_content_1 { position:absolute; top:3560px; width:1722px; height:480px; }
 .Launching_content_1 h3 { margin-left:430px; position:absolute; z-index:1; }
 .Launching_content_1 p { position: absolute; top: 120px; background-color: #000; width:100%; height:360px; }
-.Launching_content_1 p img { position: absolute; left:50%; margin-left:-580px; }
+.Launching_content_1 p img { position: absolute; left:50%; margin-left:-580px; }*/

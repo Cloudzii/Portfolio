@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NEWSSTAND_NAVER</title>
+    <link rel="stylesheet" href="NEWSSTAND.css" type="text/css" />
+</head>
+<style type="text/css">
+/*html,body{*/
+/*    height:100%;*/
+/*}*/
+/* reset */
+/*body{*/
+/*    background-image: url(http://static.naver.net/newsstand/img/20121231/bg_bd.png);*/
+/*    font-family:'돋움',dotum,Helvetica,sans-serif;*/
+/*    font-size:12px;*/
+/*    position:relative;*/
+/*}*/
+/*html, body, div, span, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, img, ins, kbd, q, s, samp, small, strong, sub, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure{margin:0; padding:0;}*/
+/*a{text-decoration:none;}*/
+
+/*a:hover,a:active,a:focus{text-decoration:underline;}*/
+
+
+
+
+/* header */
+/*#header{*/
+/*    position:absolute;*/
+/*    top:0;*/
+/*    background:url(http://static.naver.net/newsstand/img/20121231/bg_hd.png) 0 0 repeat-x;*/
+/*    width:100%;*/
+/*    height:55px;*/
+/*    padding-top:5px;*/
+/*}*/
+/*#header .h1_menu{*/
+/*    float:left;*/
+/*    display:inline-block;*/
+/*    margin: 0 0 0 14px;*/
+/*    text-decoration:none;*/
+/*}*/
+/*#header h1{*/
+/*    display:inline-block;*/
+/*    overflow:hidden;*/
+/*    width:118px;*/
+/*    height:30px;*/
+/*    background:url(http://static.naver.net/newsstand/img/20140716/sp_nwstd.png) 2px -82px no-repeat;*/
+/*    font-size:0;*/
+    /*display: inline-block;*/
+    /*overflow: hidden;*/
+    /*width: 118px;*/
+    /*height: 30px;*/
+    /*background: url(http://static.naver.net/newsstand/img/20140716/sp_nwstd.png) 2px -82px no-repeat;*/
+    /*line-height: 999px;*/
+/*}*/
+/*#header .h1_msg{*/
+/*    float:left;*/
+/*    display:inline-block;*/
+/*    background:url(http://static.naver.net/newsstand/img/20140716/sp_nwstd.png) -116px -82px no-repeat;*/
+/*    width:276px;*/
+/*    height:30px;*/
+/*    font-size:0;*/
+/*}*/
+/*#header .all_news{*/
+/*    position:absolute;*/
+/*    left:50%;*/
+/*    width:174px;*/
+/*    height:30px;*/
+/*    margin-left:-87px;*/
+/*}*/
+/*#header .mynav{*/
+/*    float:left;*/
+/*    display:inline-block;*/
+/*    background:url(http://static.naver.net/newsstand/img/20140716/sp_nwstd.png) 0 -116px no-repeat; */
+/*    width:87px;*/
+/*    height:30px;*/
+/*    font-size:0;*/
+/*}*/
+/*#header .alltab{*/
+/*    float:left;*/
+/*    display:inline-block;*/
+/*    background:url(http://static.naver.net/newsstand/img/20140716/sp_nwstd.png) -88px -150px no-repeat;*/
+/*    width:87px;*/
+/*    height:30px;*/
+/*    font-size:0;*/
+    /*position:relative;*/
+/*}*/
+/*#header .gnb_option{*/
+/*    float:right;*/
+    /*width:227px;*/
+    /*height:26px;*/
+/*    padding:5px 9px 0 0;*/
+/*}*/
+/*#header .gnb_option .bar{*/
+/*    overflow:hidden;*/
+/*    display:inline-block;*/
+/*    width:2px;*/
+/*    height:20px;*/
+/*    margin:0 6px;*/
+/*    background:url(http://static.naver.net/newsstand/img/20140716/sp_nwstd.png) -244px -150px no-repeat;*/
+    /*vertical-align:top;*/
+/*    font-size:0;*/
+/*}*/
+/*#header .gnb_option .btn_rfsh{*/
+/*    overflow:hidden;*/
+/*    display:inline-block;*/
+/*    width:66px;*/
+/*    height:21px;*/
+/*    background:url(http://static.naver.net/newsstand/img/20140716/sp_nwstd.png) -252px -150px no-repeat;*/
+/*    font-size:0;*/
+/*}*/
+/*#header .gnb_option .btn_setting{*/
+/*    display:inline-block;*/
+/*    overflow:hidden;*/
+/*    width:46px;*/
+/*    height:21px;*/
+    /*vertical-align:top;*/
+/*    background:url(http://static.naver.net/newsstand/img/20140716/sp_nwstd.png) -332px -150px no-repeat;*/
+/*    font-size:0;*/
+/*}*/
+/*#header .gnb_option .naverlogo{*/
+/*    display:inline-block;*/
+/*    overflow:hidden;*/
+/*    width:60px;*/
+/*    height:21px;*/
+    /*vertical-align:top;*/
+/*    background:url(http://static.naver.net/newsstand/img/20140716/sp_nwstd.png) -541px -272px no-repeat;*/
+/*    font-size:0;*/
+/*}*/
+/*#header .user_wrap{*/
+/*    float:right;*/
+    /*margin:1px -2px 0 0;*/
+/*    width:185px;*/
+/*    height:30px;*/
+/*}*/
+/*.gnb_icon .bar:first-child{*/
+/*    margin-right:10px;*/
+/*}*/
+/*#header .user_wrap .userlogin{*/
+/*    overflow:hidden;*/
+/*    display:inline-block;*/
+/*    background:url(http://static.naver.net/common/myarea/myInfo.gif);*/
+/*    width:26px;*/
+/*    height:26px;*/
+/*    border-radius:15px;*/
+/*    font-size:0;*/
+/*}*/
+/*#header .user_wrap .useralert{*/
+/*    display:inline-block;*/
+/*    background:url(http://static.naver.net/common/gnb/one/sp_gnb_v12.png) -3px -60px no-repeat;*/
+/*    font-size:0;*/
+/*}*/
+/* footer */
+/*#footer{*/
+/*    position:absolute;*/
+/*    bottom:0;*/
+/*    background:url(http://static.naver.net/newsstand/img/20131014/bg_ft.png) 0 0 repeat-x;*/
+/*    width:100%;*/
+/*    height:81px;*/
+/*    color:#FFF;*/
+/*    text-align:center;*/
+    /*padding:13px;*/
+/*    line-height:18px;*/
+/*    opacity:0.8;*/
+/*}*/
+/*#footer .copyright{*/
+/*    line-height:26px;*/
+/*    vertical-align:middle;*/
+/*}*/
+/*#footer .notice {margin-top:10px;}*/
+</style>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <a href="http://newsstand.naver.com" class="h1_menu">
+                <h1>newsstand</h1>
+            </a>
+            <p class="h1_msg">뉴스스탠드 기사는 각 언론사에서 직접 편집합니다.</p>
+            <div class="all_news">
+                <a href="#" class="mynav">my뉴스</a>
+                <a href="http://newsstand.naver.com" class="alltab">전체언론사</a>
+                <!--a태그에 이 페이지 초기화화면으로 돌리기-->
+            </div>
+            <!--<div class="user_wrap">-->
+            <!--    <a href="#" class="userlogin">userlogin</a>-->
+            <!--    <a href="#" class="useralert">useralert</a>-->
+            <!--    <a href="#" class="usermail">usermail</a>-->
+            <!--    <a href="#" class="gnb_icon">gnb_icon</a>-->
+            <!--</div>-->
+            <div class="gnb_option">
+                <span class="bar">|</span>
+                <a href="http://newsstand.naver.com" class="btn_rfsh">새로고침</a>
+                <!--a태그에 이 페이지 초기화화면으로 돌리기-->
+                <span class="bar">|</span>
+                <a href="#" class="btn_setting">설정</a>
+                <span class="bar">|</span>
+                <a href="http://www.naver.com" class="naverlogo">NAVER</a>
+            </div>
+        </div>
+        <div id="container">
+            <div class="content">
+                <div class="wrap_category">
+                    <h2 class="blind">주제별보기</h2>
+                    <ul class="list_category">
+                        <li class="ct1"><strong><a href="">주요언론사</a></strong></li>
+                        <li class="ct2"><a href="#">종합/경제</a></li>
+                        <li class="ct3"><a href="#">방송/통신</a></li>
+                        <li class="ct4"><a href="#">IT</a></li>
+                        <li class="ct5"><a href="#">영자지</a></li>
+                        <li class="ct6"><a href="#">스포츠/연예</a></li>
+                        <li class="ct7"><a href="#">매거진/전문지</a></li>
+                        <li class="ct8"><a href="#">지역</a></li>
+                    </ul>
+                </div>
+                <h2 class="blind">주요언론사</h2>
+                <div class="panel_wrap">
+                    <div class="panel_rolling"></div>
+                    <div class="focusnews_wrap">
+                        <div class="focusnews_inner"></div>
+                        <div class="panel_nav">
+                            <a href="#" class="nav_btn_prv_wrap"><span class="nav_btn_prv">이전</span></a>
+                            <a href="#" class="nav_btn_nxt_wrap"><span class="nav_btn_nxt">다음</span></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="list_news">
+                    <div class="wrap_rolling">
+                        <ul class="rolling_box">
+                            <li class="rolling_selected"><a href="list_news(twenty)/kbs.html"><img src="http://static.naver.net/newsstand/up/2014/0715/056.gif" alt="KBS"></a></li>
+                            <li class="rolling_selected"><a href="#"><img src="http://static.naver.net/newsstand/up/2014/0715/016.gif" alt="헤럴드경제"></a></li>
+                            <li class="rolling_selected"><a href="#"><img src="http://static.naver.net/newsstand/up/2016/0412/nsd1893370.png" alt="서울경제"></a></li>
+                            <li class="rolling_selected"><a href="#"><img src="http://static.naver.net/newsstand/up/2014/0715/055.gif" alt="SBS"></a></li>
+                            <li class="rolling_selected"><a href="#"><img src="http://static.naver.net/newsstand/up/2014/0715/117.gif" alt="마이데일리"></a></li>
+                            <li class="rolling_selected"><a href="#"><img src="http://static.naver.net/newsstand/up/2014/0715/092.gif" alt="지디넷코리아"></a></li>
+                            <li class="rolling_selected"><a href="#"><img src="http://static.naver.net/newsstand/up/2014/0715/028.gif" alt="한겨레"></a></li>
+                            <li class="rolling_selected"><a href="#"><img src="http://static.naver.net/newsstand/up/2015/0424/nsd163650137.gif" alt="MBN"></a></li>
+                            <li class="rolling_selected"><a href="#"><img src="http://static.naver.net/newsstand/up/2014/0715/241.gif" alt="일간스포츠"></a></li>
+                            <li class="rolling_selected"><a href="#"><img src="http://static.naver.net/newsstand/up/2016/0311/nsd10128574.gif" alt="전자신문"></a></li>
+                            <li class="rolling_selected"><a href="#"><img src="http://static.naver.net/newsstand/up/2014/0715/330.gif" alt="중앙데일리"></a></li>
+                            <li class="rolling_selected"><a href="#"><img src="http://static.naver.net/newsstand/up/2014/0715/040.gif" alt="코리아타임스"></a></li>
+                            <li class="rolling_selected"><a href="#"><img src="http://static.naver.net/newsstand/up/2015/1112/nsd184430988.jpg" alt="YTN"></a></li>
+                            <li class="rolling_selected"><a href="#"><img src="http://static.naver.net/newsstand/up/2014/0715/109.gif" alt="OSEN"></a></li>
+                        </ul>
+                    </div>
+                    <h3 class="blind">언론사목록</h3>
+                    <a href="#" class="btn_prv3" title="이전 언론사 목록">이전 언론사 목록</a>
+                    <a href="#" class="btn_nxt3" title="다음 언론사 목록">다음 언론사 목록</a>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <p class="notice">
+                <strong>공지사항</strong>
+                <a href="http://http://news.naver.com/main/ombudsman/readView.nhn?notiId=320&notiDel=N">언론사별 주요기사 메인노출 안내</a>
+            </p>
+            <p class="copyright">본 콘텐츠의 저작권은 제공처 또는 네이버에 있으며, 이를 무단 이용하는 경우 저작권법 등에 따라 법적책임을 질 수 있습니다.</p>
+            <address>Copyright ⓒ <strong>NAVER Corp.</strong> All Rights Reserved </address>
+        </div>
+    </div>
+</body>
+</html>

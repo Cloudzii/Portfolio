@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>뉴스데일리</title>
+<style>
+/* reset */
+html, body, h1, h2, h3, h4, h5, h6, p, a, img, ul, li { margin:0px; padding:0px; border:0px; font-size:100%; list-style:none; }
+img { vertical-align:top; }
+a { text-decoration:none; color:#000; }
+a:hover { text-decoration:underline; }
+
+/* 아이콘 */
+.icon { display:inline-block; background-image:url('http://static.naver.net/newsstand/img/20140716/sp_nwstd.png'); }
+.read { width:66px; background-position:-187px -199px; }
+.comment { width:75px; background-position:-293px -174px; /*과제 제출시*/ border-right:1px solid #bbb; border-radius:0px 3px 3px 0px; }
+.share { width:28px; background-position:-500px -270px; }
+
+/* layout */
+body { background-image:url('http://static.naver.net/newsstand/img/20121231/bg_bd.png'); font-family:Dotum,"돋움"; }
+
+#wrap { position:absolute; left:50%; top:50%; margin-left:-468px; margin-top:-280px; width:936px; height:560px; background-image:url('http://static.naver.net/newsstand/img/20121231/bg_panel.png'); }
+#header { width:840px; height:108px; margin:0px auto; border-bottom:3px solid #545454; }
+#header .head_wrap { float:left; height:78px; padding:20px 0px 10px; }
+#header .head_wrap h1 { height:55px; }
+#header .head_wrap h1 span { visibility:hidden; font-size:0px; }
+#header .head_wrap .head_icon { height:22px; margin-top:2px; }
+#header .head_wrap .head_icon a { height:22px; float:left; margin-right:4px; }
+#header .head_wrap .head_icon a span { visibility:hidden; font-size:0px; }
+#header .head_wrap .head_icon span { display:inline-block; height:22px; font-size:11px; line-height:22px; vertical-align:top; margin-left:4px; }
+#header .head_banner { float:right; height:60px; padding:38px 0px 10px; }
+#contents { width:840px; height:380px; padding:20px 0px 29px; margin:0px auto; }
+
+.thumb_img { display:block; }
+.thumb_img img { width:100%; height:100%; }
+
+.leftNews { float:left; width:480px; height:380px; overflow:hidden; }
+
+.topNews { height:130px; margin-bottom:15px; }
+.topNews h2 { height:32px; font-size:21px; margin-bottom:8px; }
+.topNews .thumb_img { float:left; width:155px; height:90px; }
+.topNews .thumb_img+span { display:block; margin-left:165px; font-size:12px; color:#555; line-height:18px; }
+.topNews ul { margin-left:165px; margin-top:6px; }
+.topNews li { width:315px; height:24px; line-height:24px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.topNews li a { font-size:13px; font-weight:bold; color:#333; }
+.topNews li a .icon_list { display:inline-block; width:10px; height:10px; font-weight:bold; }
+
+.headline { float:left; width:350px; height:60px; border-top:1px solid #ccc; }
+.headline li { height:30px; line-height:30px; font-size:14px; font-weight:bold; }
+
+.listNews { float:left; width:345px; height:173px; border-top:1px dotted #ccc; }
+.listNews li { float:left; width:345px; background-color:#EEE; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; line-height:24px; }
+.listNews li a { font-size:14px; letter-spacing:-2px; }
+.listNews li.thumbNews .thumb_img { float:left; width:66px; height:69px; margin:4px 0px;  }
+.listNews li.thumbNews > ul { margin-left:75px; margin-top:4px; height:69px; background:green; }
+.listNews li.thumbNews > ul li { width:270px; height:23px; text-overflow:ellipsis; }
+.listNews li.thumbNews > ul li .icon_list { display:inline-block; width:8px; height:23px; }
+.listNews strong { color:#1d00ce; }
+.listNews > ul > li:last-child { background-color:#FFF; }
+
+.photoNews { margin-left:350px; width:130px; height:235px; background-color:#DDD; }
+.photoNews a { display:block; height:109px; padding:4px 5px; }
+.photoNews .thumb_img { height:80px; }
+.photoNews .thumb_img+span { display:block; width:120px; height:25px; padding-top:4px; font-size:11px; }
+
+.rightNews { margin-left:492px; width:348px; height:380px; }
+
+.subNews { height:130px; }
+.subNews li { height:38px; margin-top:8px; }
+.subNews li:first-child { margin-top:0px; }
+.subNews li a { font-size:13px; }
+.subNews .thumb_img { float:left; width:55px; height:36px; border:1px solid #ccc; }
+.subNews .thumb_img+span { display:block; height:17px; line-height:17px; margin-left:65px; margin-bottom:4px; overflow:hidden; }
+.subNews h3 { height:17px; margin-left:65px; }
+
+.subList { height:92px; margin:11px 0px 12px; }
+.subList li { height:23px; line-height:23px; overflow:hidden; }
+.subList li a { font-size:13px; }
+.subList strong { color:#1d00ce; }
+
+.photo a { display:block; float:left; width:110px; height:135px; background-color:#333; margin-left:9px; }
+.photo a:first-child { margin-left:0px; }
+.photo .thumb_img { height:100px; }
+.photo .thumb_img+span { display:block; height:29px; margin:3px 4px; font-size:11px; text-align:center; color:#fff; line-height:1.4; overflow:hidden; }
+</style>
+</head>
+<body>
+
+<!-- wrap [시작] -->
+<div id="wrap">
+
+
+<!-- header -->
+<div id="header">
+    <div class="head_wrap">
+        <h1>
+            <img src="http://static.naver.net/newsstand/up/2013/0819/nsd182741916.gif" alt="신문사 로고" />
+            <span>신문사 로고</span>
+        </h1>
+        <div class="head_icon">
+            <a class="icon read" href=""><span>구독하기</span></a>
+            <a class="icon comment" href=""><span>이용자 한마디</span></a>
+            <a class="icon share" href=""><span>공유하기</span></a>
+            <span>01-09 09:40편집</span>
+        </div>
+    </div>
+    <a class="head_banner" href=""><img src="http://adcreative.naver.com/ad3/1004/1004874/468_60_11482906762798.jpg" alt="광고 배너" /></a>
+</div>
+<!-- //header -->
+
+<!-- contents -->
+<div id="contents">
+
+<div class="leftNews">
+    <div class="topNews">
+        <a href="">
+            <h2>'사대외교' 논란 자초 송영길, 제1야당 중진 자...</h2>
+            <span class="thumb_img"><img src="http://static.naver.net/newsstand/2017/0110/newdaily/130447/001.jpg" alt="" /></span>
+            <span>송영길 더불어민주당 의원(4선·인천 계양을)의 최근 행보를 보면, 그가 대한민국을 대표하는 4선 의원이...</span>
+        </a>
+        <ul>
+            <li><a href=""><span class="icon_list">·</span>검색 관심도, 문재인 48 반기문 34… 文 부정여론...</a></li>
+            <li><a href=""><span class="icon_list">·</span>"날 낙선시키겠다고?" 대선 가도에 암초(TV조선)...</a></li>
+        </ul>
+    </div>
+    <div class="headline">
+        <ul>
+            <li><a href="">돌아온 안철수, 당권주자 앞에서 '자강론' 강조...</a></li>
+            <li><a href="">돌아온 안철수, 당권주자 앞에서 '자강론' 강조...</a></li>
+        </ul>
+    </div>
+    <div class="listNews">
+        <ul>
+            <li class="thumbNews">
+                <a href="">
+                    <strong>폴리실리콘 가격 올라 좋긴 한데…'中 사드 보복'에 좌불안석</strong>
+                    <span class="thumb_img"><img src="http://static.naver.net/newsstand/2017/0110/newdaily/130447/002.jpg" alt="" /></span>
+                    <ul>
+                        <li><a href=""><span class="icon_list">·</span>정유년 닭띠 금융 CEO 주식부자 박윤식 한화손보 사장</a></li>
+                        <li><a href=""><span class="icon_list">·</span><strong>금융지주 매트릭스 경영체제 재부상…임원 겸직 확대</strong></a></li>
+                        <li><a href=""><span class="icon_list">·</span>정유년 닭띠 금융 CEO 주식부자 박윤식 한화손보 사장</a></li>
+                    </ul>
+                </a>
+            </li>
+            <li><a href=""><strong>폴리실리콘 가격 올라 좋긴 한데…'中 사드 보복'에 좌불안석</strong></a></li>
+            <li><a href="">정유년 닭띠 금융 CEO 주식부자 박윤식 한화손보 사장</a></li>
+            <li><a href="">호란·윤제문·강정호, '음주운전 삼진아웃'.."면허 박탈</a></li>
+        </ul>
+    </div>
+    <div class="photoNews">
+        <a href="">
+            <span class="thumb_img"><img src="http://static.naver.net/newsstand/2017/0110/newdaily/130447/003.jpg" alt="" /></span>
+            <span>황주홍, 부드러운 카리스마로 '새정치' 복...</span>
+        </a>
+        <a href="">
+            <span class="thumb_img"><img src="http://static.naver.net/newsstand/2017/0110/newdaily/130447/003.jpg" alt="" /></span>
+            <span>황주홍, 부드러운 카리스마로 '새정치' 복...</span>
+        </a>
+    </div>
+</div>
+
+<div class="rightNews">
+    <div class="subNews">
+        <ul>
+            <li>
+                <a href="">
+                    <span class="thumb_img"><img src="http://static.naver.net/newsstand/2017/0110/newdaily/130447/005.jpg" alt="" /></span>
+                    <span>[정도원 칼럼] 보훈영웅, 보수가 기리지 않으면 누가 기리나</span>
+                </a>
+                <a href=""><h3>이중희 씨의 사례… 바른정당, 계수할 것은...</h3></a>
+            </li>
+            <li>
+                <a href="">
+                    <span class="thumb_img"><img src="http://static.naver.net/newsstand/2017/0110/newdaily/130447/005.jpg" alt="" /></span>
+                    <span>[정도원 칼럼] 보훈영웅, 보수가 기리지 않으면 누가 기리나</span>
+                </a>
+                <a href=""><h3>이중희 씨의 사례… 바른정당, 계수할 것은...</h3></a>
+            </li>
+            <li>
+                <a href="">
+                    <span class="thumb_img"><img src="http://static.naver.net/newsstand/2017/0110/newdaily/130447/005.jpg" alt="" /></span>
+                    <span>[정도원 칼럼] 보훈영웅, 보수가 기리지 않으면 누가 기리나</span>
+                </a>
+                <a href=""><h3>이중희 씨의 사례… 바른정당, 계수할 것은...</h3></a>
+            </li>
+        </ul>
+    </div>
+    <div class="subList">
+        <ul>
+            <li><a href=""><strong>인간본능 설득하는 ‘슈퍼휴먼들’의 아름다움</strong></a></li>
+            <li><a href="">인공지능, 인간 크리에이티비티를 대체할까</a></li>
+            <li><a href=""><strong>담요 뒤집어 쓴 김민희, 눈만 '빼꼼'..옆에 선 홍상수는 '당당'</strong></a></li>
+            <li><a href="">호란·윤제문·강정호, '음주운전 삼진아웃'.."면허 박탈됐어요"</a></li>
+        </ul>
+    </div>
+    <div class="photo">
+        <a href="">
+            <span class="thumb_img"><img src="http://static.naver .net/newsstand/2017/0110/newdaily/130447/008.jpg" alt="" /></span>
+            <span>[포토] 올 설에는 실속가득한 '한돈선물세트'로 선물 하세요</span>
+        </a>
+        <a href="">
+            <span class="thumb_img"><img src="http://static.naver.net/newsstand/2017/0110/newdaily/130447/008.jpg" alt="" /></span>
+            <span>[포토] 올 설에는 실속가득한 '한돈선물세트'로 선물 하세요</span>
+        </a>
+        <a href="">
+            <span class="thumb_img"><img src="http://static.naver.net/newsstand/2017/0110/newdaily/130447/008.jpg" alt="" /></span>
+            <span>[포토] 올 설에는 실속가득한 '한돈선물세트'로 선물 하세요</span>
+        </a>
+    </div>
+</div>
+
+</div>
+<!-- //contents -->
+
+</div>
+<!-- wrap [종료] -->
+
+</body>
+</html>

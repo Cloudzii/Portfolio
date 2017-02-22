@@ -1,0 +1,61 @@
+/* reset */
+html, body, h1, h2, h3, h4, h5, h6, p, a, img, ul, li { margin:0; padding:0; border:0; font-size:100%; list-style:none; font-family: "Dotum", "돋움", "Gulim", "굴림","Helvetica","sans-serif"; line-height:16px; vertical-align:middle;}
+img { vertical-align:middle; }
+a { text-decoration:none; color:#000; }
+a:hover,a:active { text-decoration:underline; }
+
+
+
+/* layout */
+#wrap { position:absolute; left:50%; top:50%; margin-left:-468px; margin-top:-280px; width:936px; height:560px; background-image:url('http://static.naver.net/newsstand/img/20121231/bg_panel.png'); }
+
+
+/* header */
+#header .head_wrap { width:840px;  margin:0 auto; padding:15px 0 30px; border-bottom:3px solid #545454; text-align:left; }
+#header .head_wrap h3 { display:inline-block; width:260px; height:55px; padding-bottom: 10px;}
+.head_wrap .icon { display:inline-block; background-image:url('http://static.naver.net/newsstand/img/20140716/sp_nwstd.png'); }
+.subscribe { width:66px; background-position: -187px -199px; }
+.comment { width:75px; background-position:-293px -174px; border-right:1px solid #bbb; border-radius:0px 3px 3px 0px; }
+.share { width:28px; background-position:-500px -270px; }
+.head_wrap .head_icon a { height:22px; float:left; margin-left:2px; overflow:hidden; }
+.head_wrap .head_icon a:nth-child(2) { margin-right:4px; }
+.head_wrap .head_icon a span { font-size:0; }
+
+/* content */
+#content { position:relative; top:15px; width:840px; height:385px; margin:0 auto;  }
+/*.leftContent { width:390px; float:left;}*/
+.hdl_News { position:relative; float:left; width:386px; height:190px; }
+.hdl_News a { display:block; width:195px; height:195px; }
+.hdl_News li { width:190px; height:190px; float:left; }
+.hdl_News .str_mask strong { display:block; position:absolute; left:0; bottom:0; width:162px; padding:10px 12px; color:#FFF; line-height:135%; letter-spacing:-1px; font-size:14px; }
+/*.hdl_News .hdl_News_left .str_mask,.hdl_News .hdl_News_right .str_mask { width:190px; height:190px; }*/
+
+.str_mask { display: block; width:190px; height:190px; position: absolute; top: 0; background: url(http://static.naver.net/newsstand/2017/0210/KBS/144349/011.png) no-repeat; z-index: 1; }
+.hdl_News .hdl_News_left { margin-right:5px; }
+.maj_wrap { position:absolute; top:200px; left:0; width:386px;  }
+.maj_News { float:left; width:262px; }
+.maj_News li { font-size:12px; height:28px; line-height:28px; border-bottom:1px solid #e1e1e1; white-space:nowrap; letter-spacing:-0.5px; }
+.ban_News { float:right; width:115px; height:184px; }
+.ban_News .ban_txt { display:table; width:113px; height:58px; background-color:#FFF; padding-bottom:5px; border:1px solid #666; margin-bottom:5px; }
+.ban_txt a { display:table-cell; font-size:11px; font-weight:bold; text-align:center; vertical-align:middle; line-height:15px; padding:0 5px; color:#333; letter-spacing:-1px; }
+.ban_img { position:relative; width:115px; height:118px; }
+.ban_img a span { position:absolute; left:0; bottom:0; background-color: #333; width:105px; height:35px; padding:10px 5px; font-size:11px; color:#FFF; text-align:center; letter-spacing:-1px; line-height:15px; }
+/*line-height 계산법 공부하기*/
+
+
+/*.rightContent { margin-left:450px;  background-color:pink; }*/
+.con_News { float:right; width:453px; height:262px; }
+.con_News .con_Box { position:relative; float:left; width:145px; height:125px; font-size:12px; margin:0 0 6px 6px;  }
+.con_News img { display:inline-block; width:145px; height:80px; }
+.con_News .con_Box .con_txt { display:block; height:34px; padding:5px; border:1px solid #c6c6c6; border-top:none; letter-spacing:-1px;  }
+
+.rank_News { position:absolute; bottom:0; right:125px; width:320px; height:116px; border:1px solid #0b245e; }
+.rank_News .rank_title { display:inline-block; width:185px; height:20px; line-height:20px; font-weight:bold; font-size:11px; border-bottom:1px solid #ced1d6; color:#0b245e; margin-left:3px; }
+.rank_News .rank_cat { display:inline-block; position:absolute; right:0; width:195px; height:22px; font-weight:bold; font-size:12px; background: url(http://static.naver.net/newsstand/2017/0210/KBS/171049/015.png) no-repeat; text-align:right; }
+.rank_cat a { display:inline-block; padding:0 6px; color:#FFF; height:14px; line-height:14px; margin:3px 0; border-right:1px solid #FFF; }
+.rank_cat a:last-child { border-right:none; }
+.rank_News ol { background:url(http://static.naver.net/newsstand/2017/0210/KBS/171049/016.png) no-repeat; margin: 4px 0 0 7px; padding: 1px 0 0 15px; font-weight:bold; }
+.rank_News ol .red a { color:#cb2100; }
+.rank_News ol li { font-size:12px; line-height:21px; }
+.thumb_News { position:absolute; bottom:0; right:0; width:118px; height:118px;  }
+.thumb_News span { display:block; width:108px; height:35px; font-size:11px; text-align:center; line-height:15px; background-color: #333; color:#FFF; text-align:center; letter-spacing:-1px; padding: 10px 5px; }
