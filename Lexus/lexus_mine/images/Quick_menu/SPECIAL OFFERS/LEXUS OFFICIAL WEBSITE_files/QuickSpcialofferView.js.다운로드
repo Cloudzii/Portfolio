@@ -1,0 +1,191 @@
+App.Views.QuickSpecialofferView = Backbone.View.extend({
+    initialize : function(obj){
+        this.quickSpecialofferCollection = obj.quickSpecialofferCollection;
+        this.quickSpecialofferModel = obj.quickSpecialofferModel;
+        this.specialOfferLen = 0;
+        this.addCount = 0;
+        this.classNameArr = ["","col-2","col-3", "col-4"];
+        this.btnShowroom = $('.btn-servicecenter');
+        this.btnDetailViewES300h = $('.promotion .benefit-list .first').find('a');
+        this.btnDetailViewNX300h = $('.promotion .benefit-list .second').find('a');
+
+        this.getQuickSpecialofferData();
+    },
+
+    render: function (){
+        this.specialOfferLen = this.quickSpecialofferCollection.models.length;
+        if(this.specialOfferLen != 0) {
+            // 리스트 만들기
+            this.setClassName();
+            this.addAll();
+        }else{
+
+        }
+    },
+
+    setClassName : function(){
+        var i=0;
+        var count = 0;
+        var class_name = "";
+
+        for(i=0; i< this.specialOfferLen; i++){
+
+            count = i+1;
+
+            if (count % 2 == 0) {
+                class_name = this.classNameArr[1];
+            }
+
+            if (count % 3 == 0) {
+                if (class_name == "") {
+                    class_name = this.classNameArr[2];
+                } else {
+                    class_name += " " + this.classNameArr[2];
+                }
+            }
+
+            if (count % 4 == 0) {
+                if (class_name == "") {
+                    class_name = this.classNameArr[3];
+                } else {
+                    class_name += " " + this.classNameArr[3];
+                }
+            }
+
+            this.quickSpecialofferCollection.models[i].attributes.class_name = class_name;
+            // 초기화
+            class_name = ""
+
+            /*
+            this.quickSpecialofferCollection.models[i].attributes.class_name =""
+
+            if(count>this.classNameArr.length-1){
+                count=0;
+            }
+            this.quickSpecialofferCollection.models[i].attributes.class_name =this.classNameArr[count]
+
+            /*
+            if(i==this.specialOfferLen-1){
+                this.quickSpecialofferCollection.models[i].attributes.class_name = "last"
+            }
+            */
+            count++
+        }
+    },
+
+    addAll : function(){
+        this.quickSpecialofferCollection.forEach(this.addOne, this);
+    },
+
+    addOne : function($model){
+        var listview = new App.Views.QuickSpecialofferListView({model:$model});
+        this.$el.append(listview.render().el.childNodes)
+
+        this.addCount++
+        //console.log(this.quickSpecialofferCollection.models);
+
+        // 배너 리스트가 모두 ADD 되었을 때 이미지 경로 넣어주기
+        if(this.specialOfferLen == this.addCount){
+            this.addOneComplete();
+        }
+    },
+
+    addOneComplete : function(){
+        $(".btn-offer-list").on("click", this.onClick_offerList)
+        //console.log("add complete");
+        this.show();
+    },
+
+    show : function(){
+        this.addEvent();
+		this.checkSpecialofferListTextBoxHeight();
+    },
+
+    showComplete : function(){
+
+    },
+
+    hide : function(){
+
+    },
+
+    hideComplete : function(){
+
+    },
+
+    addEvent : function(){
+        this.listenTo(App, App.Events.RESIZE_BROWSER, this.onResize)
+        this.btnShowroom.on( 'click', _.bind(this.clickShowroomBtn, this) );
+        this.btnDetailViewES300h.on( 'click', _.bind(this.clickDetailViewES300h, this) );
+        this.btnDetailViewNX300h.on( 'click', _.bind(this.clickDetailViewNX300h, this) );
+
+    },
+
+	// add / 2016.12.02 / do / 텍스트가 많이 들어갈 경우 차량과 겹치는 현상 때문에 추가
+    checkSpecialofferListTextBoxHeight : function(){
+        // 3텍스트가 3줄이 넘을 경우는 가장 내용이 많은 텍스트 높이 기준으로 통일
+        var len = $(".pic-list-wrap>li").length;
+        var i = 0;
+        var bigH = 0;
+        $(".pic-list-wrap>li .pic-list-desc").css("height", "auto");
+        for(i=0; i<len; i++){
+            var h = $(".pic-list-wrap>li").eq(i).find(".pic-list-desc").height();
+            if(h>bigH){
+                bigH = h;
+            }
+        }
+        $(".pic-list-wrap>li .pic-list-desc").css("height", bigH);
+    },
+
+    clickShowroomBtn : function( $evt ){
+        var code = $($evt.currentTarget).attr('data-code');
+        App.footerView.sendEventCode( code );
+    },
+
+    clickDetailViewES300h : function( $evt ){
+        var code = $($evt.currentTarget).attr('data-code');
+        App.footerView.sendEventCode( code );
+    },
+
+    clickDetailViewNX300h : function( $evt ){
+        var code = $($evt.currentTarget).attr('data-code');
+        App.footerView.sendEventCode( code );
+    },
+
+    removeEvent : function(){
+        //$("#model-pg5 .quick-price .toggle-list li:eq(0) .content-area li").off("click");
+    },
+
+    onResize : function(){
+		this.checkSpecialofferListTextBoxHeight();
+    },
+
+    onClick_offerList : function(){
+        var code = "offer_"+$(this).attr("data-code");
+        App.footerView.sendEventCode(code);
+    },
+
+    //////////////////////////////////////////////
+    //  get data
+    //////////////////////////////////////////////
+    getQuickSpecialofferData : function(){
+        var url = App.GlobalVars.GET_QUICK_SPECIALOFFER_URL;
+        if(App.GlobalVars.isDebugMode) url = App.GlobalVars.DEBUG_GET_QUICK_SPECIALOFFER_URL;
+
+        App.getJsonData(url, {}, this.getQuickSpecialofferDataComplete);
+    },
+
+    getQuickSpecialofferDataComplete : function($json){
+        App.quickSpecialofferCollection.set($json.quick_specialoffer.list);
+        App.quickSpecialOfferView.render();
+    },
+});
+
+App.Views.QuickSpecialofferListView = Backbone.View.extend({
+    template: _.template($('#template-specialoffer-list').html()),
+
+    render : function(){
+        this.$el.html(this.template(this.model.attributes));
+        return this;
+    }
+});

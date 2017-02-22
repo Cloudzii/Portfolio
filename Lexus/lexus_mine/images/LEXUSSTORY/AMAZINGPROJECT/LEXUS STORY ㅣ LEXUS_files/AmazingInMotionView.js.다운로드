@@ -1,0 +1,861 @@
+App.Views.LexusStoryView = Backbone.View.extend({
+    initialize : function(obj){
+        this.CONTETNS_VISUAL_DEFAULT_WIDTH = 1420;
+        this.CONTENTS_VISUAL_DEFAULT_HEIGHT = [800,1140];
+        this.ALIGN_TOP_LEFT = "TL";
+        this.ALIGN_TOP_CENTER = "TC";
+        this.ALIGN_TOP_RIGHT = "TR";
+        this.ALIGN_CENTER_LEFT ="CL";
+        this.ALIGN_CENTER = "CENTER";
+        this.ALIGN_CENTER_RIGHT = "CR";
+        this.ALIGN_BOTTOM_LEFT = "BL";
+        this.ALIGN_BOTTOM_CENTER = "BC";
+        this.ALIGN_BOTTOM_RIGHT = "BR";
+        this.keyVisualCon = $(".key-visual");
+        this.keyvisualVideoCon = $(".visual-wrap .key-visual .fixed-area .fig-content");
+        this.videoPlayer = $("#sec-0 .visual-wrap .fig-content video");
+        this.btnClosePopupVideo = $("#model-popup-youtube .close-pop");
+        this.youtubePopupWrap = $(".popup-wrap.youtube-pop");
+        this.btnScrollDown = $(".btn-next-arr");
+        this.isShowPopup = false;
+        this.currentBrowserMode = "";
+        this.isShow = false;
+        this.isShowKeyvisual = false;
+        this.section0 = $(".sec-1, .sec-2, .sec-3, .sec-5, .sec-6");
+        this.contentsVisualCon = $(".visual-wrap figure");
+        this.visualLen = $(".contents-visual").length + 1;
+        this.visualHeight = 800;
+        this.containerPosiArr = [];
+        this.containerPosiTopArr = [];
+        this.animationArr = [];
+        this.isVideoVisual = true;
+        this.curIndex = 1;
+        this.firstGap = 0;
+        this.animationArr = [];
+        this.isShowPopup = false;
+        this.isCompleteVideo = false;
+        this.metadataLoadNum = 0;
+        this.isKeyvisualRemoveAttr = false;
+        this.isContentsRemoveAttr = false;
+        this.isShow = false;
+        this.isShowKeyvisual = false;
+        this.retryTime = 20
+        this.curNaviIndex = App.GlobalVars.NAVIGATION_SECOND_INDEX;
+        this.currentHash = "";
+        this.scrollTime = 1;
+        this.calculateTimer;
+        this.calculateTimerCheck = 0;
+        this.maxHeight = 0;
+        this.linupLen = 0;
+        this.addCount = 0;
+        this.classNameArr = ["","col-2","col-3","col-4"];
+
+        this.HOVER_THUMB_LENGTH = 5;
+        this.IMAGE_PATH = '/asset/images/lexus_story/amazing/';
+        this.slide = $('#sec-0');
+        this.hover = $('#sec-3');
+        this.motion = $('#sec-4');
+        this.videoID = '';
+        this.slidePopupWrap = $(".popup-wrap");
+        this.slidePopupGallery = $("#model-popup-slide .gallery-wrap");
+        this.slidePopupKvouter = $("#model-popup-slide .kv-outer-wrap");
+        this.slidePopupVisual = $('#model-popup-slide .visual-wrap');
+        this.slidePopupPrev = $("#model-popup-slide .btn-prev-next a.prev");
+        this.slidePopupNext = $("#model-popup-slide .btn-prev-next a.next");
+        this.slidePopupClose = $("#model-popup-slide .close-pop");
+        this.hoverIdx1 = 0;
+        this.hoverIdx2 = 0;
+
+        this.AMAZING_TABMENU_HEIGHT = 72;
+        this.AMAZING_IMAGE_WIDTH = 751;
+        this.AMAZING_IMAGE_HEIGHT = 828;
+		this.openFloatingMenu = false;
+		this.amazingPageIdx = 0;
+        this.amazingPageId = [ '', 'slide', 'film', 'award' ]
+		this.amazingPages = [ '.amazing-in-motion', '.slide', '.lexus-short-film-con', '.lexus-design-award' ];
+		this.globalTabMenus = $('.subfloat-menu ul li');
+		this.globalFloating = $('.subfloat-menu-tablet');
+		this.gatePageMenus = $('.amazing-in-motion ul li');
+        this.gatePageImgs = this.gatePageMenus.find('.back-img');
+		this.filmVideoThumbs = $('.lexus-short-film-con .view-film ol li ul .img-con');
+
+        // IE9 에서는 동영상 재생 되지 않도록
+        //if(App.GlobalVars.isIE9) this.isVideoVisual = false;
+        this.onResize();
+        this.addEvent();
+        this.checkParam();
+		this.changeAmazingPage();
+    },
+
+    onResize : function(){
+        if(this.isShowPopup){
+            this.resizeVideoPlayerPopup();
+            this.resizeSlidePopup();
+        }
+
+        if(this.isVideoVisual) {
+            if (App.GlobalVars.currentDevice == App.GlobalVars.DEVICE_TYPE_WEB) {
+                this.checkVideoPlayer();
+            }
+        }
+
+        var globalVars = App.GlobalVars;
+        if(globalVars.currentDevice == globalVars.DEVICE_TYPE_WEB){
+            if(globalVars.currentBrowserMode == globalVars.BROWSER_MODE_WEB){
+                var winH = $(window).height();
+                var winW = $(window).width();
+                this.section0.css("height", winH );
+                this.isRemoveAttr = false;
+
+            }else{
+                if(this.isRemoveAttr == false){
+                    this.section0.removeAttr('style');
+                    this.isRemoveAttr = true;
+                }
+            }
+        }
+
+        this.setContentsVisualImgSize();
+        this.setKeyVisualImgSize();
+        this.resizeAmazing();
+        App.imgPrefixer( this );
+    },
+
+    resizeAmazing: function(){
+        var w = this.AMAZING_IMAGE_HEIGHT * ( App.GlobalVars.windowHeight / this.AMAZING_IMAGE_HEIGHT );
+        // var ml = -( w - this.gatePageMenus.width() ) / 2;
+        var mw = ( App.GlobalVars.windowWidth - 180 ) / 3;
+        var ml = -( w - mw ) / 2;
+
+        if( App.GlobalVars.currentBrowserMode == App.GlobalVars.BROWSER_MODE_MOBILE ) {
+            this.gatePageImgs.css( {'margin':0, width:'100%', height:'auto'} );
+
+        } else {
+            this.gatePageImgs.css( {'margin-left':ml, width:'auto', height:App.GlobalVars.windowHeight-this.AMAZING_TABMENU_HEIGHT} );
+            this.gatePageMenus.eq(2).find('.back-img').css( {'margin-left':ml*0.5} );
+        }
+    },
+
+    addEvent: function(){
+        this.videoPlayer.on("ended", _.bind(this.onComplete_video, this));
+        this.btnClosePopupVideo.on("click", _.bind(this.onClick_closePopup, this));
+        this.btnScrollDown.on("click", _.bind(this.onArrowClick, this));
+
+        this.slide.find('a.has-3-rows').on("click", _.bind(this.clickSlideVideoBtn, this));
+        this.hover.find('.play-btn').on("click", _.bind(this.clickHoverVideoBtns, this));
+        this.motion.find('a').on("click", _.bind(this.clickMotionVideoBtns, this));
+        this.hover.find('.figure-thumb li').on("click", _.bind(this.clickHoverThumbs, this));
+        this.slidePopupPrev.on( 'click', _.bind(this.clickPopupSlidePrev, this) );
+        this.slidePopupNext.on( 'click', _.bind(this.clickPopupSlideNext, this) );
+        this.slidePopupClose.on("click", _.bind(this.clickPopupSlideClose, this));
+
+		this.globalTabMenus.find('a').on( 'click', _.bind(this.clickGlobalTabMenu, this) );
+		this.globalFloating.find('button').on( 'click', _.bind(this.clickGlobalFloatToggle, this) );
+		this.globalFloating.find('ul li a').on( 'click', _.bind(this.clickGlobalFloatMenu, this) );
+		this.gatePageMenus.find('a').on( 'click', _.bind(this.clickGatePageMenu, this) );
+		this.filmVideoThumbs.find('a').on( 'click', _.bind(this.clickFilmVideoThumb, this) );
+
+        this.listenTo(App, App.Events.RESIZE_BROWSER, this.onResize);
+        $('.see-more').on("click", this.onClick_moreBtn)
+        $('.go-join').on("click", this.onClick_joinBtn)
+        this.addEmptyIframe();
+    }, 
+
+	clickGlobalTabMenu: function( $evt ) {
+		$evt.preventDefault();
+
+
+		this.amazingPageIdx = $($evt.currentTarget).parent().index();
+        this.sendEventCode(this.amazingPageIdx);
+		this.changeAmazingPage();
+	},
+
+    checkParam: function(){
+        var hash = window.location.hash.split('#')[1];
+        switch( hash ) {
+            case 'slide' : this.amazingPageIdx = 1; break;
+            case 'film' : this.amazingPageIdx = 2; break;
+            case 'award' : this.amazingPageIdx = 3; break;
+        }
+    },
+
+    changeAmazingPage: function() {
+		this.changeHash();
+        this.activateGlobalTabMenu();
+
+		for(var i=0; i<this.amazingPages.length; i++) $(this.amazingPages[i]).css( {display:'none'} );
+		$(this.amazingPages[this.amazingPageIdx]).css( {display:'block'} );
+		// 2016.11.01 / do / 키비주얼 다운 화살표가 모두(모델페이지 포함) 검정색으로 적용되어 있는 현상 수정
+        if(this.amazingPageId[this.amazingPageIdx] == "award"){
+            $(".key-visual .btn-next-arr").addClass("blk")
+        }else{
+            $(".key-visual .btn-next-arr").removeClass("blk")
+        }
+        $('html, body').stop().animate( {scrollTop:0 }, 0 );
+	},
+
+    changeHash: function() {
+        if( this.amazingPageIdx == 0 ) {
+            history.pushState( '', document.title, window.location.pathname );
+
+        } else {
+            location.hash = this.amazingPageId[ this.amazingPageIdx ];
+        }
+    },
+
+	activateGlobalTabMenu: function() {
+		this.globalTabMenus.removeClass('on');
+		this.globalTabMenus.eq(this.amazingPageIdx).addClass('on');
+	}, 
+
+	clickGlobalFloatToggle: function( $evt ) {
+		this.toggleFloatingMenu();
+
+		this.openFloatingMenu = !this.openFloatingMenu;
+	}, 
+
+	toggleFloatingMenu: function() {
+		var o = this.openFloatingMenu;
+		this.globalFloating.find('ul').css( {display:o ? 'none' : 'block'} );
+		this.globalFloating.find('button').removeClass( o ? 'off' : 'on' );
+		this.globalFloating.find('button').addClass( o ? 'on' : 'off' );
+	}, 
+
+	clickGlobalFloatMenu: function( $evt ) {
+		$evt.preventDefault();
+
+		this.globalFloating.find('button').trigger( 'click' );
+		this.amazingPageIdx = $($evt.currentTarget).parent().index();
+
+		this.changeAmazingPage();
+	}, 
+
+	clickGatePageMenu: function( $evt ) {
+		$evt.preventDefault();
+
+		this.amazingPageIdx = $($evt.currentTarget).parent().index() + 1;
+        //console.log(this.amazingPageIdx);
+        this.sendEventCode(this.amazingPageIdx);
+		this.changeAmazingPage();
+	}, 
+
+    clickFilmVideoThumb: function( $evt ) {
+		$evt.preventDefault();
+
+		var filmIdx = $($evt.currentTarget).parent().parent().parent().index() + 1;
+		this.videoID = this.getVideoId( 'film', filmIdx );
+		this.showVideoPlayerPopup();
+	}, 
+
+    onArrowClick: function(){
+        $('html, body').stop().animate( {scrollTop:$(window).height() }, 1200, "easeInOutQuart");
+        return false;
+    },
+
+    clickHoverThumbs: function( $evt ) {
+        $evt.preventDefault();
+
+        var prev1 = this.hoverIdx1;
+        this.setImageIdx( $evt );
+        if( prev1 != this.hoverIdx1 ) {
+            this.loadSlidePopup( _.bind(this.showSlidePopup, this) );
+
+        } else {
+            this.showSlidePopup();
+        }
+    },
+
+    loadSlidePopup: function( $callBack ) {
+        var imgs = this.slidePopupVisual.find('img');
+        var imgPath = this.IMAGE_PATH;
+        var cnt = 0;
+        App.lexusStoryView.slidePopupVisual.css( {opacity:0} );
+        $.each( imgs, function( i, img ){
+            var src = $(img).attr('src');
+            var m = ( App.GlobalVars.currentBrowserMode == App.GlobalVars.DEVICE_TYPE_MOBILE ) ? '_m' : '';
+            var imgFile = 'hover_step'+App.lexusStoryView.hoverIdx1+'_image'+(i+1);
+            $(img).attr( {src:imgPath+imgFile+m+'.jpg', 'data-web-img-url':imgPath+imgFile+'.jpg', 'data-mobile-img-url':imgPath+imgFile+'_m.jpg'} );
+            $(img).load( function( $evt ){
+                cnt++;
+                if( cnt == App.lexusStoryView.HOVER_THUMB_LENGTH ) {
+                    App.lexusStoryView.slidePopupVisual.css( {opacity:1} );
+                    $callBack();
+                }
+            });
+        });
+    },
+
+    setImageIdx: function( $evt ) {
+        var li = $($evt.currentTarget);
+        var step = li.parent().parent().parent();
+        var idx1 = 0;
+        var idx2 = li.index() + 1;
+        var className = step.attr('class').split(' ')[0];
+        switch( className ) {
+            case 'step-2' : idx1 = 2; break;
+            case 'step-3' : idx1 = 3; break;
+            case 'step-4' : idx1 = 4; break;
+            case 'step-5' : idx1 = 5; break;
+        }
+
+        this.hoverIdx1 = idx1;
+        this.hoverIdx2 = idx2;
+    },
+
+    showSlidePopup: function() {
+        $("body").css( {overflow:'hidden'} );
+        this.showOverlay();
+        this.slidePopupWrap.removeClass('hide');
+        this.resizeSlidePopup();
+        this.isShowPopup = true;
+    },
+
+    clickPopupSlidePrev: function(){
+        this.hoverIdx2--;
+        if( this.hoverIdx2 < 1 ) this.hoverIdx2 = this.HOVER_THUMB_LENGTH;
+        this.changePopupSlide( this.hoverIdx2 );
+    },
+
+    clickPopupSlideNext: function(){
+        this.hoverIdx2++;
+        if( this.hoverIdx2 > this.HOVER_THUMB_LENGTH ) this.hoverIdx2 = 1;
+        this.changePopupSlide( this.hoverIdx2 );
+    },
+
+    resizeSlidePopup: function() {
+        var size = this.setSize( App.GlobalVars.windowWidth, App.GlobalVars.windowHeight );
+        this.slidePopupGallery.css( {width:size.w, height:size.h, 'margin-left':-size.w/2, 'margin-top':-size.h/2} );
+        this.slidePopupKvouter.css( {width:size.w, height:size.h} );
+        this.slidePopupVisual.css( {width:size.w*this.HOVER_THUMB_LENGTH} );
+        this.slidePopupVisual.find('.kv-type-image').css( {width:size.w, height:size.h} );
+        this.slidePopupVisual.find('img').css( {width:size.w, height:size.h} );
+
+        this.changePopupSlide( this.hoverIdx2, 0 );
+    },
+
+    changePopupSlide: function( $idx, $delay ) {
+        var size = this.setSize( App.GlobalVars.windowWidth, App.GlobalVars.windowHeight );
+        var delay = ( $delay == undefined ) ? 800 : $delay;
+        var tgX = -( size.w * ( $idx-1 ) );
+        this.slidePopupVisual.stop().animate( {'margin-left':tgX}, delay, 'easeInOutQuint' );
+    },
+
+    setSize: function( w, h ) {
+        var maxW = 2000;
+        var maxH = maxW * 7/11;
+        var margin = 0;
+        var imgW = ( w - margin*2 < maxW ) ? w - margin*2 : maxW;
+        var imgH = ( h - margin*2 < maxH ) ? h - margin : maxH;
+
+        if( imgW < maxW && imgH < maxH ) {
+            if( imgW > imgH*11/7 ) {
+                imgW = imgH*11/7;
+
+            } else {
+                imgH = imgW*7/11;
+            }
+
+        }else if( imgW < maxW ) {
+            imgH = imgW*7/11;
+
+        }else if( imgH < maxH ) {
+            imgW = imgH*11/7;
+        }
+
+        return { w:imgW, h:imgH }
+    },
+
+    clickPopupSlideClose : function( $evt ){
+        $evt.preventDefault();
+
+        this.hideSlidePopup();
+        this.onResize();
+        return false;
+    },
+
+    hideSlidePopup: function(){
+        this.hideOverlay();
+        this.slidePopupWrap.addClass("hide");
+        $('body').css( {overflow:'visible'} );
+        this.isShowPopup = false;
+    },
+
+    clickSlideVideoBtn: function( $evt ) {
+        $evt.preventDefault();
+
+        this.videoID = this.getVideoId( 'slide' );
+        this.showVideoPlayerPopup();
+    },
+
+    clickHoverVideoBtns: function( $evt ) {
+        $evt.preventDefault();
+
+        var videoID = '', seq = null;
+        var step = $($evt.currentTarget).parent().parent();
+        var className = step.attr('class').split(' ')[0];
+        switch( className ) {
+            case 'step-1' : videoID = this.getVideoId( 'hover', 1 ); break;
+            case 'step-2' : videoID = this.getVideoId( 'hover', 2 ); break;
+            case 'step-4' : videoID = this.getVideoId( 'hover', 4 ); break;
+            case 'step-5' : videoID = this.getVideoId( 'hover', 5 ); break;
+            default :
+                className = step.attr('class').split(' ')[0];
+                seq = ( className == 'group-1' ) ? 1 : 2;
+                videoID = this.getVideoId( 'hover', 3, seq );
+                break;
+        }
+
+        this.videoID = videoID;
+        this.showVideoPlayerPopup();
+    },
+
+    clickMotionVideoBtns: function( $evt ) {
+        $evt.preventDefault();
+
+        var idx = $($evt.currentTarget).parent().index();
+        this.videoID = this.getVideoId( 'motion', idx+1 );
+        this.showVideoPlayerPopup();
+    },
+
+    getVideoId: function( $section, $step, $seq ) {
+        var videoID = '';
+        switch( $section ) {
+            case 'slide' : videoID = 'HCyGRgKZpl8'; break;
+
+            case 'hover' :
+                if( $step == 1 ) videoID = 'q_BYvUlDviM';		// story
+                if( $step == 2 ) videoID = 'IM0sRctOxQc';		// tech
+                if( $step == 3 ) {
+
+                    if( $seq == 1 ) videoID = 'y_5NuNZPI9Y';		// board - Making the impossible
+                    if( $seq == 2 ) videoID = 'ee7HhUc3XEM';	// board - Evolution of the board
+                }
+                if( $step == 4 ) videoID = 'F-t74UHvrPs';			// ride
+                if( $step == 5 ) videoID = 'edwpKJ1W600';		// park
+                break;
+
+            case 'motion' :
+                if( $step == 1 ) videoID = 'KDOl9iEtqH4';			// steps
+                if( $step == 2 ) videoID = 'f4B56lqaNyM';			// strobe
+                if( $step == 3 ) videoID = 'LcovBLmALog';		// swarm
+                break;
+
+            case 'film' :
+                if( $step == 1 ) videoID = 'v6XgEDNKDwE';		// MARKET HOURS
+                if( $step == 2 ) videoID = 'QYDWpwD0OOo';	// OPERATION BARN OWL
+                if( $step == 3 ) videoID = 'OZuWQAJ7sA4';		// BEYOND MEMORIES
+                if( $step == 4 ) videoID = 'aQ1t5cq1PRk';		// ECHOES
+                if( $step == 5 ) videoID = 'vEnUZxVxNH8';		// PUPIL
+                break;
+        }
+        return videoID;
+    },
+
+    addEmptyIframe : function(){
+        if( App.GlobalVars.isMSIE && $(".popup-wrap.youtube-pop ").hasClass("youtube-pop") ) {
+            var selector = $(".youtube-player");
+            var template = $("#template-empty-iframe").html();
+            $(".popup.utube-pop").append( template );
+        }
+    },
+
+    show : function(){
+        this.isShow = true;
+        if (App.GlobalVars.currentDevice == App.GlobalVars.DEVICE_TYPE_WEB) {
+            //this.render();
+        }
+    },
+
+    render: function (){
+        if( this.isVideoVisual ) {
+            if( App.GlobalVars.currentDevice == App.GlobalVars.DEVICE_TYPE_WEB && App.GlobalVars.currentBrowserMode == App.GlobalVars.BROWSER_MODE_WEB ) {
+                $(".video-player").removeClass("hide");
+                this.checkVideoReady();
+            } else {
+                this.showKeyvisualImage();
+            }
+
+        }else{
+            this.showKeyvisualImage();
+        }
+    },
+
+    checkVideoReady : function(){
+        var _this = App.lexusStoryView;
+        _this.metadataLoadNum++
+        if(_this.metadataLoadNum != _this.retryTime) {
+            if (!App.GlobalVars.isIE8 && !App.GlobalVars.isIE9) {
+                if (_this.videoPlayer.get(0).readyState != 0) {
+                    _this.videoPlayer.get(0).currentTime = 0;
+                    _this.videoPlayer.get(0).muted = true;
+                    _this.videoPlayer.get(0).play();
+                } else {
+                    setTimeout(_this.checkVideoReady, 100);
+                }
+            } else {
+                _this.showKeyvisualImage();
+            }
+        }else{
+            _this.showKeyvisualImage();
+        }
+    },
+
+    hide : function(){
+
+    },
+
+    showVideoPlayerPopup: function(){
+        $("body").css( {overflow:'hidden'} );
+        this.showOverlay();
+        this.youtubePopupWrap.removeClass('hide');
+        $(".youtube-player").attr( {src:'https://www.youtube.com/embed/'+this.videoID+'?autoplay=1&rel=0'} );
+        this.resizeVideoPlayerPopup();
+        this.isShowPopup = true;
+    },
+
+    resizeVideoPlayerPopup :function(){
+        $("#main-popup-youtube").css({"width": "100%", "height": "100%"});
+        $(".youtube-player").attr({"width":"100%", "height":"99.8%"});
+    },
+
+    showOverlay : function(){
+        $(".overlay").removeClass("hide");
+    },
+
+    hideOverlay : function(){
+        $(".overlay").addClass("hide");
+    },
+
+    onClick_closePopup : function( $evt ){
+        $evt.preventDefault();
+
+        this.hideVideoPlayerPopup();
+        this.onResize();
+        return false;
+    },
+
+    hideVideoPlayerPopup : function(){
+        this.hideOverlay();
+        this.youtubePopupWrap.addClass("hide");
+        $(".youtube-player").attr("src", "");
+        $("body").css({"overflow": "visible"});
+        if(!this.isCompleteVideo) this.playVideo();
+        this.isShowPopup = false;
+    },
+
+    removeEvent : function(){
+
+    },
+
+    resetVideo : function(){
+        if(!App.GlobalVars.isIE8 && this.isVideoVisual) this.videoPlayer.get(0).currentTime = 0;
+    },
+
+    playVideo : function(){
+        if(!App.GlobalVars.isIE8 && this.isVideoVisual) this.videoPlayer.get(0).play();
+    },
+
+    pauseVideo : function(){
+        if(!App.GlobalVars.isIE8 && this.isVideoVisual) this.videoPlayer.get(0).pause();
+    },
+
+    onComplete_video : function(e){
+        this.isCompleteVideo = true;
+        this.showKeyvisualImage();
+    },
+
+    showKeyvisualImage : function(){
+        if(this.isVideoVisual) {
+            if (!this.isCompleteVideo) this.isCompleteVideo = true;
+            TweenLite.killTweensOf($("#standard"));
+            TweenLite.to($("#standard"), 1.2, {"opacity": 1, onComplete: this.onComplete_showKeyvisualImage})
+
+        }else{
+            if(!this.isShowKeyvisual) {
+                TweenLite.killTweensOf($("#standard"));
+                TweenLite.to($("#standard"), 1.2, {"opacity": 1})
+                this.isShowKeyvisual = true;
+            }else{
+                $("#standard").css("opacity", 1);
+            }
+        }
+
+        if(!this.isShow){
+            this.show();
+            this.isShow = true;
+        }
+    },
+
+    onComplete_showKeyvisualImage : function(){
+        $(".video-player").addClass("hide");
+    },
+
+    hideKeyvisualImage : function(){
+
+    },
+
+    setKeyVisualImgSize : function() {
+        var globalVars = App.GlobalVars;
+        var selectorKeyvisualImg = $(".amazing .section-0 .fig-content img, .amazing .section-5 .fig-content img, .amazing .section-6 .fig-content img");
+        var selectorKeyvisualCon = $(".amazing .section-0 figure, .amazing .section-5 figure, .amazing .section-6 figure");
+        if(globalVars.currentBrowserMode == globalVars.BROWSER_MODE_MOBILE){
+            selectorKeyvisualImg.css({"width": "100%", "height": "auto", "top": 0, "left": 0});
+            selectorKeyvisualCon.css({"width":"100%", "height":"auto"});
+            return;
+        }
+
+        var tbGap = globalVars.currentBrowserMode == globalVars.BROWSER_MODE_TABLET ? 100 : 0;
+        var per = App.resizeView.sumSizePer(App.GlobalVars.windowWidth, App.GlobalVars.windowHeight-tbGap, this.CONTETNS_VISUAL_DEFAULT_WIDTH, this.CONTENTS_VISUAL_DEFAULT_HEIGHT[0]);
+        var width = Math.floor(this.CONTETNS_VISUAL_DEFAULT_WIDTH * per);
+        var height = Math.floor(this.CONTENTS_VISUAL_DEFAULT_HEIGHT[0] * per);
+        var posX = 0;
+        var posY = 0;
+
+        if (App.GlobalVars.windowWidth < width) {
+            posX = -((width - App.GlobalVars.windowWidth) / 2)
+        }
+
+        if (App.GlobalVars.windowHeight < height) {
+            posY = -((height - App.GlobalVars.windowHeight) / 2)
+        }
+
+        posX = App.GlobalVars.currentBrowserMode == App.GlobalVars.BROWSER_MODE_WEB ? posX+App.GlobalVars.NAVIGATION_WIDTH * .5 : posX;
+
+        //창크기가 800이하일때 부모컨테이너 높이 수정//
+        if( App.GlobalVars.windowHeight < 800 && App.GlobalVars.currentBrowserMode != App.GlobalVars.BROWSER_MODE_TABLET && App.GlobalVars.currentBrowserMode != App.GlobalVars.BROWSER_MODE_MOBILE) {
+            if(App.GlobalVars.windowHeight < 706){
+                this.keyVisualCon.css("height", 706);
+            }else{
+                this.keyVisualCon.css("height", App.GlobalVars.windowHeight);
+            }
+        }else{
+            this.keyVisualCon.css("height", '');
+            this.contentsVisualCon.css("height", '');
+            this.contentsVisualCon.parent().css("height", '');
+        }
+
+        //브라우저가 타블릿일때
+        if(globalVars.currentBrowserMode == globalVars.BROWSER_MODE_TABLET && globalVars.currentBrowserMode == App.GlobalVars.BROWSER_MODE_TABLET){
+            selectorKeyvisualImg.css({"width": "", "height": "", "top": "auto", "left": "auto"});
+            selectorKeyvisualCon.css({"width": "", "height": ""});
+            $('.visual-wrap .fig-content img').css({"position":"static"})
+        }else{
+            $('.visual-wrap .fig-content img').css({"position":"absolute"})
+            selectorKeyvisualCon.css({"height": App.GlobalVars.windowHeight-tbGap});
+            // selectorKeyvisualImg.css({"width": width, "height": height, "top": posY, "left": posX});
+
+            // LEXUS SHORT FILM 키비주얼 이미지만, 상단 탭 메뉴 폭으로 고정
+            for( var prop in selectorKeyvisualImg ) {
+                posY = ( prop == '1' ) ? 60 : posY;
+                selectorKeyvisualImg.css({"width": width, "height": height, "top": posY, "left": posX});
+            }
+        }
+
+        if(globalVars.currentBrowserMode == globalVars.BROWSER_MODE_MOBILE){
+            this.keyvisualVideoCon.css({"width": (App.GlobalVars.windowWidth - App.GlobalVars.NAVIGATION_WIDTH), "height": App.GlobalVars.windowHeight});
+        }
+
+        this.isKeyvisualRemoveAttr = false
+        if(this.isVideoVisual) {
+            if (this.isCompleteVideo) $("#standard").css("opacity", 1);
+        }else{
+            if(!this.isKeyvisualRemoveAttr) {
+                this.keyVisualCon.removeAttr('style');
+                selectorKeyvisualImg.removeAttr('style');
+                this.keyvisualVideoCon.removeAttr('style');
+                this.isKeyvisualRemoveAttr = true;
+                if(this.isVideoVisual){
+                    if(!this.isCompleteVideo){
+                        this.showKeyvisualImage();
+                    }
+                }else{
+                    this.showKeyvisualImage();
+                }
+            }
+        }
+    },
+
+    checkVideoPlayer : function() {
+        if (App.GlobalVars.currentBrowserMode != App.GlobalVars.BROWSER_MODE_WEB && !this.isCompleteVideo) {
+            this.isCompleteVideo = true;
+            this.showKeyvisualImage();
+        }
+    },
+
+    setImageUrl : function(){
+        var browserMode = App.GlobalVars.currentBrowserMode;
+        var imgUrl = "";
+        var i = 0;
+        var secectorImg = "";
+        var changableLen = $(".changable").length;
+
+
+        if(this.currentBrowserMode !== browserMode) {
+            for (i = 0; i < changableLen; i++) {
+                secectorImg = $(".changable:eq(" + i + ")")
+
+                if (browserMode == App.GlobalVars.BROWSER_MODE_WEB) {
+                    // 이미지에 웹버전 경로 넣어주기
+                    imgUrl = secectorImg.attr("data-web-img-url");
+                    secectorImg.attr("src", imgUrl);
+                } else if(browserMode == App.GlobalVars.BROWSER_MODE_TABLET){
+                    // 이미지에 타블렛 경로 넣어주기
+                    imgUrl = secectorImg.attr("data-tablet-img-url");
+                    secectorImg.attr("src", imgUrl);
+                }else{
+                    // 이미지에 모바일 경로 넣어주기
+                    imgUrl = secectorImg.attr("data-mobile-img-url");
+                    secectorImg.attr("src", imgUrl);
+                }
+            }
+
+            this.currentBrowserMode = browserMode;
+        }
+    },
+
+    setContentsVisualImgSize : function(){
+        var number = '';
+        for(var i =0 ; i < 2 ; i++) {
+            number = i;
+            var stageW = App.GlobalVars.currentBrowserMode == App.GlobalVars.BROWSER_MODE_WEB ? (App.GlobalVars.windowWidth - App.GlobalVars.NAVIGATION_WIDTH) : (App.GlobalVars.windowWidth);
+            var per = stageW / App.GlobalVars.WINDOW_DEFAULT_WIDTH;
+            if (App.GlobalVars.currentBrowserMode == App.GlobalVars.BROWSER_MODE_TABLET) per = 0.9;
+            var width = Math.floor(this.CONTETNS_VISUAL_DEFAULT_WIDTH * per);
+            var height = Math.floor(this.CONTENTS_VISUAL_DEFAULT_HEIGHT[i] * per);
+            if (App.GlobalVars.currentBrowserMode == App.GlobalVars.BROWSER_MODE_MOBILE) {
+                $('.visual-wrap.banners .fig-content img').removeAttr("style");
+                this.contentsVisualCon.css({"width": "100%", "height": "auto"});
+                return;
+            }
+
+            if (App.GlobalVars.windowWidth > this.CONTETNS_VISUAL_DEFAULT_WIDTH || App.GlobalVars.currentBrowserMode == App.GlobalVars.BROWSER_MODE_TABLET) {
+                // 브라우저 크기가 max 사이즈 보다 커지면 크기와 위치값 리사이징
+                var align, content_visual_H;
+                if (App.GlobalVars.currentBrowserMode == App.GlobalVars.BROWSER_MODE_TABLET) {
+                    align = this.ALIGN_CENTER_TABLET;
+                    content_visual_H = height;
+                    $('.visual-wrap.banners .fig-content img').removeAttr("style");
+                } else {
+                    align = this.ALIGN_CENTER;
+                    content_visual_H = this.CONTENTS_VISUAL_DEFAULT_HEIGHT[i];
+                }
+                this.setContentsVisualImgPos($('.visual-wrap.banners .fig-content img'), align, width, height, number);
+
+            } else {
+                // 브라우저 크기가 max 사이즈 보다 작으면 위치 값만 리사이징
+                this.setContentsVisualImgPos($('.visual-wrap.banners .fig-content img'), this.ALIGN_CENTER, this.CONTETNS_VISUAL_DEFAULT_WIDTH, this.CONTENTS_VISUAL_DEFAULT_HEIGHT[i], number);
+                content_visual_H = this.CONTENTS_VISUAL_DEFAULT_HEIGHT[i];
+            }
+
+            this.contentsVisualCon.css({"width":App.GlobalVars.windowWidth, "height":''});
+            var marL = (stageW > 960) ? -480 : stageW * -.5 - 20;
+
+            // 가운데 정렬 텍스트
+            var naviWidth = 0;
+            var posX = 0;
+            if (App.GlobalVars.currentBrowserMode == App.GlobalVars.BROWSER_MODE_WEB) naviWidth = App.GlobalVars.NAVIGATION_WIDTH;
+        }
+    },
+
+    setContentsVisualImgPos : function(selector, align, width, height, number){
+        var posX = 0;
+        var posY = 0;
+
+        switch(align){
+            case this.ALIGN_CENTER_TABLET :
+                posX = -((width - (App.GlobalVars.windowWidth))/2);
+                posY = 0;
+                break;
+            case this.ALIGN_TOP_LEFT :
+                posX = 0;
+                posY = 0;
+                break;
+            case this.ALIGN_TOP_CENTER :
+                posX = -((width - (App.GlobalVars.windowWidth-App.GlobalVars.NAVIGATION_WIDTH))/2);
+                posY = 0;
+                break;
+            case this.ALIGN_TOP_RIGHT :
+                posX =  (App.GlobalVars.windowWidth-App.GlobalVars.NAVIGATION_WIDTH) - width;
+                posY = 0;
+                break;
+            case this.ALIGN_CENTER_LEFT :
+                posX = 0;
+                posY = -((height - this.CONTENTS_VISUAL_DEFAULT_HEIGHT[number])/2);
+                break;
+            case this.ALIGN_CENTER :
+                posX = -((width - (App.GlobalVars.windowWidth-App.GlobalVars.NAVIGATION_WIDTH))/2);
+                posY = -((height - this.CONTENTS_VISUAL_DEFAULT_HEIGHT[number])/2);
+                break;
+            case this.ALIGN_CENTER_RIGHT :
+                posX = (App.GlobalVars.windowWidth-App.GlobalVars.NAVIGATION_WIDTH) - width;
+                posY = -((height - this.CONTENTS_VISUAL_DEFAULT_HEIGHT[number])/2);
+                break;
+            case this.ALIGN_BOTTOM_LEFT :
+                posX = 0;
+                posY = this.CONTENTS_VISUAL_DEFAULT_HEIGHT[number] - height;
+                break;
+            case this.ALIGN_BOTTOM_CENTER :
+                posX = -((width - (App.GlobalVars.windowWidth-App.GlobalVars.NAVIGATION_WIDTH))/2);
+                posY = this.CONTENTS_VISUAL_DEFAULT_HEIGHT[number] - height;
+                break;
+            case this.ALIGN_BOTTOM_RIGHT :
+                posX = (App.GlobalVars.windowWidth-App.GlobalVars.NAVIGATION_WIDTH) - width;
+                posY = this.CONTENTS_VISUAL_DEFAULT_HEIGHT[number] - height;
+                break;
+            default :
+                break;
+        }
+
+        if (App.GlobalVars.currentBrowserMode != App.GlobalVars.BROWSER_MODE_TABLET) {
+            if (height > this.CONTENTS_VISUAL_DEFAULT_HEIGHT[number]) {
+                if (width > 1426) {
+                    var oriValue = 4.6;
+                    var oriValue_1180 = 4.9;
+                    var getHeight = (( width / 1572 )) * 1.5;
+                    var calHeight_1180 = (( (width - 1572) * getHeight ) / 10) / 10;
+                    var getHeight_ = ( 800 - height ) / 2;
+                    var calHeight_ = getHeight_;
+
+                    if (number == 0) {
+                        $(selector[number]).css( {"left": posX,  "top": posY + calHeight_, "width": width, "height": height} );
+                    } else if (number == 1) {
+                        $(selector[number]).css( {"left": posX, "top": posY + calHeight_1180, "width": width, "height": height} );
+                    }
+                } else {
+                    $(selector[number]).css({"left": posX, "top": posY, "width": width, "height": height});
+                }
+            } else {
+                $(selector[number]).css({"left": posX, "top": '', "width": '', "height": ''});
+            }
+        }
+    },
+
+    sendEventCode : function(index){
+        switch (index){
+            case 0 :
+                App.footerView.sendEventCode("navi_ls_amazingproject")
+                break;
+            case 1 :
+                App.footerView.sendEventCode("navi_ls_inmotion")
+                break;
+            case 2 :
+                App.footerView.sendEventCode("navi_ls_shortfilm")
+                break;
+            case 3 :
+                App.footerView.sendEventCode("navi_ls_award")
+                break;
+            default :
+                break;
+        }
+    },
+
+    onClick_moreBtn : function(){
+        //console.log('clicked more')
+        googleEventTagging('award_view_160906');
+    },
+
+    onClick_joinBtn : function(){
+        //console.log('clicked join')
+        googleEventTagging('award_parti_160906');
+    }
+});

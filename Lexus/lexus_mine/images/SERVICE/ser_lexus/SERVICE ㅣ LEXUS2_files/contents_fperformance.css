@@ -1,0 +1,110 @@
+/* common */
+.fperformance .sec-1, .fperformance .sec-2, .fperformance .sec-3, .fperformance .sec-4 { position:relative; overflow: hidden; }
+.fperformance .sec-1 .sec-1-1 {height:5000px}
+.fperformance .fig-content img { position: absolute; } /* width:100%; */
+.fperformance .contents-visual {overflow: hidden; background-color: #000000;}
+
+
+.fperformance .sec-1 .sec-1-2{ height:800px; }
+.fperformance .sec-1 .sec-1-3{ height:800px; }
+
+.fperformance .sec-2 .sec-2-1{ height:800px; }
+.fperformance .sec-2 .sec-2-2{ height:800px; }
+
+.fperformance .sec-3 .sec-3-1{ height:800px; }
+.fperformance .sec-3 .sec-3-2{ height:800px; }
+
+
+/* sec-1 */
+/*.fperformance .sec-1 .sec-1-1{ height:900px; }*/
+.fperformance .sec-1 .sec-1-1 figure { position:fixed; overflow:hidden; width: 100%; height: 100%;}
+.fperformance .sec-1 .sec-1-1 .fig-content { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #000000;}
+.fperformance .sec-1 .sec-1-1 .fig-content img { position:absolute; }
+.fperformance .sec-1 .sec-1-1 .fig-txt h3 { position:absolute; left:60px; top:100px; }
+.fperformance .sec-1 .sec-1-1 .fig-txt p { position:absolute; left:60px; top:216px; }
+.fperformance .sec-1 .sec-1-1 .fig-txt a { left:60px; top:361px; position:absolute; display:block; }
+.fperformance .sec-1-3 { overflow:hidden; }
+.fperformance .sec-1-3 .fig-map { position:absolute; right:8.75%; top:-16px; }
+.fperformance .sec-1-3 .fig-txt h3 { position:absolute; left:77px; top:119px; }
+.fperformance .sec-1-3 .fig-txt p { position:absolute; left:77px; top:186px; }
+
+/* sec-2 */
+.fperformance .sec-2 .sec-2-1 .fig-txt h3 { position:absolute; left:60px; top:119px; }
+.fperformance .sec-2 .sec-2-1 .fig-txt p { position:absolute; left:60px; top:186px; }
+.fperformance .sec-2 .sec-2-1 .contents-visual { z-index: 2 }
+.fperformance .sec-2 .sec-2-2 { position:relative; }
+.fperformance .sec-2 .sec-2-2 .copy-holder{position: absolute; top:54px; z-index: 10; text-align: right; left:50%; width:960px; margin-left:-480px; max-width: 960px}
+.fperformance .sec-2 .sec-2-2 .copy-holder h3{padding-bottom:30px;}
+.fperformance .sec-2 .sec-2-2 .gallery-wrap{position:absolute; top:155px; z-index: 3; left:50%; width:960px; margin-left:-480px;}
+.fperformance .sec-2 .sec-2-2 .kv-indi-wrap { margin-top:25px; text-align:center; z-index:10; }
+/* contents.css 의 .gallery-indicator 클래스로 공통정의 */
+.fperformance .sec-2 .sec-2-2 .kv-outer-wrap{position:relative; width:960px; height:500px; overflow: hidden}
+.fperformance .sec-2 .sec-2-2 .visual-wrap{ position:relative; width:3840px;} /* 이미지 컨테이너 가로폭 사이즈, 이미지 현재 4개, left값은 음의 값으로 */
+.fperformance .sec-2 .sec-2-2 .visual-wrap figure { float:left; overflow: hidden;  width:960px; height:500px; }
+.fperformance .sec-2 .sec-2-2 .visual-wrap .fig-content{overflow: visible;}
+.fperformance .sec-2 .sec-2-2 .visual-wrap .fig-content img{position: absolute; }
+.fperformance .sec-2 .sec-2-2 .visual-wrap .fig-txt{position:absolute; }
+/*.fperformance .sec-2 .sec-2-2 .visual-wrap .kv-type-video{display:none} *//* todo 임시 숨김 1014 jongjin */
+.fperformance .sec-2 .sec-2-2 .visual-wrap .kv-type-video video { position: absolute; right: 0; bottom: 0; min-width: 100%; min-height: 100%; width: auto; height: auto; }
+.fperformance .sec-2 .sec-2-2 .visual-wrap .video-image{position:absolute; opacity: 0;}
+.fperformance .sec-2 .sec-2-2 .visual-wrap  .fig-btn-play{position:absolute;}
+.fperformance .sec-2 .sec-2-2 .visual-wrap .kv-type-video .fig-txt.title-pos-0{top:100px; left:238px;}
+.fperformance .sec-2 .sec-2-2 .visual-wrap .kv-type-video .fig-txt.title-pos-1{top:100px; left:790px;}
+.fperformance .sec-2 .sec-2-2 .btn-prev-next{ }
+.fperformance .sec-2 .sec-2-2 .btn-prev-next a{position: absolute;top:372px; z-index: 3;}
+.fperformance .sec-2 .sec-2-2 .btn-prev-next a.prev{left:0;}
+.fperformance .sec-2 .sec-2-2 .btn-prev-next a.next{right:0}
+.fperformance .sec-2 .sec-2-2 .bg-mask { position: absolute; left:0; top:0; width:100%; height:100%; z-index: 2; background:url('/asset/images/fperformance/dimmed.png') repeat; }
+.fperformance .sec-2 .bg-holder { overflow: hidden; height:800px }
+.fperformance .sec-2 .bg-holder .inner-wrap {position: relative; width:6400px; } /* left값 양값으로 증가, width값은 동적 할당  */
+.fperformance .sec-2 .bg-holder .inner-wrap .img-case{display:block; float:right; overflow: hidden;}
+.fperformance .sec-2 .bg-holder .inner-wrap img{width:100%; min-width: 1600px; }
+
+/* sec-3 */
+.fperformance .sec-3 .sec-3-1 .fig-txt h3 { position:absolute; left:50%; margin-left:-195px; top:88px; }
+.fperformance .sec-3 .sec-3-1 .fig-txt p { position:absolute; left:50%; margin-left:-423px; top:157px; }
+.fperformance .sec-3 .sec-3-2 { position:relative; }
+.fperformance .sec-3 .sec-3-2 .fig-txt h3 { position:absolute; left:50%; margin-left:-240px; top:93px; }
+.fperformance .sec-3 .sec-3-2 .fperformance-feature { position:absolute; left:50%; top:50%; margin-left:-495px; margin-top:-245px; width:990px; height:490px; }
+.fperformance .sec-3 .sec-3-2 .fperformance-feature .tile-pics-wrap { position:relative; }
+.fperformance .sec-3 .sec-3-2 .fperformance-feature .tile-pics-wrap li { position:relative; float:left; margin-right:10px; margin-bottom:10px; width:23.9%; overflow: hidden; }
+.fperformance .sec-3 .sec-3-2 .fperformance-feature .tile-pics-wrap li.last { margin-right:0px; }
+.fperformance .sec-3 .sec-3-2 .fperformance-feature .tile-pics-wrap li .point { position:absolute; right:0; bottom:0; width:60px; height:60px; display:block; background: url('/asset/images/common/sprite_common.png') no-repeat 0 -450px; }
+
+/* sec-4  */
+.fperformance .sec-4 { background:#191919; }
+.fperformance .sec-4 h3 { padding:90px 0 107px; text-align: center }
+.fperformance .sec-4 h3 img { }
+
+/* 4컬럼 라인업으로 변경이 있을시에는 hybrid zero의 라인업을 그대로 가져다쓰기 */
+
+.fperformance .sec-4 .pic-list-wrap {margin-left:13%; width:74%;}
+.fperformance .sec-4 .pic-list-wrap li { float:left;  width:27.33%; margin-bottom:50px; margin-left:4%;}
+.fperformance .sec-4 .pic-list-wrap.only-3-col li {width:33.3333333%;  margin-left:0;}
+/* .fperformance .sec-4 .pic-list-wrap li a {display:block; width:100%; height: 100%; color:#fff;} */
+.fperformance .sec-4 .pic-list-wrap li a {display:block; position:relative; left:50%; margin-left:-120px; width:240px; height: 100%; color:#fff;}
+/* .fperformance .sec-4 .pic-list-wrap dl dt{height:110px; padding-left:12px; font-size: 26px; line-height:1;} */
+.fperformance .sec-4 .pic-list-wrap dl dt{height:110px; padding-left:0; font-size: 26px; line-height:1; margin-left:-2px;}
+
+@media only screen and (min-width:768px) and (max-width:959px){
+    .fperformance .sec-4 .pic-list-wrap {margin-left:0; width:100%;}
+    .fperformance .sec-4 .pic-list-wrap li {width:44%;}
+}
+
+@media only screen and (min-width:960px) and (max-width:1023px){
+    .fperformance .sec-4 .pic-list-wrap {margin-left:0; width:100%;}
+}
+
+@media only screen and (min-width:1024px) and (max-width:1279px){
+    .fperformance .sec-4 .pic-list-wrap {margin-left:0; width:100%;}
+}
+
+@media only screen and (min-width:1280px) and (max-width:1499px){
+
+}
+
+@media only screen and (min-width:1500px) {
+    .fperformance .sec-4 .pic-list-wrap li { width:21%;}
+}
+
+

@@ -1,0 +1,152 @@
+.promotion.certified .visual-inner .fig-txt {width:100%; height:100%; text-align: center; position:absolute; left:0; top:0;}
+.promotion.certified .visual-inner .fig-txt p{margin-top:30px}
+.promotion.certified .visual-inner .fig-txt h3, .promotion.certified .visual-inner .fig-txt p {position:static;}
+.promotion.certified .visual-inner .fig-content{background:#000}
+.promotion.certified .visual-inner .fig-content img{position: relative; left:50%; width:auto; margin-left:-610px;  }
+.promotion.certified .fig-txt h3, .promotion.certified .fig-txt p{position: absolute}
+.promotion.certified .contents-1 .visual-wrap{ height: 990px }
+.promotion.certified .contents-1 figure { position:relative; overflow:hidden; width: 100%; height: 100%}
+.promotion.certified .contents-1 figure .btn-viewdetail{ display:block; position:absolute; left:60px; top:245px }
+.promotion.certified .contents-1 .fig-content { position: fixed; top: 0; left: 180px; width: 100%; height: 100%; background-color: #000000;}
+.promotion.certified .contents-1 .fig-content img { position: absolute; _width:100%}
+.promotion.certified .contents-1 .fig-txt h3{ top:90px; left:60px }
+.promotion.certified .contents-1 .fig-txt p{ top:183px; left:60px }
+.promotion.certified .contents-2 .fig-txt h3 {margin-top:112px;}
+.promotion.certified .contents-2 .inner-cont-wrap{padding:0}
+/*구조번경*/
+.promotion.certified .contents-2 .inner-cont-wrap ol.csv{width:840px; position:relative; margin:100px auto 0 auto; padding-bottom:43px}
+.promotion.certified .contents-2 .inner-cont-wrap ol.csv > li{width:240px; float:left; margin-right:60px}
+.promotion.certified .contents-2 .inner-cont-wrap ol.csv li.last-nomar{margin-right:0}
+.promotion.certified .contents-2 .inner-cont-wrap ol.csv li.last-child{clear:both}
+/*새로생성*/
+.promotion.certified .contents-2 .inner-cont-wrap ol.csv li span.number{font-size: 16px; float: left; padding-right:20px }
+.promotion.certified .contents-2 .inner-cont-wrap ol.csv li p.contents{font-size: 14px; padding-top: 22px; padding-bottom:77px; border-top: 2px solid #000; color:#000; float: left; width:100% }
+.promotion.certified .contents-2 .inner-cont-wrap ol.csv li.last-child span.number{font-size: 16px; float: left; padding-right:20px }
+.promotion.certified .contents-2 .inner-cont-wrap ol.csv li.last-child p.contents{font-size: 14px; padding-top: 22px; padding-bottom:77px; border-top: 2px solid #000; color:#000; float: left; width:100% }
+/*새로생성 끝*/
+.promotion.certified .contents-2 .inner-cont-wrap ol.csv li.last-child p.contents span{margin-bottom:10px; display:block}
+.promotion.certified .contents-2 .inner-cont-wrap ol.csv li p.contents span{margin-bottom:10px; display:block}
+.promotion.certified .contents-2 .inner-cont-wrap ol.csv > li ol{border-top:2px solid #000; padding-top:22px; padding-bottom:77px}
+.promotion.certified .contents-2 .inner-cont-wrap ol.csv li ol{float:left; width:100%}/*margin-top:22px; margin-bottom:77px*/
+.promotion.certified .contents-2 .inner-cont-wrap ol.csv li ol li.number{font-size:16px; float:left; margin-right:20px }
+.promotion.certified .contents-2 .inner-cont-wrap ol.csv li ol li.contents{font-size:14px; float:left; color:#000; width:83%}
+.promotion.certified .contents-2 .inner-cont-wrap ol.csv li ol li.contents span{display:block; margin-bottom:10px; font-size:16px}
+.promotion.certified .contents-2 .inner-cont-wrap ol.csv li ol li.contents span.set-fontsize{font-size:14px}
+/*구조변경*/
+.promotion.certified .contents-3 .inner-cont-wrap{width:840px; padding:0; position:relative; margin:0 auto 0 auto}
+.promotion.certified .contents-3 .inner-cont-wrap .graph{padding:100px 0 110px 0}
+.promotion.certified .contents-3 .fig-txt h3, .promotion.certified .contents-5 .fig-txt h3, .promotion.certified .contents-7 .fig-txt h3{margin-top:112px}
+.promotion.certified .contents-4 .fig-txt h3, .promotion.certified .contents-6 .fig-txt h3{margin-top:110px}
+.promotion.certified .common-list .inner-cont-wrap ul.csv{ width:840px; position:relative; padding-bottom:125px; margin:100px auto 0 auto}
+.promotion.certified .common-list .inner-cont-wrap ul.csv li.set-mar{margin-right:0}
+.promotion.certified .common-list .inner-cont-wrap ul.csv li{width:240px; float:left; margin-right:60px}
+.promotion.certified .contents-6 .inner-cont-wrap ul.csv li.last-child{margin-right:0}
+.promotion.certified .contents-6 .inner-cont-wrap ul.csv li.last-child dl{border-bottom:none}
+/*.promotion .common-list .inner-cont-wrap ul.csv li.last-child{clear:both}*/
+.promotion.certified .common-list .inner-cont-wrap ul.csv li dl{float:left; padding-top:22px; margin-bottom:0; border-top:2px solid #000; width:inherit}
+.promotion.certified .common-list .inner-cont-wrap ul.csv li dl dt{ float:none; margin-right:20px; color:#000; font-size:22px; font-weight:bold; }
+.promotion.certified .common-list .inner-cont-wrap ul.csv li dl dt span{display:block; line-height: 32px; margin-bottom:10px}
+.promotion.certified .common-list .inner-cont-wrap ul.csv li dl dd{font-size:14px; float:left; color:#000; line-height:23px; margin-top:30px}
+.promotion.certified .common-list .inner-cont-wrap ul.csv li dl dd span{display:block; margin-bottom:0; font-size:13px; letter-spacing: -0.2px}
+.promotion.certified .contents-4 .inner-cont-wrap{padding:0 0 100px 0}
+.promotion.certified .contents-4 .inner-cont-wrap ul{width:774px; height:352px; position:relative; margin:80px auto 0 auto}
+.promotion.certified .contents-4 .inner-cont-wrap ul li{width:299px; height:58px; float:left; line-height:58px; font-size:16px; margin-bottom:40px; color:#000}
+.promotion.certified .contents-4 .inner-cont-wrap ul li.set-width{width:175px}
+.promotion.certified .contents-4 .inner-cont-wrap ul li:before{content:''; display:block; float:left; background-image: url("../images/promotion/certified/sprite_benefit_dis60.png"); width:58px; height:58px; background-repeat: no-repeat; margin-right:17px }
+.promotion.certified .contents-4 .inner-cont-wrap ul li.benefit-0:before{background-position: 0 0}
+.promotion.certified .contents-4 .inner-cont-wrap ul li.benefit-1:before{background-position: -60px 0}
+.promotion.certified .contents-4 .inner-cont-wrap ul li.benefit-2:before{background-position: -120px 0}
+.promotion.certified .contents-4 .inner-cont-wrap ul li.benefit-3:before{background-position: -180px 0}
+.promotion.certified .contents-4 .inner-cont-wrap ul li.benefit-4:before{background-position: -240px 0}
+.promotion.certified .contents-4 .inner-cont-wrap ul li.benefit-5:before{background-position: -300px 0}
+.promotion.certified .contents-4 .inner-cont-wrap ul li.benefit-6:before{background-position: -360px 0}
+.promotion.certified .contents-4 .inner-cont-wrap ul li.benefit-7:before{background-position: -420px 0}
+.promotion.certified .contents-4 .inner-cont-wrap ul li.benefit-8:before{background-position: -480px 0}
+.promotion.certified .contents-4 .inner-cont-wrap ul li.benefit-9:before{background-position: -540px 0}
+.promotion.certified .contents-4 .inner-cont-wrap ul li.benefit-8{ margin-bottom:0; }
+.promotion.certified .contents-4 .inner-cont-wrap ul li.benefit-9{width:336px; height:58px; float:left; line-height:58px; font-size:16px; margin-bottom:0}
+.promotion.certified .contents-5 .inner-cont-wrap, .promotion.certified .contents-6 .inner-cont-wrap{padding:0}
+.promotion.certified .contents-6.common-list .inner-cont-wrap ul.csv{border-bottom:2px solid #000; padding-bottom:100px}
+
+/*지도*/
+.promotion.certified .info {padding-top: 80px; padding-bottom: 210px; width:840px; position:relative; margin:0 auto}
+.promotion.certified .info .inner-cont-wrap{position: relative; padding:0}
+.promotion.certified .info .info-company dt { color:#000; font-size:24px; font-weight:bold; line-height:24px; }
+.promotion.certified .info .info-company dt span {display: block; margin-top:12px}
+.promotion.certified .info .info-company .addr {padding-top:35px; font-size:15px; letter-spacing: -0.2px; color:#000; }
+.promotion.certified .info .info-company .tel{padding-top:35px; font-size: 30px; color:#000000; letter-spacing: -0.4px}
+.promotion.certified .info .info-company .tel:after {content:''; display: block; background: url("../images/common/blank.png") 0 0 repeat; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1000;}
+.promotion.certified .info .info-company .tel a {cursor: default; color: #000;}
+.promotion.certified .info .info-company .info-box {padding-top: 13px;}
+.promotion.certified .info .info-box li {display: inline-block; margin-left:11px; font-size: 13px; line-height:1}
+.promotion.certified .info .info-box li:first-child{margin-left:0}
+.promotion.certified .info .info-box li span {margin-left: 5px; font-size: 13px; color: #333;}
+.promotion.certified .info .info-box li span.day{font-weight: bold; display:inline-block; margin:0; font-size: 13px; color: #888;}
+.promotion.certified .info .map-holder {position: absolute; left: auto; right:0;  top: 2px}
+.promotion.certified .info .map-holder a{display:block; margin-top:0; background-color:#383838}
+.promotion.certified .info .btn-detail-map {height:30px; font-size: 12px; line-height: 30px; padding:0 20px}
+
+/*매입프로그램*/
+.promotion.certified .program{width:840px; position:relative; margin:27px auto 0 auto}
+.promotion.certified .program h5 {font-size: 22px; color:#000}
+.promotion.certified .program ol {padding: 64px 0 122px}
+.promotion.certified .program ol li:first-child{width:17.017%}
+.promotion.certified .program ol li.step-2{width:17.017%}
+.promotion.certified .program ol li.step-3{width:15.017%}
+.promotion.certified .program ol li.step-4{width:15.017%}
+.promotion.certified .program ol li.step-5{width:20.017%}
+.promotion.certified .program ol li.last{width:15.017%}
+.promotion.certified .program ol li.last p{letter-spacing: -1px; font-size:13px}
+.promotion.certified .program ol li {position:relative; float: left; width: 17.017%; height: 104px; padding-right: 11px; box-sizing: border-box;}
+.promotion.certified .program ol li:first-child {width: 14.649122%;}
+.promotion.certified .program ol li.last {width: 17.017543%; padding-right: 0; word-spacing: 1px;}
+.promotion.certified .program ol li.last:before {background-position: -220px -100px;}
+.promotion.certified .program ol li.last:after {display: none;}
+.promotion.certified .program ol li:before {content: ''; display: block; width: 67px; height: 56px; margin: 0 auto; background: url("../images/promotion/certified/sprite_selling.png") 0 0 no-repeat;}
+.promotion.certified .program ol li:after {position:absolute; right:0; top:35px; content: ''; display: block; width: 11px; height: 20px; margin: 0 auto; background: url("../images/promotion/certified/sprite_selling.png") 0 -200px no-repeat;}
+.promotion.certified .program ol li.step-2:before {background-position: -110px 0;}
+.promotion.certified .program ol li.step-3:before {background-position: -220px 0;}
+.promotion.certified .program ol li.step-4:before {background-position: 0 -100px;}
+.promotion.certified .program ol li.step-5:before {background-position: -110px -100px;}
+.promotion.certified .program ol li p {margin-top: 30px; font-size: 13px; line-height:1; text-align: center; letter-spacing: -0.5px}
+.promotion.certified .process li p span {display: inline;}
+
+@media only screen and (max-width: 1050px) and (min-width: 960px){
+    .promotion.certified .contents-2 .inner-cont-wrap{padding:0 20px 0 20px}
+    /*구조변경*/
+    .promotion.certified .contents-2 .inner-cont-wrap ol.csv{width:auto}
+    .promotion.certified .contents-2 .inner-cont-wrap ol.csv li p.contents{width:240px}
+    .promotion.certified .contents-2 .inner-cont-wrap ol.csv li.last-child p.contents{width:240px}
+    .promotion.certified .contents-2 .inner-cont-wrap ol.csv > li{width: 33.333%; box-sizing: border-box; margin-left: 0; padding-bottom: 30px; float: left;  margin-right:0}
+    /*구조변경*/
+    .promotion.certified .common-list .inner-cont-wrap{padding:0 20px 0 20px}
+    .promotion.certified .common-list .inner-cont-wrap ul.csv > li{width: 33.333%; box-sizing: border-box; margin-left: 0; padding-bottom: 30px; float: left;  margin-right:0}
+    .promotion.certified .common-list .inner-cont-wrap ul.csv > li dl{width:240px;}
+    .promotion.certified .common-list .inner-cont-wrap ul.csv{width:auto}
+    .promotion.certified .program{width:auto; padding:0 20px}
+    .promotion.certified .contents-3 .inner-cont-wrap{width:auto; padding:0 20px; margin:0}
+    .promotion.certified .contents-3 .inner-cont-wrap img{width:100%}
+    .promotion.certified .contents-4 .inner-cont-wrap ul{padding:0 20px; width:774px}
+    .promotion.certified .contents-4 .inner-cont-wrap ul li{width:279px}
+}
+
+@media only screen and (min-width:960px) and (max-width:1023px){
+
+}
+
+@media only screen and (min-width:960px) and (max-width:1279px){
+
+}
+
+@media only screen and (min-width:1280px) and (max-width:1499px){
+
+}
+
+@media only screen and (min-width:1500px){
+	
+}
+
+
+@media only screen and (max-width:767px){
+
+}

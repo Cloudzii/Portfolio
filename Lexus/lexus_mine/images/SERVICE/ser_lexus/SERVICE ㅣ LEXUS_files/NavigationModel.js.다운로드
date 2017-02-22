@@ -1,0 +1,11 @@
+App.Models.NavigationModel = Backbone.Model.extend({
+    'default':{
+        "models":[],
+        "lexus_story":[]
+    },
+
+    initialize : function() {
+
+    }
+});
+
