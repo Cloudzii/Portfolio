@@ -1,0 +1,113 @@
+
+<section class="philosophy">
+
+<!-- <img src="../images\LEXUSSTORY\BRANDPHILOSOPHY\bg_s0.jpg" alt="BRAND PHILOSOPHY 배경화면">
+        배경화면 CSS로 넣기  -->
+
+    <div class="story_philosophy">
+          <div class="philosophy_content">
+            <!-- <img src="../images\LEXUSSTORY\BRANDPHILOSOPHY\bg_s0.jpg" alt="BRAND PHILOSOPHY 배경화면">
+                    배경화면 CSS로 넣기  -->
+            <h2><img src="../../lib/images/LEXUSSTORY/BRANDPHILOSOPHY/head_s0.png" alt="BRAND PHILOSOPHY 로고"></h2>
+          </div>
+    </div>
+
+    <div class="video_philosophy">
+      <span>
+        <img src="/BRANDPHILOSOPHY/img_s1.jpg" alt="YouTube Video">
+        <a href="#">
+          <img src="/BRANDPHILOSOPHY/btn_model_play.png" alt="play button">
+        </a>
+      </span>
+      <p>
+        <img src="/BRANDPHILOSOPHY/txt_s1.png" alt="디자인, 기술, 장인정신과 고객 케어에 있어 끊임없이 노력하고자 하는 렉서스의 기본 브랜드 철학입니다.차 자체의 놀라움 뿐만 아니라 렉서스 만의 놀라운 경험을 제공하고자 합니다">
+      </p>
+    </div>
+
+    <div class="product_philosophy">
+      <ul>
+        <li>
+          <div>
+            <h3><img src="/BRANDPHILOSOPHY/head_s2.png" alt="PRODUCT PHILOSOPHY"></h3>
+            <h4><img src="/BRANDPHILOSOPHY/logo_s2.png" alt="PRODUCT PHILOSOPHY logo"></h4>
+            <p><img src="/BRANDPHILOSOPHY/txt_s2.png" alt="LEXUS ENGINEERING"></p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="design_philosophy">
+      <ul>
+        <li>
+          <div>
+            <h3><img src="/BRANDPHILOSOPHY/head_s3.png" alt="DESIGN PHILOSOPHY"></h3>
+            <img src="" alt="">
+          </div>
+        </li>
+      </ul>
+    </div>
+
+
+
+
+
+
+
+    <div class="video_begining">
+      <ul>
+        <li>
+          <img src="../../lib/images/LEXUSSTORY/THEBEGINING/txt_s1.png" alt="lexus the finest luxury car ever built on the planet">
+          <img src="../../lib/images/LEXUSSTORY/THEBEGINING/img_s1.jpg" alt="car image">
+        </li>
+        <li>
+          <div>
+            <h3 class="Birth_logo"><img src="../../lib/images/LEXUSSTORY/THEBEGINING/head_s2.png" alt="The Birth Of LEXUS"></h3>
+            <p><img src="../../lib/images/LEXUSSTORY/THEBEGINING/txt_s2_1.png" alt="Decision has been made"></p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p><img src="../../lib/images/LEXUSSTORY/THEBEGINING/txt_s2_2.png" alt=""></p>
+            <img src="../../lib/images/LEXUSSTORY/THEBEGINING/img_s2_2.jpg" alt="도요타회장">
+          </div>
+        </li>
+        <li>
+            <p><img src="../../lib/images/LEXUSSTORY/THEBEGINING/txt_s2_3.png" alt="LS 400의 시작"></p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="launching_begining">
+      <ul>
+        <li>
+          <div>
+            <h3><img src="../../lib/images/LEXUSSTORY/THEBEGINING/head_s3.png" alt="Launching The Brand"></h3>
+            <p><img src="../../lib/images/LEXUSSTORY/THEBEGINING/bg_s3.jpg" alt="Launching's car image"></p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p><img src="../../lib/images/LEXUSSTORY/THEBEGINING/txt_s3_2.png" alt="Fist launching in USA"></p>
+            <img src="../../lib/images/LEXUSSTORY/THEBEGINING/img_s3_2.jpg" alt="first Lexus In US image">
+          </div>
+        </li>
+        <li>
+            <p><img src="../../lib/images/LEXUSSTORY/THEBEGINING/txt_s3_3.png" alt="LS 400 Story"></p>
+            <div>
+              <img src="../../lib/images/LEXUSSTORY/THEBEGINING/img_s3_3.jpg" alt="LS 400 video'image">
+              <span><img src="../../lib/images/LEXUSSTORY/THEBEGINING/btn_model_play.png" alt="play button"></span>
+            </div>
+            <div class="play_video">
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/yUeAT3mY9fk"  ></iframe>
+            </div>
+        </li>
+        <li>
+          <div>
+            <p><img src="../lib/images/LEXUSSTORY/THEBEGINING/txt_s3_4.png" alt="Best quality ever"></p>
+            <img src="../lib/images/LEXUSSTORY/THEBEGINING/img_s3_4.png" alt="lexus JD POWER">
+          </div>
+        </li>
+      </ul>
+    </div>
+
+</section>
