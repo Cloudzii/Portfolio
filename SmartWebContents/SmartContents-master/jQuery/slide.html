@@ -7,21 +7,21 @@
     <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <style type="text/css">
-        
+
         body{
-            font-family: 'Noto Sans KR', 
-            sans-serif; 
+            font-family: 'Noto Sans KR',
+            sans-serif;
             margin: 0;
-            padding: 0; 
-            background-image: url(../img/aa.jpg); 
+            padding: 0;
+            background-image: url(../img/aa.jpg);
             -webkit-background-size: cover;
             background-size: cover;
-            background-attachment: fixed;   
+            background-attachment: fixed;
             /*background-attachment:fixed;
               fixed를 해놓으면 아무리 길어져도 고정되어있음*/
         }
         .gnb{
-            height:100px; 
+            height:100px;
             width:100%;
             left:0;
             top:0;
@@ -29,23 +29,23 @@
             position:fixed;
         }
         .contents{width:1000px; height:2000px; background-color:rgba(255,255,255,.8); margin:120px auto 0;}
-        
+
     </style>
     <script type="text/javascript">
-        
+
         $(function(){
-            
+
             $(window).scroll(function(){
-                
+
                 var sct = $(this).scrollTop()
-                
+
                 if(sct > $('.gnb').height() && !$('.gnb').is('.mini')){        //아니라면!그니까 class gnb가 class mini가 아니라면!
                                                                               ////mini라는게 최초에 없으니까 작동이안될거임
                     $('.gnb').animate({
                         top:-100
                     },1000,function(){
                     // 애니메이션 종료후
-                        $(this).css({          //이 gnb에 css를 준다 
+                        $(this).css({          //이 gnb에 css를 준다
                             'bottom':'-100px',
                             'top':'initial'    //위에 쓴 top에 대한 태그를 상속받지않겠다
                         }).animate({
@@ -56,7 +56,7 @@
                             })
                         })
                     })
-                    $('.gnb').addClass('mini')    
+                    $('.gnb').addClass('mini')
                 }else if(sct < $('.gnb').height()){
                     $('.gnb').removeClass('mini')
                     $('.gnb').animate({
@@ -71,29 +71,29 @@
                             $(this).animate({
                                 height:50
                             })
-                        
+
                         })
                     })
-                    
+
                 }
-                
-                
-                
+
+
+
             })
-            
-            
-            
+
+
+
         })
-        
-        
+
+
     </script>
-    
+
 </head>
 <body>
-    
+
     <div class="gnb"></div>
     <div class="contents"></div>
-    
-    
+
+
 </body>
 </html>
