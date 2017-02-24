@@ -1,0 +1,136 @@
+App.Views.ServiceView = Backbone.View.extend({
+    initialize: function( $options ) {
+        this.CONTETNS_VISUAL_DEFAULT_WIDTH = 1220;      // 1220
+        this.CONTENTS_VISUAL_DEFAULT_HEIGHT = 900;
+    },
+
+    render: function() {
+
+    },
+
+    show: function() {
+        //console.log("lexus service view");
+        this.addEvent();
+        this.onResize();
+    },
+
+    showComplete: function() {
+
+    },
+
+    hide: function() {
+
+    },
+
+    hideComplete: function() {
+
+    },
+
+    addEvent: function() {
+        this.listenTo(App, App.Events.RESIZE_BROWSER, this.onResize);
+        $(".btn-next-arr").on("click", _.bind(this.onArrowClick, this));
+    },
+
+    removeEvent: function() {
+
+    },
+
+    onArrowClick: function(){
+        $('html, body').stop().animate({ scrollTop: $(window).height() }, 1200, "easeInOutQuart");
+    },
+
+    onResize : function(){
+        var globalVars = App.GlobalVars;
+
+        if(globalVars.currentDevice == globalVars.DEVICE_TYPE_WEB){
+
+            if(globalVars.currentBrowserMode == globalVars.BROWSER_MODE_WEB){
+                var winH = $(window).height();
+                var winW = $(window).width();
+
+                $("#page0").css("height", winH);
+                this.isRemoveAttr = false;
+            }else{
+
+                if(this.isRemoveAttr == false){
+                    $("#page0").removeAttr('style');
+                    this.isRemoveAttr = true;
+                }
+            }
+        }
+
+        //this.calculatePos();
+//        App.imgPrefixer( this );
+        this.setImageUrl();
+        this.setKeyVisualImgSize();
+    },
+
+    setImageUrl : function(){
+        var browserMode = App.GlobalVars.currentBrowserMode;
+        var imgUrl = "";
+        var i = 0;
+        var secectorImg = "";
+        var len = $(".changable").length;
+
+        if(this.currentBrowserMode !== browserMode) {
+            for (i = 0; i < len; i++) {
+                secectorImg = $(".changable").eq(i);
+                if (browserMode == App.GlobalVars.BROWSER_MODE_WEB || browserMode == App.GlobalVars.BROWSER_MODE_TABLET) {
+                    // 이미지에 웹버전 경로 넣어주기
+                    imgUrl = secectorImg.attr("data-web-img-url");
+
+                    secectorImg.attr("src", imgUrl);
+                } else {
+                    // 이미지에 모바일 경로 넣어주기
+                    imgUrl = secectorImg.attr("data-mobile-img-url");
+                    secectorImg.attr("src", imgUrl);
+                }
+
+                //console.log(imgUrl);
+            }
+
+            this.currentBrowserMode = browserMode;
+        }
+    },
+
+    setKeyVisualImgSize : function() {
+        var globalVars = App.GlobalVars;
+        var selectorKeyvisualImg = $("#page0 .visual-wrap .fig-content img");
+        var selectorKeyvisualCon = $("#page0 .visual-wrap figure");
+        var headerH = 0;
+
+        if(globalVars.currentBrowserMode == globalVars.BROWSER_MODE_MOBILE){
+            selectorKeyvisualImg.css({"width": "100%", "height": "auto", "top": 0, "left": 0});
+            selectorKeyvisualCon.css({"width":"100%", "height":"auto"});
+            return;
+        }
+
+        var tbGap = globalVars.currentBrowserMode == globalVars.BROWSER_MODE_TABLET ? 100 : 0;
+        var per = App.resizeView.sumSizePer(App.GlobalVars.windowWidth, App.GlobalVars.windowHeight-tbGap, this.CONTETNS_VISUAL_DEFAULT_WIDTH, this.CONTENTS_VISUAL_DEFAULT_HEIGHT);
+
+        var width = Math.floor(this.CONTETNS_VISUAL_DEFAULT_WIDTH * per);
+        var height = Math.floor(this.CONTENTS_VISUAL_DEFAULT_HEIGHT * per);
+        var posX = 0;
+        var posY = 0;
+
+        if (App.GlobalVars.windowWidth < width) {
+            posX = -((width - App.GlobalVars.windowWidth) / 2)
+        }
+
+        if (App.GlobalVars.windowHeight < height) {
+            posY = -((height - App.GlobalVars.windowHeight) / 2)
+        }
+
+        posX = App.GlobalVars.currentBrowserMode == App.GlobalVars.BROWSER_MODE_WEB ? posX+App.GlobalVars.NAVIGATION_WIDTH * .5 : posX;
+
+        if(App.GlobalVars.currentBrowserMode == App.GlobalVars.BROWSER_MODE_WEB){
+            selectorKeyvisualCon.css({"height": App.GlobalVars.windowHeight-tbGap});
+            selectorKeyvisualImg.css({"width": width, "height": height, "top": posY, "left": 0});
+        }else{
+            selectorKeyvisualCon.removeAttr("style");
+            selectorKeyvisualImg.removeAttr("style");
+        }
+
+    }
+
+});

@@ -1,0 +1,183 @@
+/* Common Company */
+.company.news .sch-form-wrap{position: relative; height:58px; }
+.company.news .sch-form-wrap .inner-wrap{position: absolute; right:0; top:0}
+.company.news .sch-form-wrap select{
+    width: 90px;
+    height: 30px;
+    border: none;
+    vertical-align: top;
+    border-bottom: 2px solid #111;
+    background: url('/asset/images/service/common/bul_svc_select.png') no-repeat right center;
+    background-size: 8px 5px;
+}
+.company.news .sch-form-wrap .input-wrap{display:inline-block; width:180px; margin-left:24px; border-bottom: 2px solid #111111}
+.company.news .sch-form-wrap label{display:none}
+.company.news .sch-form-wrap input[type="text"]{width:150px; border:none;}
+.company.news .sch-form-wrap button.btn-sch{
+    position:absolute;
+    right:0; top:0;
+    width:28px; height:28px;
+    background: url('/asset/images/common/sprite_common.png') no-repeat;
+    background-size: 86px 300px;
+    background-position:-26px -218px;
+    vertical-align:top;
+}
+.company.news .pic-list-wrap{}
+.company.news .pic-list-wrap li{float:left; width:33.3%; text-align:center; height:360px; }
+.company.news .pic-list-wrap li.last{margin-right:0}
+.company.news .pic-list-wrap li a{display:block; width:300px; color:#222}
+.company.news .pic-list-wrap li .pic, .company .pic-list-wrap li .text-wrap{display: inline-block; width:300px; }
+.company.news .pic-list-wrap li .pic{position:relative;}
+.company.news .pic-list-wrap li .pic img{width:100%}
+.company.news .pic-list-wrap li .text-wrap{ padding:18px 0 5px; text-align:left;}
+.company.news .pic-list-wrap li .text-wrap span{ display: block; text-align:left;}
+.company.news .pic-list-wrap li .text-wrap .text{
+    width: 100%;
+    padding-bottom: 13px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size:14px; line-height: 1.4;  font-weight:bold;
+}
+.company.news .pic-list-wrap li .text-wrap .sub-text{padding-bottom: 18px; line-height: 1.6; }
+.company.news .pic-list-wrap li .text-wrap .date{font-size: 10px;}
+.company.news .pic-list-wrap li em.more { display: block; position: absolute; right:0; bottom: 0; width:46px; height:46px; background: url('/asset/images/common/sprite_common.png') no-repeat -46px -355px; }
+
+/* .pics-pop을 명시한 이유: 우선 순위때문 */
+.pics-pop.company-pop{width:660px; min-height:690px; margin:-345px 0 0 -330px}
+.pics-pop.company-pop .content-area{background:#fff; }    /* 임시 background 추가 */
+.pics-pop.company-pop p.text-wrap{margin:0 30px;}
+.pics-pop.company-pop p.text-wrap span.title{width:100%; padding-bottom: 10px;}
+.pics-pop.company-pop .custom-scroll{height:129px; margin-right:28px; padding: 26px 0 30px 0; font-size:13px;}
+.pics-pop.company-pop .btm-cnt{height: 18px; line-height: 18px; margin: 0 30px; padding: 30px 0;}
+.pics-pop.company-pop .btm-cnt p.date{float:left}
+.pics-pop.company-pop .btm-cnt p.hits{float:right}
+.pics-pop.company-pop .btm-cnt p.hits span{display:inline-block; margin-left:5px;}
+.pics-pop.company-pop .btm-cnt p.hits{}
+/* about leuxs */
+.company.about .inner-cont-wrap{padding:0;}
+.company.about .about-listwrap { width:720px; margin:0 auto;}
+.company.about .overview {padding:0 0 60px; text-align: center;}
+.company.about .overview h3{padding:54px 0 26px; color:#111; font:28px 'nobel-bold';}
+.company.about .overview p.txt-cont{padding-bottom:60px; letter-spacing: -0.3px; color:#333; font:13px/2 'SDGothicNeo1R'; }
+.company.about .overview p.txt-cont span{display: block;}
+.company.about .overview p.pic-cont{text-align: center;}
+
+.company.about .history{padding:60px 0;}
+.company.about .history:after{display:block; clear:both; content: '';}
+.company.about .history .history-list {width:350px; }
+.company.about .history .history-list.left-cnt {float:left}
+.company.about .history .history-list.right-cnt {float:right}
+.company.about .history dt{padding-bottom:10px; border-bottom:1px solid #ccc; font:20px 'nobel-bold'; color:#333;}
+.company.about .history dd{padding:5px 0 30px;}
+.company.about .history dt em, .company.about .history th em{position:absolute; top:-9999px; left:-9999px; font-size:0; color:transparent; visibility: hidden; }
+.company.about .history table{width:100%; table-layout: fixed;}
+.company.about .history th, .company.about .history td{line-height:1.2; vertical-align: top; padding:8px 0 2px; }
+.company.about .history th{width:16%; color:#ccc; font-size:14px; line-height: 1.1; }
+.company.about .history td{width:84%; color:#333; font-size:13px; }
+.company.about .history td span{display: block; padding-top:9px}
+.company.about .history td span:first-child{padding-top:0}
+
+.company.about .dealer-wrap{padding:60px 0 150px;}
+.company.about .dealer-wrap h3{padding: 30px 0 15px; border-top: 4px solid #111; color:#111; font-size:15px; font-weight:bold; }
+.company.about .dealer-wrap h3 span{
+    display:inline-block;
+    width:2px; height:15px;
+    margin:0 5px;
+    background: url('/asset/images/company/about/bul_vline.png') no-repeat center center;
+    vertical-align: top;
+}
+.company.about .dealer-wrap:after, .company.about .dealer-list:after{display:block; clear:both; content: '';}
+.company.about .half-sec.left{float:left;}
+.company.about .half-sec.right{float:right;}
+.company.about .full-sec{clear:left;}
+.company.about .dealer-list{}
+.company.about .dealer-list dl{position:relative; float:left; width:165px; margin-right: 20px;}
+.company.about .dealer-list dl.last-col{margin-right:0}
+.company.about .dealer-list dt{margin-top:180px; padding:21px 0 18px; color:#111; font:14px 'SDGothicNeo1R'; font-weight:bold; }
+.company.about .dealer-list dd{height:50px; padding:10px 0 0;border-top: 1px solid #ccc; line-height: 1.2;}
+.company.about .dealer-list dd a{color:#333; }
+.company.about .dealer-list dd a:hover{color:#111; }
+.company.about .dealer-list dd.addr{ letter-spacing: -0.5px }
+.company.about .dealer-list dd.phone p{padding-top:9px; vertical-align: middle;}
+.company.about .dealer-list dd.phone p:first-child{padding-top:0}
+.company.about .dealer-list dd.phone .phone-tit{
+    display: inline-block;
+    margin-right:3px;
+    padding-right: 6px;
+    background: url('/asset/images/company/about/bul_col.png') no-repeat right 2px;
+}
+.company.about .dealer-list dd.phone a{font-size: 12px}
+.company.about .dealer-list dd.web{padding-top: 7px;}
+.company.about .dealer-list dd.web a{font-size: 14px}
+.company.about .dealer-list dd.pic{position: absolute; top:0 ; left:0; height:auto; border-top: none; padding:0;}
+.company.about .full { background:#000; overflow:hidden}
+.company.about .full img { display:block; position:relative; left:50%; margin-left:-610px; width:1220px; }
+
+/* 사회공헌 */
+.company.contribution { width:100%; }
+.company.contribution .inner-cont-wrap { padding:0; }
+.company.contribution .responsive { margin-bottom:30px; width:100%; text-align:center; }
+.company.contribution .full { margin-bottom:60px; width:100%; background:#000; overflow:hidden}
+.company.contribution .full img {display:block; position:relative; left:50%; margin-left:-610px; width:1220px; }
+
+/* 보도자료 */
+.company.news .inner-cont-wrap .previous { margin:-40px 0 28px 0; float:right; }
+.company.news .inner-cont-wrap .btn-more { display:none; }
+.popup.company-iframe-pop { position:absolute; margin-left:-430px; margin-top:-300px; background:#fff; }
+.popup.company-iframe-pop iframe { width:860px; height:600px; border:0; display:block; }
+.popup.company-iframe-pop p.text-wrap { margin: 0 60px 0 52px; border:0; }
+.popup.company-iframe-pop p.text-wrap span { padding-bottom:12px; line-height:1; display:inline-block; }        /* font-weight:bold; */
+.popup.company-iframe-pop p.text-wrap span.title { width:79%; padding-top:38px; font-size:20px; color: #222; }
+
+/*
+@media only screen and (min-width:960px){
+    .company .pic-list-wrap li{width:45.4%; margin-right:9%}
+    .company .pic-list-wrap li.col-2{margin-right:0}
+}
+*/
+
+/* -------------------------------------------------------------------   */
+/*  ③ Web 1024↑
+/* -------------------------------------------------------------------   */
+
+@media only screen and (min-width:1024px) and (max-width:1280px){
+	/* 한국토요타자동차(주) */
+    .company.about .inner-cont-wrap .area { display:block; }
+    .company.about .inner-cont-wrap .area-mobile { display:none; }
+
+	/* 사회공헌 */
+    .company.contribution .inner-cont-wrap .area { display:block; }
+    .company.contribution .inner-cont-wrap .area-mobile { display:none; }
+
+    /* 보도자료 */
+    .company.news .inner-cont-wrap .previous { display:block; }
+}
+
+@media only screen and (min-width:960px) and (max-width:1279px){
+    .company.news .pic-list-wrap li{width:45.4%; margin-right:9%}
+    .company.news .pic-list-wrap li.col-2{margin-right:0}
+}
+
+@media only screen and (min-width:1280px) and (max-width:1499px){
+    .company.news .pic-list-wrap li{width:29.4%; margin-right: 5.9%;}
+    .company.news .pic-list-wrap li.col-2{margin-right:5.9%}
+    .company.news .pic-list-wrap li.col-3{margin-right:0}
+}
+
+@media only screen and (min-width:1500px){
+    .company.news .pic-list-wrap li{width:21.5%; margin-right: 4.3%;}
+    .company.news .pic-list-wrap li.col-2,
+    .company.news .pic-list-wrap li.col-3{margin-right:4.3%}
+    .company.news .pic-list-wrap li.col-4{margin-right:0}
+}
+
+@media only screen and (max-width:1023px){
+	/* 한국토요타자동차(주) */
+	.company.about .inner-cont-wrap {margin:0;}
+    /* .company.about .responsive img, .company.about .full img { left:0; margin:0; width:100%; } */
+
+	/* 사회공헌 */
+	.company.contribution .inner-cont-wrap {margin:0;}
+    /* .company.contribution .responsive img, .company.contribution .full img { left:0; margin:0; width:100%; }*/
+}

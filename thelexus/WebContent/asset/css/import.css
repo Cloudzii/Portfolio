@@ -1,0 +1,491 @@
+@import "common.css";
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.pf {
+  position: fixed;
+}
+.pr {
+  position: relative;
+}
+.pa {
+  position: absolute;
+}
+.depth-1-nav-wrapper {
+  width: 180px;
+  height: 100%;
+  background-color: #000;
+  position: fixed;
+}
+header div h1 {
+  font-size: 0;
+  text-indent: -9999px;
+}
+header div a {
+  width: 140px;
+  height: 52px;
+}
+header div a img {
+  padding: 36px 0 0 30px;
+  width: 114px;
+  height: 20px;
+}
+nav {
+  top: 90px;
+  left: 30px;
+  width: 150px;
+  height: 240px;
+}
+nav li {
+  height: 30px;
+}
+nav li a h2 {
+  text-transform: uppercase;
+  color: #ccc;
+  font-family: "SDGothicNeo1R";
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 900;
+  -webkit-font-smoothing: antialiased;
+}
+nav li a h2:hover {
+  color: #fff;
+}
+nav li a h2:hover i {
+  visibility: visible;
+  width: 150px;
+}
+nav li a h2 i {
+  visibility: hidden;
+  display: block;
+  width: 1px;
+  height: 2px;
+  background-color: #fff;
+  transition: .4s;
+  -webkit-transition: .4s;
+  /* For Safari 3.1 to 6.0 */
+}
+.nav-depth-1-sub {
+  display: none;
+}
+footer {
+  bottom: 21px;
+  left: 30px;
+  width: 150px;
+}
+footer .quick-menu li a {
+  height: 30px;
+}
+footer .quick-menu li a cite {
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 900;
+  -webkit-font-smoothing: antialiased;
+  color: #444;
+  font-size: 12px;
+}
+footer .quick-menu li a cite:hover {
+  color: #fff;
+}
+footer .quick-menu li a cite:hover i {
+  visibility: visible;
+  width: 150px;
+}
+footer .quick-menu li a cite i {
+  visibility: hidden;
+  display: block;
+  width: 1px;
+  height: 2px;
+  background-color: #fff;
+  transition: .4s;
+  -webkit-transition: .4s;
+  /* For Safari 3.1 to 6.0 */
+}
+.sns-btns {
+  padding-bottom: 41px;
+}
+.sns-btns h2 {
+  font-size: 0;
+  z-index: -999px;
+}
+.sns-btns ul li {
+  display: inline-block;
+  height: 21px;
+}
+.sns-btns ul li a span {
+  font-size: 0;
+  text-indent: -9999px;
+}
+.sns-btns ul li a span:hover {
+  color: #fff;
+}
+.foot-cont {
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+.foot-cont li {
+  display: inline-block;
+}
+.foot-cont li a {
+  font-family: "SDGothicNeo1R";
+  font-weight: 900;
+  font-size: 9px;
+  sletter-spacing: 0.2px;
+  word-spacing: 1.5px;
+}
+.foot-cont address {
+  position: absolute;
+  bottom: -10px;
+}
+.foot-cont address span {
+  font-size: 9px;
+  letter-spacing: -0.6px;
+  color: #444;
+  position: relative;
+  bottom: 65px;
+  width: 180px;
+  height: 22px;
+  text-rendering: optimizeLegibility;
+  white-space: -1.5px;
+}
+aside {
+  right: 0;
+}
+aside input {
+  right: 0;
+  top: 380px;
+}
+aside div {
+  display: none;
+  right: 0;
+  background-color: tomato;
+  width: 277px;
+}
+aside div li {
+  height: 153px;
+  background-color: rgba(255, 255, 255, 0.5);
+  outline: 1px solid black;
+}
+#main {
+  margin-left: 180px;
+}
+#main div {
+  height: 950px;
+}
+#main div li {
+  display: none;
+}
+#main div li:first-child {
+  display: block;
+}
+#main div li:first-child div > img {
+  width: 1920px;
+  height: 1271px;
+  top: -321px;
+  left: 0px;
+  position: absolute;
+  z-index: -1;
+}
+#main div li:first-child div a img {
+  position: relative;
+  z-index: 1;
+  left: 60px;
+  top: 28px;
+}
+#main .section-btn {
+  width: 113px;
+  height: 50px;
+  top: 900px;
+  right: 800px;
+  z-index: 2;
+}
+#main .section-btn li {
+  display: inline-block;
+  padding-left: 5px;
+}
+body,
+html {
+  height: 100%;
+}
+section#hybrid {
+  margin-left: 180px;
+  background-color: #000;
+}
+section#hybrid .section_hybrid_1 {
+  height: 950px;
+}
+section#hybrid .section_hybrid_1 .section_hybrid_1_bg {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1420px;
+  height: 800px;
+  margin-left: -620px;
+}
+section#hybrid .section_hybrid_1 h2 {
+  width: 245px;
+  height: 61px;
+  position: absolute;
+  top: 74px;
+  left: 50%;
+  margin-left: -32px;
+}
+section#hybrid .section_hybrid_1 .strip_hybrid_1 {
+  position: absolute;
+  top: 169px;
+  left: 50.5%;
+  width: 240px;
+  height: 457px;
+  margin-left: -48px;
+}
+section#hybrid .section_hybrid_1 .man_hybrid_1 {
+  position: absolute;
+  top: 168px;
+  left: 50.5%;
+  width: 378px;
+  height: 431px;
+  margin-left: -92px;
+}
+section#hybrid .section_hybrid_1 p {
+  width: 528px;
+  height: 46px;
+  position: absolute;
+  top: 660px;
+  left: 50%;
+  margin-left: -174px;
+}
+section#hybrid .section_hybrid_2 {
+  height: 694px;
+  position: relative;
+}
+section#hybrid .section_hybrid_2 .section_hybrid_2_bg {
+  width: 2000px;
+  height: 1600px;
+  position: absolute;
+  top: 50px;
+  left: 54.125%;
+}
+section#hybrid .section_hybrid_2 strong {
+  margin-left: -93px;
+  width: 199px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 103px;
+}
+section#hybrid .section_hybrid_2 .section_hybrid_2_video {
+  width: 676px;
+  height: 360px;
+  position: absolute;
+  left: 50%;
+  top: 180px;
+  margin-left: -338px;
+}
+section#hybrid .section_hybrid_3 {
+  height: 800px;
+  position: relative;
+}
+section#hybrid .section_hybrid_3 h2 {
+  width: 696px;
+  height: 385px;
+  position: absolute;
+  top: 115px;
+  left: 50%;
+  margin-left: -370px;
+}
+section#hybrid .section_hybrid_3 a {
+  width: 272px;
+  height: 40px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 590px;
+  margin-left: -136px;
+}
+section#hybrid .section_hybrid_4 {
+  height: 1054px;
+  position: relative;
+  background-color: #FFF;
+  overflow: hidden;
+}
+section#hybrid .section_hybrid_4 .section_hybrid_4_section_1 {
+  height: 360px;
+  overflow: hidden;
+}
+section#hybrid .section_hybrid_4 .section_hybrid_4_section_1 .section_hybrid_4_bg_1 {
+  width: 315px;
+  height: 960px;
+  position: absolute;
+  top: -300px;
+  left: 56%;
+  opacity: 0.901328;
+}
+section#hybrid .section_hybrid_4 .section_hybrid_4_section_1 .section_hybrid_4_text_1 {
+  position: absolute;
+  left: 50%;
+  top: 105px;
+  margin: 0 0 0 -226px;
+  width: 444px;
+}
+section#hybrid .section_hybrid_4 .section_hybrid_4_section_1 .section_hybrid_4_text_1 h3 {
+  width: 361px;
+  height: 51px;
+  margin: 0 auto;
+}
+section#hybrid .section_hybrid_4 .section_hybrid_4_section_1 .section_hybrid_4_text_1 p {
+  width: 444px;
+  height: 62px;
+  position: absolute;
+  top: 80px;
+}
+section#hybrid .section_hybrid_4 .section_hybrid_4_section_2 {
+  position: relative;
+  height: 694px;
+  overflow: hidden;
+  background: #0f0f0f;
+}
+section#hybrid .section_hybrid_4 .section_hybrid_4_section_2 .section_hybrid_4_bg_2 {
+  position: relative;
+  left: 50%;
+  top: -198px;
+  margin-left: -720px;
+}
+section#hybrid .section_hybrid_4 .section_hybrid_4_section_2 .section_hybrid_4_text_2 {
+  position: absolute;
+  left: 50%;
+  top: 186px;
+  margin: 0 0 0 -366.5px;
+  width: 733px;
+}
+section#hybrid .section_hybrid_4 .section_hybrid_4_section_2 .section_hybrid_4_text_2 h3 {
+  position: relative;
+  z-index: 10;
+}
+section#hybrid .section_hybrid_4 .section_hybrid_4_section_2 .section_hybrid_4_text_2 strong {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 190px;
+  margin-left: -151px;
+  width: 303px;
+  z-index: 10;
+}
+section#hybrid .section_hybrid_4 .section_hybrid_4_section_2 .section_hybrid_4_text_2 p {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 103px;
+  margin-left: -327px;
+  width: 654px;
+}
+section#hybrid .section_hybrid_5 {
+  height: 1365px;
+  position: relative;
+  overflow: hidden;
+}
+section#hybrid .section_hybrid_5 .section_hybrid_5_bg {
+  margin-top: -242.637px;
+  width: 996px;
+  height: 2365px;
+  position: absolute;
+  top: -500px;
+  left: 29.507042%;
+  opacity: 0.61685;
+}
+section#hybrid .section_hybrid_5 .section_hybrid_5_text {
+  position: absolute;
+  left: 50%;
+  top: 142px;
+  margin: 0 0 0 -374.5px;
+  width: 749px;
+  z-index: 10;
+}
+section#hybrid .section_hybrid_5 .section_hybrid_5_text h3 {
+  width: 749px;
+  height: 45px;
+  margin-bottom: 126px;
+}
+section#hybrid .section_hybrid_5 .section_hybrid_5_text li {
+  float: left;
+  width: 100%;
+  border-top: 1px solid #3e3e3e;
+  margin-bottom: 10px;
+  height: 220px;
+}
+section#hybrid .section_hybrid_5 .section_hybrid_5_text li h4 {
+  margin-top: 28px;
+}
+section#hybrid .section_hybrid_5 .section_hybrid_5_text li span {
+  display: block;
+  float: left;
+  margin-left: 250px;
+  margin-top: -42px;
+  line-height: 70px;
+}
+section#hybrid .section_hybrid_6 {
+  position: relative;
+  overflow: hidden;
+  height: 1397px;
+}
+section#hybrid .section_hybrid_6 .section_hybrid_6_section_1 {
+  height: 450px;
+  overflow: hidden;
+  background-color: #1c1c1c;
+}
+section#hybrid .section_hybrid_6 .section_hybrid_6_section_1 .section_hybrid_6_bg_1 {
+  position: relative;
+  left: 50%;
+  margin-left: -710px;
+  background: url(http://www.lexus.co.kr/asset/images/hybrid/bg_gra_s4_1.png) 0 0 repeat-x;
+  width: 100%;
+}
+section#hybrid .section_hybrid_6 .section_hybrid_6_section_1 h3 {
+  width: 671px;
+  height: 46px;
+  position: absolute;
+  left: 50%;
+  top: 209px;
+  margin-left: -335.5px;
+}
+section#hybrid .section_hybrid_6 .section_hybrid_6_section_2 {
+  position: relative;
+  height: 947px;
+  overflow: hidden;
+}
+section#hybrid .section_hybrid_6 .section_hybrid_6_section_2 .section_hybrid_6_bg_2 {
+  position: absolute;
+  left: 9.1549295%;
+  top: -500px;
+}
+section#hybrid .section_hybrid_6 .section_hybrid_6_section_2 .section_hybrid_6_text_2 {
+  width: 750px;
+  position: absolute;
+  left: 50%;
+  top: 88px;
+  margin: 0 0 0 -375px;
+  z-index: 10;
+}
+section#hybrid .section_hybrid_6 .section_hybrid_6_section_2 .section_hybrid_6_text_2 h3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+section#hybrid .section_hybrid_6 .section_hybrid_6_section_2 .section_hybrid_6_text_2 p {
+  position: absolute;
+  top: 0;
+  left: 245px;
+}
+section#hybrid .section_hybrid_6 .section_hybrid_6_section_2 .section_hybrid_6_text_2 span {
+  position: absolute;
+  display: block;
+  top: 248px;
+  left: 0;
+}
+section#hybrid .section_hybrid_7 {
+  height: 754px;
+  background-color: #FFF;
+}
