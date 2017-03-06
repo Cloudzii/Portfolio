@@ -4,9 +4,10 @@
   border: 1px #F00 solid;
   position: relative;
   height: 100%;
+  background-color: #F00;
 }
 #st_begin .st_begining {
-  background-image: url(../images/LEXUSSTORY/THEBEGINING/bg_s0.jpg);
+  background-image: url(../../asset/image/story/begining/bg_s0.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -20,7 +21,7 @@
   margin-top: -90px;
   text-align: right;
 }
-#st_begin .st_begining .begin_content > img {
+#st_begin .st_begining .begin_content li > img {
   position: absolute;
   top: 300px;
   right: 20px;
@@ -45,7 +46,95 @@
   top: 0;
   left: 0;
 }
-#st_begin .birth_begining > ul > li > img:nth-child(2) {
-  margin-top: 60px;
+#st_begin .birth_begining > ul > li + li > h3 {
+  position: absolute;
+  left: 24%;
+}
+#st_begin .birth_begining > ul > li + li > p > img {
+  margin-top: 150px;
   margin-right: 10px;
+}
+#st_begin .birth_begining > ul > li:nth-child(3) {
+  position: relative;
+}
+#st_begin .birth_begining > ul > li:nth-child(3) > p {
+  position: absolute;
+  top: -130px;
+  right: 330px;
+}
+#st_begin .birth_begining > ul > li:nth-child(3) > img {
+  margin-top: -50px;
+}
+#st_begin .birth_begining > ul > li:nth-child(4) > p:first-child {
+  margin-top: -200px;
+}
+#st_begin .launching_begining {
+  background-color: #1e1e1e;
+  height: 2400px;
+  overflow: hidden;
+}
+#st_begin .launching_begining > ul {
+  position: relative;
+  top: 150px;
+}
+#st_begin .launching_begining > ul > li:nth-child(1) {
+  background: #000;
+}
+#st_begin .launching_begining > ul > li:nth-child(1) > div {
+  background-image: url(../../asset/image/story/begining/bg_s3.jpg);
+  background-repeat: no-repeat;
+  height: 360px;
+  margin-left: 270px;
+}
+#st_begin .launching_begining > ul > li:nth-child(1) > div > h3 {
+  position: absolute;
+  width: 717px;
+  left: 50%;
+  margin-left: -440px;
+  top: -125px;
+}
+#st_begin .launching_begining > ul > li:nth-child(1) > div > p {
+  width: 717px;
+  margin: 0 auto;
+  text-align: right;
+  margin-left: 240px;
+  padding-top: 5%;
+}
+#st_begin .launching_begining > ul > li + li {
+  width: 717px;
+  margin: 5% auto;
+}
+#st_begin .launching_begining > ul > li:nth-child(2) {
+  width: 717px;
+  margin: 4% auto;
+  margin-bottom: 130px;
+}
+#st_begin .launching_begining > ul > li:nth-child(2) > p {
+  float: left;
+}
+#st_begin .launching_begining > ul > li:nth-child(2) > img {
+  margin-left: 40px;
+}
+#st_begin .launching_begining > ul > li:nth-child(3) > div {
+  position: relative;
+  margin-top: 10%;
+}
+#st_begin .launching_begining > ul > li:nth-child(3) > div > span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -33px;
+  margin-top: -33px;
+}
+#st_begin .launching_begining > ul > li:nth-child(3) .play_video {
+  display: none;
+}
+#st_begin .launching_begining > ul > li:nth-child(4) {
+  position: relative;
+}
+#st_begin .launching_begining > ul > li:nth-child(4) > span {
+  position: absolute;
+  margin: 0 auto;
+  top: 33%;
+  left: 50%;
 }
