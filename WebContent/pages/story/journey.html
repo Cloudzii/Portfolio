@@ -2,6 +2,9 @@
 <html>
 <head>
 <meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- <script src="/thelexus/asset/js/project.js"></script> -->
+<script src="../../asset/js/project.js"></script>
 <link rel="stylesheet" href="../../asset/css/import.css">
 <title>Amazing Hybrid Journey</title>
 </head>
@@ -14,10 +17,69 @@
         <img src="../../asset/image/story/journey/head_kv.png" alt="LEXUS AMAZING HYBRID JOURNEY">
         <span><img src="../../asset/image/story/journey/head_detail_kv.png" alt="#EcoLife / 2016.10.13 - 2016.10.15 강원도 일대"></span>
       </h2>
-      <a href="https://www.youtube.com/embed/kD3XfMOWPYE?amp;autoplay=1">
+
+
+
+
+
+      <!-- <a href="https://www.youtube.com/embed/kD3XfMOWPYE?amp;autoplay=1">
 
         <img src="../../asset/image/story/journey/btn_vod_kv.jpg" alt="">
+      </a> -->
+
+
+      <a href="javascript:void(0)" onclick="popopen();" / >
+        	<img src="../../asset/image/story/journey/btn_vod_kv.jpg" alt="">
       </a>
+
+
+      <div class="popopen" style="display:none;">
+        <!-- ?rel=0&autoplay=1&loop=1 -->
+      	<!-- <iframe width="1903" height="948" src="https://www.youtube.com/embed/kD3XfMOWPYE" frameborder="0" allowfullscreen></iframe> -->
+
+
+
+        <!-- <p class="close_btn" style="position:fixed;" onclick="close();">
+        	  <a href="javasciprt:void(0)" style="position:fixed; top:50px; right:20px;">
+        	    <span>close button</span>
+        	  </a>
+      	</p> -->
+
+          <a href="javasciprt:void(0)" onclick="close_btn();" style="position:fixed; top:38px; right:20px;">
+            <span class="cl_btn" style="position:absolute; left:20px; top:20px;">close button</span>
+          </a>
+
+
+      </div>
+
+      <script>
+
+                function popopen() {
+
+                     $('.popopen').css({
+                       "display":"block"
+                     }).append('<iframe width="100%" height="100%" src="https://www.youtube.com/embed/kD3XfMOWPYE?rel=0&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>')
+
+
+                    //  $('.close_btn').click(function(){
+                    //    $('.popopen').css({
+                    //      "display":"none"
+                    //    }).children('iframe').remove();
+                    //  })
+                };
+
+                function close_btn() {
+
+                  $('.popopen').css({
+                      "display":"none"
+                    }).children('iframe').remove();
+                  // $('.popopen').children('iframe').remove();
+                  // $('.popopen').css({"display":"none"});
+                }
+
+    </script>
+
+
       <p><img src="../../asset/image/story/journey/txt_kv.png" alt="렉서스 하이브리드와 함께 즐기는 AMAZING ROAD 더 나은 삶을 위한 첫번째 여정에 당신을 초대합니다 /모집기간 2016.09.12 - 2016.09.25"></p>
     </div>
   </section>

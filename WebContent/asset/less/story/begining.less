@@ -2,6 +2,46 @@
   margin-left:180px;
   position:relative;
   height:100%;
+///////////////////Youtube 팝업
+  .popopen {
+    position:fixed;
+    width:1903px;
+    height:950px;
+    z-index:5;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    // .close_btn {
+    //   z-index:10;
+      a {
+        z-index:10;
+        width:60px;
+        height:60px;
+        background: url('../../asset/image/service/btn_close_bg.png') repeat 0 0;
+        opacity:0.5;
+        &:hover {
+          opacity:1;
+          color:#fff;
+        }
+        &:link {
+          color:#666;
+        }
+        >.cl_btn {
+          left:20px;
+          top:20px;
+          width:20px;
+          height:20px;
+          background:url('../../asset/image/service/sprite_common.png') no-repeat -95px -163px;
+          text-indent:-9999px;
+          font-size:0;
+        }
+      }
+    // }
+  }
+/////////////////////////Youtube 팝업
+
+
   .st_begining {
     background-image: url(../../asset/image/story/begining/bg_s0.jpg);
     background-size:cover;
@@ -39,7 +79,7 @@
           top:0;
           left:0;
         }
-        
+
       }
 
 
@@ -69,10 +109,10 @@
       		margin-top:-200px;
       	}
       }
-      
+
     }
   }
-  
+
   .launching_begining {
   	background-color:#1e1e1e;
   	height:2400px;
@@ -85,7 +125,7 @@
   		>div {
   			background-image:url(../../asset/image/story/begining/bg_s3.jpg);
             background-repeat:no-repeat;
-            height:360px;            
+            height:360px;
             margin-left:270px;
   			>h3 {
   			position:absolute;
@@ -141,11 +181,11 @@
 			    margin:0 auto;
 			    top:33%;
 			    left:50%;
-  				
+
   			}
   		}
   	}
-  	
+
 
 }
 
