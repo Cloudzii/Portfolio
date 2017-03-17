@@ -3,11 +3,39 @@
 <head>
 <meta charset="utf-8">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<!-- <script src="/thelexus/asset/js/project.js"></script> -->
 <script src="../../asset/js/project.js"></script>
 <link rel="stylesheet" href="../../asset/css/import.css">
 <title>Amazing project</title>
 </head>
+<!-- <script>
+
+		function popopen() {
+
+				 $('.popopen').css({
+					 "display":"block"
+				 }).append('<iframe width="1677" height="921" src="https://www.youtube.com/embed/HCyGRgKZpl8?rel=0&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>')
+		};
+
+		function close_btn() {
+
+			$('.popopen').css({
+					"display":"none"
+				}).children('iframe').remove();
+		};
+
+		function popopen_hover() {
+			$('.popopen_hovers').css({
+					"display":"block"
+			}).append('<iframe width="1920" height="948" src="https://www.youtube.com/embed/q_BYvUlDviM" frameborder="0" allowfullscreen></iframe>')
+		};
+
+		function close_btn() {
+			$('popopen_hover').css({
+				"display":"none"
+			}).children('iframe').remove();
+		};
+
+</script> -->
 <body>
 
 	<section id="st_project">
@@ -56,7 +84,20 @@
 						</div>
 						<div class="main-txt">
 							<h2><img src="../../asset/image/story/project/kvback_0_txt.png" alt="AMAZING IN MOTION SLIDE 렉서스 기술력, 디자인, 상상력의 가장 이상적인 결합" /></h2>
-								<a href="https://www.youtube.com/embed/HCyGRgKZpl8?amp;autoplay=1" class="btn_play"><img src="../../asset/image/story/project/btn_model_play.png" alt="영상 재생" /></a>
+
+
+								<a href="javascript:void(0)" onclick="popopen();" class="btn_play" / >
+										<img src="../../asset/image/story/project/btn_model_play.png" alt="영상 재생" />
+								</a>
+
+								<div class="popopen" style="display:none;">
+
+					          <a href="javasciprt:void(0)" onclick="close_btn();" style="position:fixed; top:38px; right:20px;">
+					            <span class="cl_btn" style="position:absolute; left:20px; top:20px;">close button</span>
+					          </a>
+
+					      </div>
+
 								<a href="#" class="btn-next-arr">click to go down</a>
 								<!-- background:url(../../asset/image/story/project/arr_dn.png') 0 0 no-repeat) -->
 						</div>
@@ -83,16 +124,29 @@
 							<ul>
 								<li class="step">
 									<img src="../../asset/image/story/project/hover_step1_txt.png" alt="THESTORY 마침내 트랙 위를 날다 불가능이라 생각되는 것을 가능하게 만들기 위해 기술, 디자인, 혁신의 모든 한계를 넘다." />
-									<a href="https://www.youtube.com/embed/q_BYvUlDviM?amp;autoplay=1">
-										<img src="../../asset/image/story/project/hover_step1_img.jpg" alt="THESTORY image" />
-										<img src="../../asset/image/story/project/hover_play_btn.png" class="right_play_btn" alt="자세히 보기" />
+
+									<a href="javascript:void(0)" onclick="popopen();">
+											<img src="../../asset/image/story/project/hover_step1_img.jpg" alt="THESTORY image" />
+											<img src="../../asset/image/story/project/hover_play_btn.png" class="right_play_btn" alt="자세히 보기" />
 									</a>
+									<div class="popopen" style="display:none;">
+											<a href="javasciprt:void(0)" onclick="close_btn();" style="position:fixed; top:38px; right:20px;">
+						            <span class="cl_btn" style="position:absolute; left:20px; top:20px;">close button</span>
+						          </a>
+									</div>
+
 								</li>
 								<li class="step">
-									<a href="https://www.youtube.com/embed/IM0sRctOxQc?amp;autoplay=1">
+									<a href="javascript:void(0)" onclick="popopen();">
+										<!-- <iframe width="1920" height="950" src="https://www.youtube.com/embed/IM0sRctOxQc" frameborder="0" allowfullscreen></iframe> -->
 										<img src="../../asset/image/story/project/hover_step2_img.jpg" alt="THE STORY 마침내 트랙 위를 날다 불가능이라 생각되는 것을 가능하게 만들기 위해 기술, 디자인, 혁신의 모든 한계를 넘다." />
 										<img src="../../asset/image/story/project/hover_play_btn.png" class="left_play_btn" alt="영상 재생" />
 									</a>
+									<div class="popopen" style="display:none;">
+											<a href="javasciprt:void(0)" onclick="close_btn();" style="position:fixed; top:38px; right:20px;">
+						            <span class="cl_btn" style="position:absolute; left:20px; top:20px;">close button</span>
+						          </a>
+									</div>
 									<img src="../../asset/image/story/project/hover_step2_txt.png" alt="THE TECH 초전도체 자석과 액체질소의 완전한 결합 액체 질소로 냉각한 초전도체와 호버파크에 설치된 자석 트랙으로 공중에 부상하다" />
 
 									<ul class="fig-thumb">
@@ -105,14 +159,26 @@
 								</li>
 								<li class="step">
 									<img src="../../asset/image/story/project/hover_step3_txt1.png" alt="THE BOARD" />
-									<a href="https://www.youtube.com/embed/y_5NuNZPI9Y?amp;autoplay=1">
+									<a href="javascript:void(0)" onclick="popopen();">
+										<!-- <iframe width="1920" height="948" src="https://www.youtube.com/embed/y_5NuNZPI9Y" frameborder="0" allowfullscreen></iframe> -->
 										<img src="../../asset/image/story/project/hover_step3_img1.jpg" alt="" />
 										<img src="../../asset/image/story/project//hover_play_btn.png" class="right_play_btn" alt="자세히 보기" />
 									</a>
-									<a href="https://www.youtube.com/embed/ee7HhUc3XEM?amp;autoplay=1">
+									<div class="popopen" style="display:none;">
+											<a href="javasciprt:void(0)" onclick="close_btn();" style="position:fixed; top:38px; right:20px;">
+						            <span class="cl_btn" style="position:absolute; left:20px; top:20px;">close button</span>
+						          </a>
+									</div>
+									<a href="javascript:void(0)" onclick="popopen();">
+										<!-- <iframe width="1920" height="948" src="https://www.youtube.com/embed/ee7HhUc3XEM" frameborder="0" allowfullscreen></iframe> -->
 										<img src="../../asset/image/story/project/hover_step3_img2.jpg" alt="" />
 										<img src="../../asset/image/story/project/hover_play_btn.png" class="left_play_btn" alt="자세히 보기" />
 									</a>
+									<div class="popopen" style="display:none;">
+											<a href="javasciprt:void(0)" onclick="close_btn();" style="position:fixed; top:38px; right:20px;">
+						            <span class="cl_btn" style="position:absolute; left:20px; top:20px;">close button</span>
+						          </a>
+									</div>
 									<img src="../../asset/image/story/project/hover_step3_txt2.png" alt="" />
 									<ul class="fig-thumb">
 										<li><a href="#"><img src="../../asset/image/story/project/hover_step3_thumb1.jpg" alt="" /></a></li>
@@ -125,10 +191,16 @@
 
 								</li>
 								<li class="step step_re">
-									<a href="https://www.youtube.com/embed/F-t74UHvrPs?amp;autoplay=1">
+									<a href="javascript:void(0)" onclick="popopen();">
+										<!-- <iframe width="1920" height="948" src="https://www.youtube.com/embed/F-t74UHvrPs" frameborder="0" allowfullscreen></iframe> -->
 										<img src="../../asset/image/story/project/hover_step4_img.jpg" alt="" />
 										<img src="../../asset/image/story/project/hover_play_btn.png" class="left_play_btn" alt="자세히 보기" />
 									</a>
+									<div class="popopen" style="display:none;">
+											<a href="javasciprt:void(0)" onclick="close_btn();" style="position:fixed; top:38px; right:20px;">
+						            <span class="cl_btn" style="position:absolute; left:20px; top:20px;">close button</span>
+						          </a>
+									</div>
 									<img src="../../asset/image/story/project/hover_step4_txt.png" alt="THE RIDE 모든 것이 새로운 경험이었다 Hoverboard Test Ride ROSS MCGOURAN" />
 									<ul class="fig-thumb">
 										<li><a href="#"><img src="../../asset/image/story/project/hover_step4_thumb1.jpg" alt="" /></a></li>
@@ -139,10 +211,16 @@
 									</ul>
 								</li>
 								<li class="step step_re">
-									<a href="https://www.youtube.com/embed/edwpKJ1W600?amp;autoplay=1">
+									<a href="javascript:void(0)" onclick="popopen();">
+										<!-- <iframe width="1920" height="948" src="https://www.youtube.com/embed/edwpKJ1W600" frameborder="0" allowfullscreen></iframe> -->
 										<img src="../../asset/image/story/project/hover_step5_img.jpg" alt="" />
 										<img src="../../asset/image/story/project/hover_play_btn.png" class="left_play_btn" alt="자세히 보기" />
 									</a>
+									<div class="popopen" style="display:none;">
+											<a href="javasciprt:void(0)" onclick="close_btn();" style="position:fixed; top:38px; right:20px;">
+						            <span class="cl_btn" style="position:absolute; left:20px; top:20px;">close button</span>
+						          </a>
+									</div>
 									<img src="../../asset/image/story/project/hover_step5_txt.png" alt="THE PARK 기술력과 상상력이 하나가 되는 곳 최적의 보드 라이딩이 가능한 데크와 200미터 길이의 자석 트랙이 설치된 호버파크에서 기술력과 상상력이 하나가 되다" />
 									<ul class="fig-thumb">
 										<li><a href="#"><img src="../../asset/image/story/project/hover_step5_thumb1.jpg" alt="" /></a></li>
@@ -160,29 +238,50 @@
 							<!-- <div class="banner"> -->
 								<ul>
 									<li>
-										<a href="https://www.youtube.com/embed/KDOl9iEtqH4?amp;autoplay=1">
+										<a href="javascript:void(0)" onclick="popopen();">
+											<!-- <iframe width="1920" height="948" src="https://www.youtube.com/embed/KDOl9iEtqH4" frameborder="0" allowfullscreen></iframe> -->
 											<img src="../../asset/image/story/project/part_banner_0.jpg" alt="STEPS 10미터가 넘는 거대한 모형에 생명력을 불어넣은" />
 											<img src="../../asset/image/story/project/btn_contents_play.png" alt="영상 재생" />
 										</a>
+										<div class="popopen" style="display:none;">
+												<a href="javasciprt:void(0)" onclick="close_btn();" style="position:fixed; top:38px; right:20px;">
+							            <span class="cl_btn" style="position:absolute; left:20px; top:20px;">close button</span>
+							          </a>
+										</div>
 									</li>
 									<li>
-										<a href="https://www.youtube.com/embed/f4B56lqaNyM?amp;autoplay=1">
+										<a href="javascript:void(0)" onclick="popopen();">
+											<!-- <iframe width="1920" height="948" src="https://www.youtube.com/embed/f4B56lqaNyM" frameborder="0" allowfullscreen></iframe> -->
 											<img src="../../asset/image/story/project/part_banner_1.jpg" alt="STROBE 쿠알라 룸 푸르의 밤하늘을 수놓은 라이트 수트의 환상적인 퍼포먼스" />
 											<img src="../../asset/image/story/project/btn_contents_play.png" alt="영상 재생" />
 										</a>
+										<div class="popopen" style="display:none;">
+												<a href="javasciprt:void(0)" onclick="close_btn();" style="position:fixed; top:38px; right:20px;">
+							            <span class="cl_btn" style="position:absolute; left:20px; top:20px;">close button</span>
+							          </a>
+										</div>
 									</li>
 									<li>
-										<a href="https://www.youtube.com/embed/LcovBLmALog?amp;autoplay=1">
+										<a href="javascript:void(0)" onclick="popopen();">
+											<!-- <iframe width="1920" height="948" src="https://www.youtube.com/embed/LcovBLmALog" frameborder="0" allowfullscreen></iframe> -->
 											<img src="../../asset/image/story/project/part_banner_2.jpg" alt="SWARM SWARM 정확히 계산되어 움직이는 쿼드로터의 놀라운 움직임" />
 											<img src="../../asset/image/story/project/btn_contents_play.png" alt="영상 재생" />
 										</a>
+										<div class="popopen" style="display:none;">
+												<a href="javasciprt:void(0)" onclick="close_btn();" style="position:fixed; top:38px; right:20px;">
+							            <span class="cl_btn" style="position:absolute; left:20px; top:20px;">close button</span>
+							          </a>
+										</div>
 									</li>
 								</ul>
-							<!-- </div> -->
-							<!-- http://www.lexus-int.com/amazinginmotion/ -->
-							<a href="https://www.youtube.com/embed/KDOl9iEtqH4?amp;autoplay=1" target="_blank" class="btn_view_detail">
-								<img src="../../asset/image/story/project/btn_view_detail.png" alt="자세히 보기" />
-							</a>
+								<a href="javascript:void(0)" onclick="popopen();" target="_blank" class="btn_view_detail">
+									<img src="../../asset/image/story/project/btn_view_detail.png" alt="자세히 보기" />
+									<div class="popopen" style="display:none;">
+											<a href="javasciprt:void(0)" onclick="close_btn();" style="position:fixed; top:38px; right:20px;">
+												<span class="cl_btn" style="position:absolute; left:20px; top:20px;">close button</span>
+											</a>
+									</div>
+								</a>
 						</div>
 					</section>
 		  	</li>
@@ -225,37 +324,172 @@
 							<ol>
 								<li>
 									<ul>
-										<li class="img-con"><a href="#"><img src="../../asset/image/story/project/shortfilm_movie_img_0.jpg" alt="영화타이틀1 이미지" /></a></li>
-										<li class="txt-con"><a href="#"><img src="../../asset/image/story/project/shortfilm_movie_text_0.jpg" alt="MARKET HOURS / JON GOLDMAN" /></a></li>
-										<li class="year-con"><a href="#"><img src="../../asset/image/story/project/shortfilm_date_2014.jpg" alt="2014" /></a></li>
+										<li class="img-con">
+											<a href="javascript:void(0)" onclick="popopen();" >
+												<img src="../../asset/image/story/project/shortfilm_movie_img_0.jpg" alt="영화타이틀1 이미지" />
+											</a>
+											<div class="popopen" style="display:none;">
+					                <a href="javasciprt:void(0)" onclick="close_btn();" style="position:fixed; top:38px; right:20px;">
+					                  <span class="cl_btn" style="position:absolute; left:20px; top:20px;">close button</span>
+					                </a>
+					            </div>
+										</li>
+										<li class="txt-con">
+											<a href="javascript:void(0)" onclick="popopen();" >
+												<img src="../../asset/image/story/project/shortfilm_movie_text_0.jpg" alt="MARKET HOURS / JON GOLDMAN" />
+											</a>
+											<div class="popopen" style="display:none;">
+					                <a href="javasciprt:void(0)" onclick="close_btn();" style="position:fixed; top:38px; right:20px;">
+					                  <span class="cl_btn" style="position:absolute; left:20px; top:20px;">close button</span>
+					                </a>
+					            </div>
+										</li>
+										<li class="year-con">
+											<a href="javascript:void(0)" onclick="popopen();" >
+												<img src="../../asset/image/story/project/shortfilm_date_2014.jpg" alt="2014" />
+											</a>
+											<div class="popopen" style="display:none;">
+					                <a href="javasciprt:void(0)" onclick="close_btn();" style="position:fixed; top:38px; right:20px;">
+					                  <span class="cl_btn" style="position:absolute; left:20px; top:20px;">close button</span>
+					                </a>
+					            </div>
+										</li>
 									</ul>
 								</li>
 								<li>
 									<ul>
-										<li class="img-con"><a href="#"><img src="../../asset/image/story/project/shortfilm_movie_img_1.jpg" alt="영화타이틀1 이미지" /></a></li>
-										<li class="txt-con"><a href="#"><img src="../../asset/image/story/project/shortfilm_movie_text_1.jpg" alt="MARKET HOURS / JON GOLDMAN" /></a></li>
-										<li class="year-con"><a href="#"><img src="../../asset/image/story/project/shortfilm_date_2014.jpg" alt="2014" /></a></li>
+										<li class="img-con">
+											<a href="javascript:void(0)" onclick="popopen();" >
+												<img src="../../asset/image/story/project/shortfilm_movie_img_1.jpg" alt="영화타이틀1 이미지" />
+											</a>
+											<div class="popopen" style="display:none;">
+					                <a href="javasciprt:void(0)" onclick="close_btn();" style="position:fixed; top:38px; right:20px;">
+					                  <span class="cl_btn" style="position:absolute; left:20px; top:20px;">close button</span>
+					                </a>
+					            </div>
+										</li>
+										<li class="txt-con">
+											<a href="javascript:void(0)" onclick="popopen();" >
+												<img src="../../asset/image/story/project/shortfilm_movie_text_1.jpg" alt="MARKET HOURS / JON GOLDMAN" />
+											</a>
+											<div class="popopen" style="display:none;">
+					                <a href="javasciprt:void(0)" onclick="close_btn();" style="position:fixed; top:38px; right:20px;">
+					                  <span class="cl_btn" style="position:absolute; left:20px; top:20px;">close button</span>
+					                </a>
+					            </div>
+										</li>
+										<li class="year-con">
+											<a href="javascript:void(0)" onclick="popopen();" >
+												<img src="../../asset/image/story/project/shortfilm_date_2014.jpg" alt="2014" />
+											</a>
+											<div class="popopen" style="display:none;">
+					                <a href="javasciprt:void(0)" onclick="close_btn();" style="position:fixed; top:38px; right:20px;">
+					                  <span class="cl_btn" style="position:absolute; left:20px; top:20px;">close button</span>
+					                </a>
+					            </div>
+										</li>
 									</ul>
 								</li>
 								<li>
 									<ul>
-										<li class="img-con"><a href="#"><img src="../../asset/image/story/project/shortfilm_movie_img_2.jpg" alt="영화타이틀1 이미지" /></a></li>
-										<li class="txt-con"><a href="#"><img src="../../asset/image/story/project/shortfilm_movie_text_2.jpg" alt="MARKET HOURS / JON GOLDMAN" /></a></li>
-										<li class="year-con"><a href="#"><img src="../../asset/image/story/project/shortfilm_date_2014.jpg" alt="2014" /></a></li>
+										<li class="img-con">
+											<a href="javascript:void(0)" onclick="popopen();" >
+												<img src="../../asset/image/story/project/shortfilm_movie_img_2.jpg" alt="영화타이틀1 이미지" />
+											</a>
+											<div class="popopen" style="display:none;">
+					                <a href="javasciprt:void(0)" onclick="close_btn();" style="position:fixed; top:38px; right:20px;">
+					                  <span class="cl_btn" style="position:absolute; left:20px; top:20px;">close button</span>
+					                </a>
+					            </div>
+										</li>
+										<li class="txt-con">
+											<a href="javascript:void(0)" onclick="popopen();" >
+												<img src="../../asset/image/story/project/shortfilm_movie_text_2.jpg" alt="MARKET HOURS / JON GOLDMAN" />
+											</a>
+											<div class="popopen" style="display:none;">
+					                <a href="javasciprt:void(0)" onclick="close_btn();" style="position:fixed; top:38px; right:20px;">
+					                  <span class="cl_btn" style="position:absolute; left:20px; top:20px;">close button</span>
+					                </a>
+					            </div>
+										</li>
+										<li class="year-con">
+											<a href="javascript:void(0)" onclick="popopen();" >
+												<img src="../../asset/image/story/project/shortfilm_date_2014.jpg" alt="2014" />
+											</a>
+											<div class="popopen" style="display:none;">
+					                <a href="javasciprt:void(0)" onclick="close_btn();" style="position:fixed; top:38px; right:20px;">
+					                  <span class="cl_btn" style="position:absolute; left:20px; top:20px;">close button</span>
+					                </a>
+					            </div>
+										</li>
 									</ul>
 								</li>
 								<li>
 									<ul>
-										<li class="img-con"><a href="#"><img src="../../asset/image/story/project/shortfilm_movie_img_3.jpg" alt="영화타이틀1 이미지" /></a></li>
-										<li class="txt-con"><a href="#"><img src="../../asset/image/story/project/shortfilm_movie_text_3.jpg" alt="MARKET HOURS / JON GOLDMAN" /></a></li>
-										<li class="year-con"><a href="#"><img src="../../asset/image/story/project/shortfilm_date_2013.jpg" alt="2013" /></a></li>
+										<li class="img-con">
+											<a href="javascript:void(0)" onclick="popopen();" >
+												<img src="../../asset/image/story/project/shortfilm_movie_img_3.jpg" alt="영화타이틀1 이미지" />
+											</a>
+											<div class="popopen" style="display:none;">
+					                <a href="javasciprt:void(0)" onclick="close_btn();" style="position:fixed; top:38px; right:20px;">
+					                  <span class="cl_btn" style="position:absolute; left:20px; top:20px;">close button</span>
+					                </a>
+					            </div>
+										</li>
+										<li class="txt-con">
+											<a href="javascript:void(0)" onclick="popopen();" >
+												<img src="../../asset/image/story/project/shortfilm_movie_text_3.jpg" alt="MARKET HOURS / JON GOLDMAN" />
+											</a>
+											<div class="popopen" style="display:none;">
+					                <a href="javasciprt:void(0)" onclick="close_btn();" style="position:fixed; top:38px; right:20px;">
+					                  <span class="cl_btn" style="position:absolute; left:20px; top:20px;">close button</span>
+					                </a>
+					            </div>
+										</li>
+										<li class="year-con">
+											<a href="javascript:void(0)" onclick="popopen();" >
+												<img src="../../asset/image/story/project/shortfilm_date_2013.jpg" alt="2013" />
+											</a>
+											<div class="popopen" style="display:none;">
+					                <a href="javasciprt:void(0)" onclick="close_btn();" style="position:fixed; top:38px; right:20px;">
+					                  <span class="cl_btn" style="position:absolute; left:20px; top:20px;">close button</span>
+					                </a>
+					            </div>
+										</li>
 									</ul>
 								</li>
 								<li>
 									<ul>
-										<li class="img-con"><a href="#"><img src="../../asset/image/story/project/shortfilm_movie_img_4.jpg" alt="영화타이틀1 이미지" /></a></li>
-										<li class="txt-con"><a href="#"><img src="../../asset/image/story/project/shortfilm_movie_text_4.jpg" alt="MARKET HOURS / JON GOLDMAN" /></a></li>
-										<li class="year-con"><a href="#"><img src="../../asset/image/story/project/shortfilm_date_2013.jpg" alt="2013" /></a></li>
+										<li class="img-con">
+											<a href="javascript:void(0)" onclick="popopen();" >
+												<img src="../../asset/image/story/project/shortfilm_movie_img_4.jpg" alt="영화타이틀1 이미지" />
+											</a>
+											<div class="popopen" style="display:none;">
+					                <a href="javasciprt:void(0)" onclick="close_btn();" style="position:fixed; top:38px; right:20px;">
+					                  <span class="cl_btn" style="position:absolute; left:20px; top:20px;">close button</span>
+					                </a>
+					            </div>
+										</li>
+										<li class="txt-con">
+											<a href="javascript:void(0)" onclick="popopen();" >
+												<img src="../../asset/image/story/project/shortfilm_movie_text_4.jpg" alt="MARKET HOURS / JON GOLDMAN" />
+											</a>
+											<div class="popopen" style="display:none;">
+					                <a href="javasciprt:void(0)" onclick="close_btn();" style="position:fixed; top:38px; right:20px;">
+					                  <span class="cl_btn" style="position:absolute; left:20px; top:20px;">close button</span>
+					                </a>
+					            </div>
+										</li>
+										<li class="year-con">
+											<a href="javascript:void(0)" onclick="popopen();" >
+												<img src="../../asset/image/story/project/shortfilm_date_2013.jpg" alt="2013" />
+											</a>
+											<div class="popopen" style="display:none;">
+					                <a href="javasciprt:void(0)" onclick="close_btn();" style="position:fixed; top:38px; right:20px;">
+					                  <span class="cl_btn" style="position:absolute; left:20px; top:20px;">close button</span>
+					                </a>
+					            </div>
+										</li>
 									</ul>
 								</li>
 							</ol>

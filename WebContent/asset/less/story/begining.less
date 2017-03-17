@@ -1,3 +1,5 @@
+// main: ../import.less
+
 #st_begin {
   margin-left:180px;
   position:relative;
@@ -36,6 +38,10 @@
           text-indent:-9999px;
           font-size:0;
         }
+      }
+      iframe {
+        width:100%;
+        height:100%;
       }
     // }
   }
@@ -159,20 +165,21 @@
     		}
   		}
   		>li:nth-child(3) {
-  			>div {
-		    position:relative;
-    		margin-top:10%;
-    		>span {
+  			>a {
+          position:relative;
+          >img {
+            position:relative;
+        		margin-top:10%;
+          }
+    		>img+img {
     			position:absolute;
-    			left:50%;
-    			top:50%;
+    			left:51%;
+    			bottom:148px;
     			margin-left:-33px;
     			margin-top:-33px;
     		}
   			}
-  			.play_video {
-    			display:none;
-    		}
+
   		}
   		>li:nth-child(4) {
   			position:relative;

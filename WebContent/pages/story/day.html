@@ -3,8 +3,38 @@
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" href="../../asset/css/import.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../../asset/js/project.js"></script>
 <title>Amazing Experience Day</title>
 </head>
+<!-- 
+<script>
+
+					function popopen() {
+
+							 $('.popopen').css({
+								 "display":"block"
+							 }).append('<iframe width="1920" height="948" src="https://www.youtube.com/embed/1m6zxMeo4Rk?rel=0&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>')
+
+
+							//  $('.close_btn').click(function(){
+							//    $('.popopen').css({
+							//      "display":"none"
+							//    }).children('iframe').remove();
+							//  })
+					};
+
+					function close_btn() {
+
+						$('.popopen').css({
+								"display":"none"
+							}).children('iframe').remove();
+						// $('.popopen').children('iframe').remove();
+						// $('.popopen').css({"display":"none"});
+					}
+
+</script> -->
+
 <body>
 <section id="st_day">
 	<section class="day-con-1">
@@ -17,10 +47,30 @@
 		</div>
 		<div class="vod-holder">
 			<span class="video-player">
-				<a href="https://www.youtube.com/embed/1m6zxMeo4Rk?amp;autoplay=1">
+				<a href="javascript:void(0)" onclick="popopen();">
 					<img src="../../asset/image/story/day/bg_sec1_video.jpg" alt="영상 이미지" />
 				</a>
 			</span>
+
+			<div class="popopen" style="display:none;">
+        <!-- ?rel=0&autoplay=1&loop=1 -->
+      	<!-- <iframe width="1903" height="948" src="https://www.youtube.com/embed/kD3XfMOWPYE" frameborder="0" allowfullscreen></iframe> -->
+
+
+
+        <!-- <p class="close_btn" style="position:fixed;" onclick="close();">
+        	  <a href="javasciprt:void(0)" style="position:fixed; top:50px; right:20px;">
+        	    <span>close button</span>
+        	  </a>
+      	</p> -->
+
+          <a href="javasciprt:void(0)" onclick="close_btn();" style="position:fixed; top:38px; right:20px;">
+            <span class="cl_btn" style="position:absolute; left:20px; top:20px;">close button</span>
+          </a>
+
+
+      </div>
+
 			<div class="video-txt">
 				<span>렉서스만의 하이브리드 드라이빙 퍼포먼스부터 고성능 F드라이빙 퍼포먼스까지</span>
 				<span>LEXUS AMAZING EXPERIENCE DAY에서</span>

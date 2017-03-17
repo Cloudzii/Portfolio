@@ -2,26 +2,62 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../../asset/js/project.js"></script>
 <title>philosophy</title>
 <link rel="stylesheet" href="../../asset/css/import.css">
 </head>
+<!-- <script>
+
+					function popopen() {
+
+							 $('.popopen').css({
+								 "display":"block"
+							 }).append('<iframe width="1677" height="921" src="https://www.youtube.com/embed/ZvfgdcozI5Y?rel=0&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>')
+					};
+
+					function close_btn() {
+
+						$('.popopen').css({
+								"display":"none"
+							}).children('iframe').remove();
+						// $('.popopen').children('iframe').remove();
+						// $('.popopen').css({"display":"none"});
+					}
+
+</script> -->
+
 <body>
-
-
 <section id="st_brand">
 
 	<article class="st_phil">
 	 	<p><img src="../../asset/image/story/philosophy/bg_s0.jpg" alt="philosophy background image" /></p>
  		<h2><img src="../../asset/image/story/philosophy/head_s0.png" alt="BRAND PHILOSOPHY" /></h2>
 	</article>
-
 	<article class="product_phil">
 		<ul>
 			<li>
-				<span>
+				<!-- <span>
 					<img src="../../asset/image/story/philosophy/img_s1.jpg" alt="YouTube Video" />
 					<a href="#"><img src="../../asset/image/story/philosophy/btn_model_play.png" alt="play" /></a>
-				</span>
+				</span> -->
+
+				<a href="javascript:void(0)" onclick="popopen();" >
+					<img src="../../asset/image/story/philosophy/img_s1.jpg" alt="YouTube Video" />
+					<img src="../../asset/image/story/philosophy/btn_model_play.png" alt="play" class="btn_play" />
+	      </a>
+
+				<div class="popopen" style="display:none;">
+
+	          <a href="javasciprt:void(0)" onclick="close_btn();" style="position:fixed; top:38px; right:20px;">
+	            <span class="cl_btn" style="position:absolute; left:20px; top:20px;">close button</span>
+	          </a>
+
+
+	      </div>
+
+
+
 				<p><img src="../../asset/image/story/philosophy/txt_s1.png" alt="디자인, 기술, 장인정신과 고객 케어에 있어 끊임없이 노력하고자 하는 렉서스의 기본 브랜드 철학입니다.
                                                    차 자체의 놀라움 뿐만 아니라 렉서스 만의 놀라운 경험을 제공하고자 합니다" /></p>
 			</li>

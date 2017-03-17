@@ -20,8 +20,6 @@ $(document).ready(function(){
     //     });
     // };
 
-
-
     $('.btn-next-arr').bind('click',function(){
         $('html,body').animate({scrollTop:'0' + '1072px'},930);
     });
@@ -52,24 +50,44 @@ $(document).ready(function(){
     	$('.project-view>ul>li').eq(idx+1).show().siblings().hide();
     });
 
-
-
+});
+////////////////////////////////////////////////////////////////////////////////
     function popopen() {
 
-         $('.popopen').css({
-           "display":"block"
-         }).append('<iframe width="100%" height="100%" src="https://www.youtube.com/embed/kD3XfMOWPYE?rel=0&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>')
-
-         $('.close_btn').click(function(){
-           $('.popopen').css({
-             "display":"none"
-           })
-         })
+				 $('.popopen').css({
+					 "display":"block"
+				 }).append('<iframe width="1677" height="921" src="https://www.youtube.com/embed/HCyGRgKZpl8?rel=0&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>')
+        //journey의 iframe 주소
     };
 
+		function close_btn() {
+
+			$('.popopen').css({
+					"display":"none"
+				}).children('iframe').remove();
+
+		};
 
 
 
 
+		function popopen_hover() {
 
-});
+			$('.popopen_hover').css({
+					"display":"block"
+			}).append('<iframe width="1920" height="948" src="https://www.youtube.com/embed/q_BYvUlDviM?rel=0&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>')
+
+    };
+
+		// function close_btn() {
+    //
+		// 	$('popopen_hover').css({
+		// 		"display":"none"
+		// 	}).children('iframe').remove();
+    //
+		// };
+
+
+
+
+// });

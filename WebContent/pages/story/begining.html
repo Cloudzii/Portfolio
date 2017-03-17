@@ -2,9 +2,31 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <title>begining</title>
-<link rel="stylesheet" href="thelexus/asset/css/import.css">
-</head>
+<link rel="stylesheet" href="../../asset/css/import.css">
+<script src="../../asset/js/project.js"></script></head>
+<!-- <script>
+
+
+  function popopen() {
+
+       $('.popopen').css({
+         "display":"block"
+       }).append('<iframe width="1920" height="948" src="https://www.youtube.com/embed/yUeAT3mY9fk?rel=0&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>')
+  };
+
+  function close_btn() {
+
+    $('.popopen').css({
+        "display":"none"
+      }).children('iframe').remove();
+    // $('.popopen').children('iframe').remove();
+    // $('.popopen').css({"display":"none"});
+  };
+
+
+</script> -->
 <body>
 
 
@@ -60,23 +82,15 @@
         </li>
         <li>
             <p><img src="../../asset/image/story/begining/txt_s3_3.png" alt="LS 400 Story"></p>
-            <div>
-              <img src="../../asset/image/story/begining/img_s3_3.jpg" alt="LS 400 video'image">
-              <span><img src="../../asset/image/story/begining/btn_model_play.png" alt="play button"></span>
-            </div>
+            <a href="javascript:void(0)" onclick="popopen();" >
+    					<img src="../../asset/image/story/begining/img_s3_3.jpg" alt="LS 400 video'image">
+    					<img src="../../asset/image/story/begining/btn_model_play.png" alt="play button">
+    	      </a>
+
+
 
 <!-- Youtube 팝업 -->
             <div class="popopen" style="display:none;">
-              <!-- ?rel=0&autoplay=1&loop=1 -->
-            	<!-- <iframe width="1903" height="948" src="https://www.youtube.com/embed/kD3XfMOWPYE" frameborder="0" allowfullscreen></iframe> -->
-
-
-
-              <!-- <p class="close_btn" style="position:fixed;" onclick="close();">
-              	  <a href="javasciprt:void(0)" style="position:fixed; top:50px; right:20px;">
-              	    <span>close button</span>
-              	  </a>
-            	</p> -->
 
                 <a href="javasciprt:void(0)" onclick="close_btn();" style="position:fixed; top:38px; right:20px;">
                   <span class="cl_btn" style="position:absolute; left:20px; top:20px;">close button</span>
@@ -85,10 +99,6 @@
 
             </div>
 <!-- Youtube 팝업 -->
-
-            <div class="play_video">
-              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/yUeAT3mY9fk"  ></iframe>
-            </div>
 
 
 
