@@ -1,0 +1,407 @@
+// main: ../import.less
+
+#st_day {
+  margin-left:180px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  .popopen {
+    position:fixed;
+    width:1903px;
+    height:950px;
+    z-index:5;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    // .close_btn {
+    //   z-index:10;
+      a {
+        z-index:10;
+        width:60px;
+        height:60px;
+        background: url('../../asset/image/service/btn_close_bg.png') repeat 0 0;
+        opacity:0.5;
+        &:hover {
+          opacity:1;
+          color:#fff;
+        }
+        &:link {
+          color:#666;
+        }
+        >.cl_btn {
+          left:20px;
+          top:20px;
+          width:20px;
+          height:20px;
+          background:url('../../asset/image/service/sprite_common.png') no-repeat -95px -163px;
+          text-indent:-9999px;
+          font-size:0;
+        }
+      }
+      iframe {
+        width:100%;
+        height:100%;
+      }
+    // }
+  }
+
+
+
+
+  .day-con-1 {
+    height:1370px;
+    position:relative;
+    .bg-holder {
+      position:relative;
+      left:-388px;
+
+    }
+    .txt-holder {
+      width:852px;
+      height:484px;
+      position:relative;
+      bottom:92.8%;
+      left:436px;
+      p {
+        position:absolute;
+        right:0;
+        bottom:14px;
+      }
+    }
+    .vod-holder {
+      width:780px;
+      position:relative;
+      bottom:1098px;
+      left:472px;
+      span {
+        margin-bottom:12px;
+        display:block;
+        opacity:0.8;
+      }
+      .video-player {
+        margin-bottom:50px;
+      }
+      .video-txt {
+        span {
+        font-size:20px;
+        color:#FFF;
+        font-family:'Nobel-Regular','SDGothicNeo1B';
+        letter-spacing:0;
+        word-spacing: 1.5px;
+        text-align:center;
+        }
+      }
+    }
+  }
+  .day-con-2 {
+    height:988px;
+    position:relative;
+
+    .day-piclist {
+      position:relative;
+      .thumnb {
+        position:relative;
+        width:50%;
+        float:left;
+      }
+      .thumb1-holder {
+        >img {width:100%; border:0; vertical-align:top;}
+
+      }
+      .thumb2-holder {
+        position:relative;
+      }
+
+    }
+    .day-pictxt {
+      position:relative;
+      height:260px;
+      .bg-holder {
+        position:relative;
+        right:395px;
+      }
+      .txt-holder {
+        position:relative;
+        right:15px;
+        bottom:175px;
+        text-align:center;
+        h3 {
+          color:#FFF;
+          margin-bottom:19px;
+          font-size:20px;
+          font-family: 'Nobel-Regular','SDGothicNeo1SB';
+        }
+        p {
+          span {
+            display:block;
+            color:#666;
+            font:14px 'SDGothicNeo1SB';
+            line-height:1.6;
+            font-weight:bold;
+          }
+        }
+      }
+    }
+
+  }
+  .day-con-3 {
+    height:420px;
+    background-color:pink;
+    .join-list_wrap {
+      height:420px;
+      padding:50px 0 56px 0;
+      position:relative;
+      left:27.5%;
+      h3 {
+        color:#000;
+        font-size:24px;
+        letter-spacing:-1px;
+        text-align:left;
+        font-family:'SDGothicNeo1SB';
+      }
+      ul {
+        margin:24px 0 30px 0;
+        height:110px;
+        background-image: url('../../asset/image/story/day/bg_sec3_step.jpg');
+        background-repeat:no-repeat;
+        background-position:0 100%;
+        li {
+          width:260px;
+          float:left;
+          p {
+            width:260px;
+            height:70px;
+            margin:20px 0 20px 0;
+            box-sizing:border-box;
+            position:relative;
+            border-right:1px #666 solid;
+            .num {
+              font-size:48px;
+              position:relative;
+              left:25px;
+              top:20px;
+              margin-top:-25px;
+              padding:0;
+              color:#FFF;
+              opacity:0.6;
+            }
+            >span {
+              font-size:14px;
+              line-height:1.4;
+              color:#FFF;
+              position:relative;
+              top:20px;
+              left:35px;
+              display:inline-block;
+              >span {
+                display:block;
+                color:#FFF;
+              }
+            }
+
+          }
+        }
+      }
+      .join-period {
+        width:260px;
+        height:158px;
+        float:left;
+        dt {
+          color:#666;
+          font-size:13px;
+          font-family:'SDGothicNeo1SB';
+          margin-bottom:12px;
+        }
+        dd {
+          font-size:28px;
+          color:#000;
+          font-family:'Nobel-Bold';
+          margin-bottom:26px;
+        }
+      }
+      .join-note {
+        width:520px;
+        height:117px;
+        float:left;
+        strong {
+          margin-bottom:16px;
+          font-size:13px;
+          color:#666;
+          letter-spacing:-1px;
+          font-family:'SDGothicNeo1SB';
+          display:inline-block;
+          // font-weight:bold;
+        }
+        p {
+          font-size:13px;
+          color:#999;
+          font-family:'SDGothicNeo1SB';
+          letter-spacing:0;
+          span {
+            line-height:1.7;
+            display:inline-block;
+            position:relative;
+            a {
+              span {
+                color:#0b3273;
+              }
+              em {
+                position:relative;
+                top:5px;
+                right:10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .day-con-4 {
+    height:790px;
+    position:relative;
+    .end-event {
+      background-image:url('../../asset/image/story/day/sec4_pausebg.png');
+      width:100%;
+      height:790px;
+      display:table;
+      .txt-wrapper {
+        display:table-cell;
+        vertical-align:middle;
+        .inner-wrapper {
+          text-align:center;
+          font-size:36px;
+          p {
+            color:#FFF;
+            padding-bottom:24px;
+          }
+          span {
+            color:#FFF;
+            font-size:16px;
+            letter-spacing:0.025em;
+            display:block;
+          }
+        }
+      }
+    }
+  }
+  .day-con-5 {
+    height:570px;
+    position:relative;
+    .bg-holder {
+      position:relative;
+      right:385px;
+    }
+    .txt-wrap {
+      width:780px;
+      height:570px;
+      position:absolute;
+      padding:50px 0 56px 0;
+      left:27.5%;
+      top:0;
+      h3 {
+        color:#FFF;
+        font-family: 'SDGothicNeo1SB';
+        font-size:26px;
+        letter-spacing: -1px;
+        text-align: left;
+        margin:0 0 26px 0;
+      }
+      .guide-wrap {
+        border-top:3px #FFF solid;
+        padding:32px 0 70px 0;
+        text-align:left;
+        ul {
+          width:780px;
+          height:100px;
+          .first {
+            width:310px;
+          }
+          .second {
+            width:240px;
+          }
+          .third {
+            width:230px;
+            a:hover {
+              background-color:#FFF;
+              color:#000;
+            }
+          }
+          li{
+            float:left;
+            dl {
+              dt {
+                color:#FFF;
+                font-family:'SDGothicNeo1SB';
+                letter-spacing:0px;
+                font-size:18px;
+                margin-bottom:16px;
+              }
+              dd {
+                font-size:13px;
+                color:#999;
+                font-family:'SDGothicNeo1SB';
+                letter-spacing:0px;
+                line-height:1.7;
+                span {
+                  display:block;
+                  font-size:13px;
+                  color:#999;
+                  font-family:'SDGothicNeo1SB';
+                  letter-spacing:0px;
+                  line-height:1.7;
+                }
+              }
+            }
+          }
+        }
+        a {
+          width:260px;
+          height:58px;
+          margin:24px 0 48px 0;
+          position:relative;
+          top:8px;
+          left:5px;
+          font-size:14px;
+          position:relative;
+          bottom:0;
+          border:1px solid #FFF;
+          font-family:'SDGothicNeo1SB';
+          text-align:center;
+          display:inline-block;
+          &:link {
+            color:#666;
+          }
+          span {
+            position:absolute;
+            color:#FFF;
+            font-size:14px;
+            left:40px;
+            top:20px;
+          }
+        }
+        h4 {
+          margin-bottom:16px;
+          color:#FFF;
+          font-size:15px;
+          font-family:'SDGothicNeo1SB';
+          letter-spacing:0;
+        }
+        p {
+          color:#999;
+          font-size:13px;
+          font-family:'SDGothicNeo1SB';
+          letter-spacing:0;
+          position:absolute;
+          bottom:180px;
+          span {
+            display:block;
+            line-height:1.5;
+          }
+        }
+      }
+    }
+  }
+
+
+}

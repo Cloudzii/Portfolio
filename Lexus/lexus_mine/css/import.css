@@ -4,6 +4,7 @@
   border: 1px #F00 solid;
   position: relative;
   height: 100%;
+  background-color: #F00;
 }
 #st_begin .st_begining {
   background-image: url(../../asset/image/story/begining/bg_s0.jpg);
