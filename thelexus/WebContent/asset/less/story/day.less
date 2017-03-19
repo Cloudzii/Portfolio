@@ -5,6 +5,14 @@
   overflow-x: hidden;
   overflow-y: hidden;
 
+  // .clearfix:after {
+  //   content:"";
+  //   clear:both;
+  // }
+  .clearfix:before {
+    content:"";
+    clear:both;
+  }
   .popopen {
     position:fixed;
     width:1903px;
@@ -55,7 +63,6 @@
     .bg-holder {
       position:relative;
       left:-388px;
-
     }
     .txt-holder {
       width:852px;
@@ -95,24 +102,57 @@
     }
   }
   .day-con-2 {
-    height:988px;
+    height:792px;
     position:relative;
+    img {
+      border:0;
+      vertical-align:top;
+      // width:100%;
+    }
 
     .day-piclist {
       position:relative;
-      .thumnb {
-        position:relative;
-        width:50%;
-        float:left;
+      // .thumnb {
+      //   position:relative;
+      //   width:50%;
+      //   float:left;
+      // }
+      // .thumb1-holder:after {
+      //   content:"";
+      //   clear:both;
+      // }
+      img {
+        width:100%;
       }
       .thumb1-holder {
-        >img {width:100%; border:0; vertical-align:top;}
-
+        width:50%;
+        float:left;
+        // >img {width:100%; border:0; vertical-align:top;}
+        .pic-top {
+          width:100%;
+          float:left;
+          img {
+            width:100%;
+          }
+          .left,.right {
+            width:50%;
+            float:left;
+          }
+        }
       }
       .thumb2-holder {
         position:relative;
+        width:50%;
+        float:left;
+        .pic-bottom {
+          width:100%;
+          float:left;
+          img {
+            width:50%;
+            float:left;
+          }
+        }
       }
-
     }
     .day-pictxt {
       position:relative;

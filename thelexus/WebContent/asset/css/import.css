@@ -230,9 +230,6 @@
   -webkit-transition: .2s;
   /* For Safari 3.1 to 6.0 */
 }
-#gnb-nav {
-  display: none;
-}
 #main {
   position: absolute;
   top: 0;
@@ -384,7 +381,7 @@ aside ul li a p {
   font-family: "SDGothicNeo1R";
 }
 footer {
-  position: absolute;
+  position: fixed;
   top: 610px;
   left: 30px;
   z-index: 2;
@@ -457,7 +454,7 @@ footer .etc ul li {
   text-rendering: optimizeLegibility;
   white-space: -1.5px;
   font-size: 9px;
-  color: #33;
+  color: #333;
 }
 footer .etc ul li:hover {
   color: #fff;
@@ -477,7 +474,6 @@ footer .etc ul li i::before {
 }
 #gnb-nav {
   position: fixed;
-  display: block;
   z-index: 2;
   width: 180px;
   height: 100%;
@@ -530,14 +526,6 @@ footer .etc ul li i::before {
   font-family: "SDGothicNeo1R";
   font-weight: bold;
   margin-bottom: 8px;
-}
-#gnb-nav > div ul li cite i {
-  position: relative;
-  display: inline-block;
-  right: 15px;
-  width: 15px;
-  height: 10px;
-  background-color: #fff;
 }
 #gnb-nav > div ul li a {
   width: 140px;
@@ -1255,6 +1243,43 @@ footer .etc ul li i::before {
   position: relative;
   height: 100%;
 }
+#st_begin .popopen {
+  position: fixed;
+  width: 1903px;
+  height: 950px;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+#st_begin .popopen a {
+  z-index: 10;
+  width: 60px;
+  height: 60px;
+  background: url('../../asset/image/service/btn_close_bg.png') repeat 0 0;
+  opacity: 0.5;
+}
+#st_begin .popopen a:hover {
+  opacity: 1;
+  color: #fff;
+}
+#st_begin .popopen a:link {
+  color: #666;
+}
+#st_begin .popopen a > .cl_btn {
+  left: 20px;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  background: url('../../asset/image/service/sprite_common.png') no-repeat -95px -163px;
+  text-indent: -9999px;
+  font-size: 0;
+}
+#st_begin .popopen iframe {
+  width: 100%;
+  height: 100%;
+}
 #st_begin .st_begining {
   background-image: url(../../asset/image/story/begining/bg_s0.jpg);
   background-size: cover;
@@ -1364,19 +1389,19 @@ footer .etc ul li i::before {
 #st_begin .launching_begining > ul > li:nth-child(2) > img {
   margin-left: 40px;
 }
-#st_begin .launching_begining > ul > li:nth-child(3) > div {
+#st_begin .launching_begining > ul > li:nth-child(3) > a {
+  position: relative;
+}
+#st_begin .launching_begining > ul > li:nth-child(3) > a > img {
   position: relative;
   margin-top: 10%;
 }
-#st_begin .launching_begining > ul > li:nth-child(3) > div > span {
+#st_begin .launching_begining > ul > li:nth-child(3) > a > img + img {
   position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 51%;
+  bottom: 148px;
   margin-left: -33px;
   margin-top: -33px;
-}
-#st_begin .launching_begining > ul > li:nth-child(3) .play_video {
-  display: none;
 }
 #st_begin .launching_begining > ul > li:nth-child(4) {
   position: relative;
@@ -1390,6 +1415,43 @@ footer .etc ul li i::before {
 #st_brand {
   margin-left: 180px;
   position: relative;
+}
+#st_brand .popopen {
+  position: fixed;
+  width: 1903px;
+  height: 950px;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+#st_brand .popopen a {
+  z-index: 10;
+  width: 60px;
+  height: 60px;
+  background: url('../../asset/image/service/btn_close_bg.png') repeat 0 0;
+  opacity: 0.5;
+}
+#st_brand .popopen a:hover {
+  opacity: 1;
+  color: #fff;
+}
+#st_brand .popopen a:link {
+  color: #666;
+}
+#st_brand .popopen a > .cl_btn {
+  left: 20px;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  background: url('../../asset/image/service/sprite_common.png') no-repeat -95px -163px;
+  text-indent: -9999px;
+  font-size: 0;
+}
+#st_brand .popopen iframe {
+  width: 100%;
+  height: 100%;
 }
 #st_brand .st_phil {
   border: 1px #F00 solid;
@@ -1421,21 +1483,21 @@ footer .etc ul li i::before {
   left: 500px;
   top: 150px;
 }
-#st_brand .product_phil ul span img {
+#st_brand .product_phil ul li:first-child a > img:first-child {
   margin: 50px 0 0 22px;
 }
-#st_brand .product_phil ul span a {
+#st_brand .product_phil ul li:first-child a .btn_play {
   position: absolute;
   left: 350px;
-  top: 185px;
+  top: 230px;
   margin-left: -33px;
   margin-top: -33px;
 }
-#st_brand .product_phil ul span a:link {
+#st_brand .product_phil ul li:first-child a:link {
   color: #666;
   text-decoration: none;
 }
-#st_brand .product_phil ul p {
+#st_brand .product_phil ul li:first-child p {
   margin: 40px 0 0 25px;
 }
 #st_brand .product_phil ul li:nth-child(2) h3 {
@@ -1568,6 +1630,78 @@ footer .etc ul li i::before {
   letter-spacing: 0.2px;
   word-spacing: 1.5px;
   height: 100%;
+}
+#st_project .popopen_hover {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #000;
+}
+#st_project .popopen_hover a {
+  z-index: 10;
+  width: 60px;
+  height: 60px;
+  background: url('../../asset/image/service/btn_close_bg.png') repeat 0 0;
+  opacity: 0.5;
+}
+#st_project .popopen_hover a:hover {
+  opacity: 1;
+  color: #fff;
+}
+#st_project .popopen_hover a:link {
+  color: #666;
+}
+#st_project .popopen_hover a > .cl_btn {
+  left: 20px;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  background: url('../../asset/image/service/sprite_common.png') no-repeat -95px -163px;
+  text-indent: -9999px;
+  font-size: 0;
+}
+#st_project .popopen {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #000;
+}
+#st_project .popopen a {
+  z-index: 10;
+  width: 60px;
+  height: 60px;
+  background: url('../../asset/image/service/btn_close_bg.png') repeat 0 0;
+  opacity: 0.5;
+}
+#st_project .popopen a:hover {
+  opacity: 1;
+  color: #fff;
+}
+#st_project .popopen a:link {
+  color: #666;
+}
+#st_project .popopen a > .cl_btn {
+  left: 20px;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  background: url('../../asset/image/service/sprite_common.png') no-repeat -95px -163px;
+  text-indent: -9999px;
+  font-size: 0;
+}
+#st_project .popopen iframe {
+  position: relative;
+  left: 100px;
 }
 #st_project .btn-next-arr {
   display: block;
@@ -1865,7 +1999,7 @@ footer .etc ul li i::before {
 #st_project .amazing-in-motion .motion-con-5 .motion_wrap ul li:last-child {
   margin-right: 0;
 }
-#st_project .amazing-in-motion .motion-con-5 .motion_wrap .btn_view_detail {
+#st_project .amazing-in-motion .motion-con-5 .motion_wrap > .btn_view_detail {
   display: block;
   width: 200px;
   height: 40px;
@@ -2190,6 +2324,47 @@ footer .etc ul li i::before {
   overflow-x: hidden;
   overflow-y: hidden;
 }
+#st_day .clearfix:before {
+  content: "";
+  clear: both;
+}
+#st_day .popopen {
+  position: fixed;
+  width: 1903px;
+  height: 950px;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+#st_day .popopen a {
+  z-index: 10;
+  width: 60px;
+  height: 60px;
+  background: url('../../asset/image/service/btn_close_bg.png') repeat 0 0;
+  opacity: 0.5;
+}
+#st_day .popopen a:hover {
+  opacity: 1;
+  color: #fff;
+}
+#st_day .popopen a:link {
+  color: #666;
+}
+#st_day .popopen a > .cl_btn {
+  left: 20px;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  background: url('../../asset/image/service/sprite_common.png') no-repeat -95px -163px;
+  text-indent: -9999px;
+  font-size: 0;
+}
+#st_day .popopen iframe {
+  width: 100%;
+  height: 100%;
+}
 #st_day .day-con-1 {
   height: 1370px;
   position: relative;
@@ -2233,24 +2408,47 @@ footer .etc ul li i::before {
   text-align: center;
 }
 #st_day .day-con-2 {
-  height: 988px;
+  height: 792px;
   position: relative;
+}
+#st_day .day-con-2 img {
+  border: 0;
+  vertical-align: top;
 }
 #st_day .day-con-2 .day-piclist {
   position: relative;
 }
-#st_day .day-con-2 .day-piclist .thumnb {
+#st_day .day-con-2 .day-piclist img {
+  width: 100%;
+}
+#st_day .day-con-2 .day-piclist .thumb1-holder {
+  width: 50%;
+  float: left;
+}
+#st_day .day-con-2 .day-piclist .thumb1-holder .pic-top {
+  width: 100%;
+  float: left;
+}
+#st_day .day-con-2 .day-piclist .thumb1-holder .pic-top img {
+  width: 100%;
+}
+#st_day .day-con-2 .day-piclist .thumb1-holder .pic-top .left,
+#st_day .day-con-2 .day-piclist .thumb1-holder .pic-top .right {
+  width: 50%;
+  float: left;
+}
+#st_day .day-con-2 .day-piclist .thumb2-holder {
   position: relative;
   width: 50%;
   float: left;
 }
-#st_day .day-con-2 .day-piclist .thumb1-holder > img {
+#st_day .day-con-2 .day-piclist .thumb2-holder .pic-bottom {
   width: 100%;
-  border: 0;
-  vertical-align: top;
+  float: left;
 }
-#st_day .day-con-2 .day-piclist .thumb2-holder {
-  position: relative;
+#st_day .day-con-2 .day-piclist .thumb2-holder .pic-bottom img {
+  width: 50%;
+  float: left;
 }
 #st_day .day-con-2 .day-pictxt {
   position: relative;
@@ -2533,6 +2731,44 @@ footer .etc ul li i::before {
   margin-left: 180px;
   overflow-x: hidden;
   overflow-y: hidden;
+}
+#st_journey .popopen {
+  position: fixed;
+  width: 1903px;
+  height: 950px;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #000;
+}
+#st_journey .popopen a {
+  z-index: 10;
+  width: 60px;
+  height: 60px;
+  background: url('../../asset/image/service/btn_close_bg.png') repeat 0 0;
+  opacity: 0.5;
+}
+#st_journey .popopen a:hover {
+  opacity: 1;
+  color: #fff;
+}
+#st_journey .popopen a:link {
+  color: #666;
+}
+#st_journey .popopen a > .cl_btn {
+  left: 20px;
+  top: 20px;
+  width: 20px;
+  height: 20px;
+  background: url('../../asset/image/service/sprite_common.png') no-repeat -95px -163px;
+  text-indent: -9999px;
+  font-size: 0;
+}
+#st_journey .popopen iframe {
+  position: relative;
+  left: 120px;
 }
 #st_journey h3 {
   font-size: 52px;
