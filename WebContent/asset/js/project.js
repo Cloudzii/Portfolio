@@ -41,6 +41,7 @@ $(document).ready(function(){
     $('.project-menu li').click(function(){
     	var idx = $(this).index();
       console.log(idx);
+      $(this).find('a').addClass('on').parent().siblings().find('a').removeClass('on')
     	$('.project-view>ul>li').eq(idx).show().siblings().hide();
     });
 
@@ -50,14 +51,17 @@ $(document).ready(function(){
     	$('.project-view>ul>li').eq(idx+1).show().siblings().hide();
     });
 
-});
-////////////////////////////////////////////////////////////////////////////////
-    function popopen() {
 
-				 $('.popopen').css({
-					 "display":"block"
-				 }).append('<iframe width="1677" height="921" src="https://www.youtube.com/embed/HCyGRgKZpl8?rel=0&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>')
+});
+
+////////////////////////////////////////////////////////////////////////////////
+    function popopen(xx) {
+
+         $('.popopen').css({
+           "display":"block"
+         }).append('<iframe width="1677" height="921" src="https://www.youtube.com/embed/'+xx+'?rel=0" frameborder="0" allowfullscreen></iframe>')
         //journey의 iframe 주소
+        //?rel=0&autoplay=1&loop=1
     };
 
 		function close_btn() {

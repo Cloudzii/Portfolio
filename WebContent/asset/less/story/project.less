@@ -138,12 +138,18 @@
 					width:100%;
 					padding:31px 0 23px 0;
 				}
-				a:hover {
+				a:hover,.on {
 						display:block;
 						border-bottom:4px #000 solid;
 						background-color:#FFF;
 						margin:0 0 -4px 0;
 				}
+				// .on {
+				// 	display:block;
+	      //   border-bottom:4px #000 solid;
+	      //   background-color:#FFF;
+	      //   margin:0 0 -4px 0;
+				// }
 			}
 
 			li:last-child {
@@ -524,11 +530,12 @@
 					height:1154px;
 					padding:0 0 80px 0;
 					>li {
-						border-bottom: 1px solid #bebebe;
+						border-top: 1px solid #bebebe;
 					}
+					li:first-child {border:none;}
 					li {
 						float:left;
-						margin:20px 0 20px 0;
+						margin:20px 0 15px 0;
 						width:100%;
 						ul {
 							position:relative;
