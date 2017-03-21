@@ -1,0 +1,115 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<link rel="stylesheet" href="../../asset/css/import.css">
+<script src="/thelexus/asset/js/project.js"></script>
+<script src="/thelexus/asset/js/main.js"></script>
+<script src="/thelexus/asset/js/gnb.js"></script>
+<title>begining</title>
+</head>
+
+<body>
+
+  <nav id="gnb-nav">
+
+      <header>
+        <a href="#none">
+          <span></span>
+          <cite>MENU</cite>
+        </a>
+      </header>
+      
+   <%@include file="../../story-gnb.jsp" %>
+      
+
+   <%@include file="../../nav.jsp" %>
+
+  </nav>
+
+  <%@include file="../../footer.jsp" %>
+
+
+<section id="st_begin">
+
+    <div class="st_begining">
+
+          <div class="begin_content">
+          	<ul>
+	          	<li>
+		            <h2><img src="../../asset/image/story/begining/head_s0.png" alt="THE BEGINING 로고"></h2>
+		            <img src="../../asset/image/story/begining/txt_s0.png" alt="모든것은 작은 의지로부터 시작되다">
+	          	</li>
+          	</ul>
+          </div>
+
+    </div>
+
+    <div class="birth_begining">
+      <ul>
+        <li>
+          <img src="../../asset/image/story/begining/txt_s1.png" alt="lexus the finest luxury car ever built on the planet">
+          <img src="../../asset/image/story/begining/img_s1.jpg" alt="car image">
+        </li>
+        <li>
+           <h3 class="Birth_logo"><img src="../../asset/image/story/begining/head_s2.png" alt="The Birth Of LEXUS"></h3>
+           <p><img src="../../asset/image/story/begining/txt_s2_1.png" alt="Decision has been made"></p>
+        </li>
+        <li>
+            <p><img src="../../asset/image/story/begining/txt_s2_2.png" alt=""></p>
+            <img src="../../asset/image/story/begining/img_s2_2.jpg" alt="도요타회장">
+        </li>
+        <li>
+            <p><img src="../../asset/image/story/begining/txt_s2_3.png" alt="LS 400의 시작"></p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="launching_begining">
+      <ul>
+        <li>
+        	<div>
+            	<h3><img src="../../asset/image/story/begining/head_s3.png" alt="Launching The Brand"></h3>
+            	<p><img src="../../asset/image/story/begining/txt_s3_1.png" alt="LS400 The first Lexus"></p>
+            </div>
+        </li>
+        <li>
+            <p><img src="../../asset/image/story/begining/txt_s3_2.png" alt="Fist launching in USA"></p>
+            <img src="../../asset/image/story/begining/img_s3_2.jpg" alt="first Lexus In US image">
+        </li>
+        <li>
+            <p><img src="../../asset/image/story/begining/txt_s3_3.png" alt="LS 400 Story"></p>
+            <a href="javascript:void(0)" onclick="popopen('yUeAT3mY9fk');" >
+    					<img src="../../asset/image/story/begining/img_s3_3.jpg" alt="LS 400 video'image">
+    					<img src="../../asset/image/story/begining/btn_model_play.png" alt="play button">
+    	      </a>
+
+
+
+<!-- Youtube 팝업 -->
+            <div class="popopen" style="display:none;">
+                <a href="javasciprt:void(0)" onclick="close_btn();" style="position:fixed; top:38px; right:20px;">
+                  <span class="cl_btn" style="position:absolute; left:20px; top:20px;">close button</span>
+                </a>
+            </div>
+<!-- Youtube 팝업 -->
+
+
+
+        </li>
+        <li>
+            <p><img src="../../asset/image/story/begining/txt_s3_4.png" alt="Best quality ever"></p>
+            <span><img src="../../asset/image/story/begining/img_s3_4.png" alt="lexus JD POWER"></span>
+        </li>
+      </ul>
+    </div>
+
+</section>
+
+
+
+</body>
+</html>

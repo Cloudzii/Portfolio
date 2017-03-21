@@ -1,0 +1,302 @@
+#lxko{
+
+  .lxko_1{
+    outline:3px green solid;
+    height:auto;
+    h2{
+      background-color:#000;
+      position:relative;
+      img{
+        width:1220px;
+        position:relative;
+        left:50%;
+        margin-left:-610px;
+      }
+    }
+    .lxko_1_cont{
+      outline:2px blue solid;
+      height:auto;
+      text-align:center;
+      padding-bottom:60px;
+      color:#333;
+      letter-spacing:-0.3px;
+      h3{
+        font-size:28px;
+        font-family:'nobel-bold';
+        color:#111;
+        padding:54px 0 26px;
+      }
+      p.lxko_1_cont_txt{
+        font:13px/2 'SDGothicNeo1R';
+        padding-bottom:60px;
+        span{
+          display:block;
+        }
+      }
+    }
+  }
+
+  .lxko_2{
+    height:auto;
+    h2{
+      background-color:#000;
+      position:relative;
+      img{
+        position:relative;
+        width:1220px;
+        // width값 안잡아줘도 되나요? 변화X
+        left:50%;
+        margin-left:-610px;
+      }
+    }
+    .lxko_2_cont{
+      padding:60px 0;
+      width:720px;
+      height:1814px;
+      margin:0 auto;
+      ul{
+        li:first-child{
+          margin-right:20px;
+        }
+        li{
+          width:350px;
+          float:left;
+          display:inline-block;
+          dl{
+            dt{
+              padding-bottom:10px;
+              border-bottom:1px #ccc solid;
+              color:#333;
+              font-size:20px;
+              em{
+                position:absolute;
+                top:-9999px;
+                left:-9999px;
+                font-size:0;
+                text-indent:-9999px;
+                visibility:hidden;
+              }
+            }
+            dd{
+              padding:5px 0 30px;
+              table{
+                width:100%;
+                table-layout:fixed;
+                caption{
+                  font-size:0;
+                  text-indent:-9999px;
+                  width:0;
+                  height:0;
+                  visibility:hidden;
+                }
+                tbody{
+                  tr{
+                    th{
+                      width:16%;
+                      color:#ccc;
+                      font-size:14px;
+                      line-height:1.1;
+                      padding:8px 0 2px;
+                      vertical-align:top;
+                      em{
+                        position:absolute;
+                        top:-9999px;
+                        left:-9999px;
+                        font-size:0;
+                        text-indent:-9999px;
+                        visibility:hidden;
+                      }
+                    }
+                    td{
+                      width:84%;
+                      color:#333;
+                      font-size:13px;
+                      line-height:1.2;
+                      padding:8px 0 2px;
+                      vertical-align:top;
+                      span{
+                        display:block;
+                        padding-top:9px;
+                      }
+                      span:first-child{
+                        padding-top:0;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .lxko_3{
+    height:auto;
+    h2{
+      background-color:#000;
+      position:relative;
+      img{
+        width:1220px;
+        position:relative;
+        left:50%;
+        margin-left:-610px;
+      }
+    }
+    .lxko_3_cont{
+      height:auto;
+      width:720px;
+      margin:0 auto;
+      padding:60px 0 150px;
+      >div{
+        vertical-align: top;
+        width: 100%;
+        height: auto;
+        display: inline-block;
+        &.half{
+          width:48.5%;
+        }
+        &.mr_20{
+          margin-right:14px;
+        }
+        cite{
+          border-top:4px #111 solid;
+          width:100%;
+          font-size:15px;
+          font-weight: bold;
+          display: inline-block;
+          padding:30px 0 15px;
+          i{
+            background-image:url('../images/company/lxko/dealer_line.png');
+            background-repeat:no-repeat;
+            display:inline-block;
+            width:2px;
+            height:15px;
+            margin:0 5px;
+            vertical-align:top;
+          }
+        }
+        ul{
+          li{
+            &.mr{
+              margin-right:0;
+            }
+            display: inline-block;
+            width: 165px;
+            margin-right: 12px;
+            img{
+              width: 165px;
+              height: 180px;
+            }
+            div{
+              height:auto;
+              dl{
+                dt{
+                  .smoothfont;
+                  display: block;
+                  color: #111;
+                  padding:21px 0 18px;
+                  font-size: 14px;
+                }
+                dd{
+                  font-size: 12px;
+                  display: block;
+                  height:50px;
+                  padding-top: 10px;
+                  &:first-child{
+                    letter-spacing: -0.5px;
+                  }
+                  &:last-child{
+                    a{
+                      &::before{
+                        content:none;
+                      }
+                    }
+                  }
+                  a{
+                    font-weight: bold;
+                    &::before{
+                      content:":"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+
+      // .full_set{
+      //   outline:1px #ccc solid;
+      //   height:auto;
+      //   h3{
+      //     padding:30px 0 15px;
+      //     border-top:4px #111 solid;
+      //     color:#111;
+      //     font-size:15px;
+      //     font-weight:bold;
+      //   }
+      //   .dealer_list{
+      //     height:auto;
+      //     dl{
+      //       outline:1px green solid;
+      //       position:relative;
+      //       width:165px;
+      //       float:left;
+      //       margin-right:20px;
+      //       font-size:0.75em;
+      //       dt{
+      //         margin-top:180px;
+      //         padding:21px 0 18px;
+      //         font:14px 'SDGothicNeo1R';
+      //         font-weight:bold;
+      //         color:#111;
+      //       }
+      //       dd{
+      //         height:50px;
+      //         padding-top:10px;
+      //         border-top:1px #CCC solid;
+      //         line-height:1.2;
+      //         color:#666;
+      //       }
+      //       .addr{
+      //         letter-spacing:-0.5px;
+      //       }
+      //       .phone{
+      //         p:first-child{
+      //           padding-top:0;
+      //         }
+      //         p{
+      //           padding-top:9px;
+      //           span{
+      //             a{font-size:12px; color:#333;}
+      //           }
+      //         }
+      //       }
+      //       .web{
+      //         font-size:12px;
+      //         color:#333;
+      //       }
+      //       .pic{
+      //         height:180px;
+      //         padding-top:0;
+      //         border-top:0;
+      //         position:absolute;
+      //         top:0;
+      //         left:0;
+      //       }
+      //     }
+      //     .lact_col{
+      //       margin-right:0;
+      //     }
+      //   }
+      // }
+
+    }
+  }
+
+
+
+}

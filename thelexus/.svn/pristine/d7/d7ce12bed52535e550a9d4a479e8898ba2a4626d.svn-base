@@ -1,0 +1,631 @@
+
+
+  #certi{
+    .certi_1{
+      position:relative;
+      // height:950px;
+      width:100%;
+      height:100%;
+      .certi_1_bg{
+        // position:absolute;
+        // 질문 position:absolute;하면 이미지가 밑으로 내려가진다.
+        width:100%;
+        background-image:url('../images/ct/certified_bg1.jpg');
+        height:950px;
+        background-repeat:no-repeat;
+        background-size:cover;
+        background-attachment:fixed;
+        background-position:180px -230px;
+      }
+      .certi_1_text{
+        position:absolute;
+        top:0;
+        left:60px;
+        h3{
+          position:absolute;
+          top:90px;
+        }
+        p{
+          position:absolute;
+          top:183px;
+        }
+        a{
+          position:absolute;
+          top:245px;
+        }
+      }
+      .btn-next-arr{
+        position:absolute;
+        bottom:30px;
+        left:49%;
+        display:block;
+        text-indent:-9999px;
+        font-size:0;
+        width:34px;
+        height:60px;
+        background:url('../images/ct/btn-next-arr.png') 0 0 no-repeat;
+        position:fixed;
+      }
+    }
+
+      .certi_2{
+        position:relative;
+        width:100%;
+        height:751px;
+        .certi_2_bg{
+          height:330px;
+          background-color:#000;
+          img{
+            position:relative;
+            left:50%;
+            margin-left:-610px;
+            // background-image:url('../images/ct/certified_bg2.jpg');
+            background-repeat:no-repeat;
+            width:1220px;
+          }
+
+        }
+        .certi_2_text{
+          position:absolute;
+          top:0;
+          text-align:center;
+          width:100%;
+          // text-align:center;으로 가운데로 보내기위해 기준을 width:100%;로줌
+          h3{
+            margin-top:110px;
+          }
+          p{
+            margin-top:30px;
+          }
+        }
+
+        .certi_2_cont{
+          height:321px;
+
+          ol{
+            width:900px;
+            height:378px;
+            margin:100px auto 0 auto;
+            padding-bottom:43px;
+            position:relative;
+            li{
+              width:240px;
+              height:139px;
+              float:left;
+              margin-right:60px;
+              display:block;
+              //질문 display:block;해야지 나옴
+              p{
+                padding:22px 0 77px 0;
+                border-top:2px #000 solid;
+                color:#000;
+                font-size:14px;
+                letter-spacing:-0.9px;
+                word-spacing:1.5px;
+                span{
+                  margin-bottom:10px;
+                  display:block;
+                  font-size:14px;
+                }
+                .number{
+                  float:left;
+                  font-size:16px;
+                  margin-right:20px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .certi_3{
+        position:relative;
+        width:100%;
+        height:897px;
+        .certi_3_bg{
+          height:330px;
+          background-color:#000;
+          img{
+            position:relative;
+            left:50%;
+            margin-left:-610px;
+            // background-image:url('../images/ct/certified_bg3.jpg');
+            background-repeat:no-repeat;
+            width:1220px;
+            height:330px;
+
+          }
+                  }
+        .certi_3_text{
+          position:absolute;
+          height:auto;
+          top:0;
+          text-align:center;
+          width:100%;
+          // text-align:center;으로 가운데로 보내기위해 기준을 width:100%;로줌
+          height:auto;
+          h3{
+            margin-top:110px;
+          }
+          p{
+            margin-top:30px;
+          }
+        }
+        .certi_3_cont{
+          width:840px;
+          height:567px;
+          // height값을 안줘도 괜찮지만 section안에div값은 자동으로 height:950px;값을 설정해놔서 해놔야한다.
+          margin:0 auto 0 auto;
+          img{
+            padding:100px 0 110px 0;
+          }
+        }
+      }
+
+      .certi_4{
+        position:relative;
+        width:100%;
+        height:862px;
+        .certi_4_bg{
+          height:330px;
+          background-color:#000;
+          img{
+            position:relative;
+            left:50%;
+            margin-left:-610px;
+            width:1220px;
+            height:330px;
+          }
+
+        }
+        .certi_4_text{
+          position:absolute;
+          height:auto;
+          top:0;
+          text-align:center;
+          width:100%;
+          // text-align:center;으로 가운데로 보내기위해 기준을 width:100%;로줌
+          height:auto;
+          h3{
+            margin-top:110px;
+          }
+          p{
+            margin-top:30px;
+          }
+        }
+        .certi_4_cont{
+          height:352px;
+          padding-bottom:100px;
+
+          ul{
+            // position: relative;
+            margin:80px auto 0 auto;
+            width:897px;
+            height:352px;
+            li{
+
+              position:relative;
+              display:inline-block;
+              float:left;
+              margin-bottom:40px;
+              width:299px;
+              height:58px;
+              line-height:58px;
+              font-size:15px;
+              .smoothfont;
+              background-repeat:no-repeat;
+              background-size:58px 58px;
+              i{
+                vertical-align:middle;
+                background-image: url('../images/ct/certified_benefits_icon.png');
+                display:inline-block;
+                width:58px;
+                height: 58px;
+                margin-right:18px;
+              }
+              span{
+                display:inline-block;
+                line-height: 58px;
+              }
+
+            }
+          }
+          p{
+            display:block;
+            a{
+              display:block;
+              width:100%;
+              height:60px;
+              color:#2a2a2a;
+            }
+          }
+        }
+      }
+
+      .certi_5{
+        position:relative;
+        width:100%;
+        height:732px;
+        .certi_5_bg{
+          height:330px;
+          background-color:#000;
+          img{
+            position:relative;
+            left:50%;
+            margin-left:-610px;
+            // background-image:url('../images/ct/certified_bg4.jpg');
+            background-repeat:no-repeat;
+            width:1220px;
+            height:330px;
+          }
+
+        }
+        .certi_5_text{
+          position:absolute;
+          height:auto;
+          top:0;
+          text-align:center;
+          width:100%;
+          // text-align:center;으로 가운데로 보내기위해 기준을 width:100%;로줌
+          height:auto;
+          h3{
+            margin-top:110px;
+          }
+          p{
+            margin-top:30px;
+          }
+        }
+        .certi_5_cont{
+          height:302px;
+          ul{
+            width:840px;
+            height:100%;
+            padding-bottom:125px;
+            margin:100px auto 0 auto;
+            li{
+              float:left;
+              display:block;
+              width:240px;
+              margin-right:60px;
+              dl{
+                border-top:2px #000 solid;
+                padding-top:22px;
+                dt{
+                  span{
+                    display:block;
+                    margin-bottom:10px;
+                  }
+                  font-size:22px;
+                  font-weight:bold;
+                  color:#000;
+                  letter-spacing:0.2px;
+                  word-spacing:1.5px;
+                  // line-height:32px;
+                }
+                dd{
+                  font-size:13px;
+                  color:#000;
+                  margin-top:30px;
+                  line-height:23px;
+                  span{
+                    display:block;
+                    letter-spacing:-0.8px;
+                    //수정하기
+                  }
+                }
+              }
+            }
+            li.fina_3{
+              margin-right:0;
+            }
+          }
+        }
+      }
+
+      .certi_6{
+        position:relative;
+        width:100%;
+        height:1048px;
+        .certi_6_bg{
+          height:330px;
+          background-color:#000;
+          img{
+            position:relative;
+            left:50%;
+            margin-left:-610px;
+            // background-image:url('../images/ct/certified_bg4.jpg');
+            background-repeat:no-repeat;
+            width:1220px;
+            height:330px;
+          }
+
+        }
+        .certi_6_text{
+          position:absolute;
+          height:auto;
+          top:0;
+          text-align:center;
+          width:100%;
+          // text-align:center;으로 가운데로 보내기위해 기준을 width:100%;로줌
+          height:auto;
+          h3{
+            margin-top:110px;
+          }
+          p{
+            margin-top:30px;
+          }
+        }
+        .certi_6_cont_inner{
+          height:279px;
+          ul{
+            border-bottom:2px #000 solid;
+            width:840px;
+            height:100%;
+            margin:100px auto 0 auto;
+            li{
+              float:left;
+              display:block;
+              width:240px;
+              margin-right:60px;
+              dl{
+                border-top:2px #000 solid;
+                padding-top:22px;
+                dt{
+                  span{
+                    display:block;
+                    margin-bottom:10px;
+                  }
+                  font-size:22px;
+                  font-weight:bold;
+                  color:#000;
+                  letter-spacing:0.2px;
+                  word-spacing:1.5px;
+                  // line-height:32px;
+                }
+                dd{
+                  font-size:13px;
+                  color:#000;
+                  margin-top:30px;
+                  line-height:23px;
+                  span{
+                    display:block;
+                    letter-spacing:-0.8px;
+                    //수정하기
+                  }
+                }
+              }
+            }
+            li.fina_3{
+              margin-right:0;
+            }
+          }
+        }
+        .certi_6_cont_prgram{
+          width:840px;
+          height:310px;
+          margin:27px auto 0 auto;
+          h4{
+            font-size:22px;
+            color:#000;
+            font-weight:bold;
+            letter-spacing:0.2px;
+            word-spacing:1.5px;
+          }
+          ol{
+            padding:64px 0 122px;
+            li{
+              position:relative;
+              padding-right:11px;
+              display:block;
+              float: left;
+              .icon1{
+                width:67px;
+                height:56px;
+                background-image:url('../images/ct/certified_selling_icon.png');
+                background-repeat:no-repeat;
+                background-position:0 0;
+                margin:0 auto;
+              }
+              .icon2{
+                width:67px;
+                height:56px;
+                background-image:url('../images/ct/certified_selling_icon.png');
+                background-repeat:no-repeat;
+                background-position:-110px 0;
+                margin:0 auto;
+              }
+              .icon3{
+                width:67px;
+                height:56px;
+                background-image:url('../images/ct/certified_selling_icon.png');
+                background-repeat:no-repeat;
+                background-position:-220px 0;
+                margin:0 auto;
+              }
+              .icon4{
+                width:67px;
+                height:56px;
+                background-image:url('../images/ct/certified_selling_icon.png');
+                background-repeat:no-repeat;
+                background-position:0 -100px;
+                margin:0 auto;
+              }
+              .icon5{
+                width:67px;
+                height:56px;
+                background-image:url('../images/ct/certified_selling_icon.png');
+                background-repeat:no-repeat;
+                background-position:-110px -100px;
+                margin:0 auto;
+              }
+              .icon6{
+                width:67px;
+                height:56px;
+                background-image:url('../images/ct/certified_selling_icon.png');
+                background-repeat:no-repeat;
+                background-position:-220px -100px;
+                margin:0 auto;
+              }
+              p{
+                font-size:13px;
+                margin-top:30px;
+                letter-spacing:-0.5px;
+                color:#666;
+                text-align: center;
+              }
+              .arrow{
+                position:absolute;
+                top:0;
+                right:0;
+                width:11px;
+                height:20px;
+                background-image:url('../images/ct/certified_selling_icon.png');
+                background-repeat:no-repeat;
+                background-position:-1px -201px;
+              }
+            }
+            li.prgram1{
+              width:14%;
+            }
+            li.prgram2{
+              width:15%;
+            }
+            li.prgram3{
+              width:15%;
+            }
+            li.prgram4{
+              width:15%;
+            }
+            li.prgram5{
+              width:15%;
+            }
+            li.prgram6{
+              width:18%;
+            }
+          }
+        }
+      }
+
+      .certi_7{
+        position:relative;
+        width:100%;
+        height:800px;
+        .certi_7_bg{
+          height:330px;
+          background-color:#000;
+          img{
+            position:relative;
+            left:50%;
+            margin-left:-610px;
+            // background-image:url('../images/ct/certified_bg4.jpg');
+            background-repeat:no-repeat;
+            width:1220px;
+            height:330px;
+          }
+
+        }
+        .certi_7_text{
+          position:absolute;
+          height:auto;
+          top:0;
+          text-align:center;
+          width:100%;
+          // text-align:center;으로 가운데로 보내기위해 기준을 width:100%;로줌
+          height:auto;
+          h3{
+            margin-top:110px;
+          }
+          p{
+            margin-top:30px;
+          }
+        }
+        .certi_7_cont{
+          // position:relative;
+          height:180px;
+          width:840px;
+          padding:80px 0 210px;
+          margin:0 auto;
+          .network{
+            height:180px;
+            position:relative;
+            dl{
+              dt{
+                font-size:24px;
+                font-weight:bold;
+                color:#000;
+                span{
+                  display:block;
+                  margin-top:12px;
+                  color:#000;
+                }
+              }
+              dd.addr{
+                font-size:15px;
+                padding-top:35px;
+                letter-spacing:-0.2px;
+                color:#000;
+              }
+              dd.info-box{
+                padding-top:13px;
+                ul{
+                  li{
+                    display:block;
+                    float:left;
+                    font-size:13px;
+                    margin-left:11px;
+                    letter-spacing:0.2px;
+                    word-spacing:1.5px;
+                    span.day{
+                      font-weight:bold;
+                      color:#888;
+                    }
+                    span{
+                      color:#333;
+                    }
+                  }
+                  li.info_1{
+                    margin-left:0;
+                  }
+                  li.info_3{
+                    float:none;
+                  }
+                }
+              }
+              dd.tel{
+                padding-top:35px;
+                font-size:30px;
+                letter-spacing:-0.4px;
+                a{
+                  display:block;
+                  cursor:default;
+                  color:#000;
+                }
+              }
+            }
+            p.map_holder{
+              position:absolute;
+              right:0;
+              top:0;
+              a{
+                display:block;
+                text-align:center;
+                background-color:#383838;
+                height:30px;
+                margin-top:-2px;
+                span{
+                  font-size:13px;
+                  line-height:30px;
+                  color:#FFF;
+                  letter-spacing:0.2px;
+                  word-spacing:1.5px;
+                }
+              }
+            }
+          }
+
+        }
+      }
+
+
+
+
+    }
