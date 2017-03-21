@@ -1,0 +1,49 @@
+* { margin:0; padding:0; }
+a { text-decoration:none;}
+li {  list-style:none; }
+.slide {
+  border:1px solid coral;
+}
+.slide .slide_wrapper {
+  width:1903px;
+}
+.slide .slide_cont {
+  height:950px;
+  position:absolute;
+  top:50%;
+  margin-top:-104px;
+  left:0;
+  right:0;
+  text-align:center;
+  z-index:5;
+}
+.slide div h2 {
+  color:#000;
+
+}
+.slide div h2 span {
+  font-weight:bold;
+}
+.slide div h3 {
+  color:#000;
+  margin-top:40px;
+  margin-bottom:50px;
+  text-transform:uppercase;
+  margin:0;
+}
+.slide li {
+  background-color: #f00;
+  background-image:url('img/textimg/Hydrangeas.jpg');
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  width:1903px;
+  left: 0px;
+  /*display: block;
+  transform: translate3d(0px, 0px, 0px);
+  transform-origin: 951.5px center 0px;
+  perspective-origin: 951.5px center;*/
+}

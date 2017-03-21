@@ -20,7 +20,7 @@ $(document).ready(function(){
     //     });
     // };
 
-    $('.btn-next-arr').bind('click',function(){
+    $('.btn-next-arr').on('click',function(){
         $('html,body').animate({scrollTop:'0' + '1072px'},930);
     });
     // animate가 아닌 ease jquery 로 해야함
